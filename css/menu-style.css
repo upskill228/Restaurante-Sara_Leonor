@@ -49,6 +49,16 @@ header{
     /* border: 2px solid black */
 }
 
+/* Logo central */
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+
 .imgcafe {
     object-fit: cover;
     border-radius: 2px;
@@ -75,8 +85,6 @@ a.menunav {
     height: 300px;
     /* grid-template-rows: 1fr; */
     /* border: 2px solid black; */
-
-
 
 .primSeccao {
     display: flex;
