@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Café Central Perk Lisboa</title>
+    <link rel="icon" type="image/x-icon" href="imagens/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700;800&family=Oswald:wght@400;500;600"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="js/scripts.js" defer></script>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="cabecalho">
+      <!-- Hamburger menu -->
+      <button class="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+      <!-- Logo central -->
+      <a href="#" class="logo">
+        <img
+          src="imagens/central-perk-logo.png"
+          width="150"
+          alt="Logótipo do Central Perk"
+        />
+      </a>
+      <!-- CTA loja online -->
+      <a href="#loja" class="ctaLoja">Loja Online</a>
+      <!-- Menu principal -->
+      <nav class="navPrincipal">
+        <ul>
+          <li><a href="#sobreNos" class="menu-link">Sobre Nós</a></li>
+          <li><a href="#galeriaFotos" class="menu-link">Galeria</a></li>
+          <li><a href="#menu" class="menu-link">No Menu</a></li>
+          <li>
+            <a href="#reservas" class="menu-link">Contactos & Reservas</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- LANDING PAGE -->
+      <section id="intro">
+        <!-- Imagem da fachada / Hero -->
+        <img
+          class="heroImg"
+          src="imagens/hero-1080.jpg"
+          srcset="imagens/hero-720.jpg 720w, imagens/hero-1080.jpg 1080w"
+          sizes="100vw"
+          width="1219"
+          height="1080"
+          alt="Fachada do Central Perk Lisboa"
+          fetchpriority="high"
+        />
+        <!-- Elemento Gráfico -->
+        <div class="angulo-wrap">
+          <div class="angulo"></div>
+        </div>
+        <!-- Texto / Hook -->
+        <div class="hook">
+          <h1>O café da série "Friends" chegou a Lisboa.</h1>
+          <p class="subtitulo">Vem conhecê-lo!</p>
+          <a href="#sobreNos" aria-label="Ir para a secção Sobre Nós">
+            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+          </a>
+        </div>
+      </section>
+      <!-- SOBRE NÓS -->
+      <section id="sobreNos">
+        <!-- Elemento Gráfico / Cor -->
+        <div class="rectangulo"></div>
+        <!-- Títulos -->
+        <div class="titulosSobreNos">
+          <h2>Sobre Nós</h2>
+          <p class="subtitulo">Tudo começou com 6 amigos <br />e um sofá...</p>
+        </div>
+        <!-- Imagem do espaço - tamanhos para desktop e mobile -->
+        <img
+          class="imgSobreNos"
+          src="imagens/sobre-nos-1250.jpg"
+          srcset="
+            imagens/sobre-nos-800.jpg   800w,
+            imagens/sobre-nos-1250.jpg 1250w
+          "
+          sizes="(max-width: 768px) 90vw, 50vw"
+          width="1250"
+          height="834"
+          alt="Fotografia do interior do Café Central Perk Lisboa."
+          loading="lazy"
+        />
+        <!-- Texto -->
+        <div class="textosSobreNos">
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+            commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+            penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+            Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
+            aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
+            imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
+            mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum
+            semper nisi. Aenean vulputate eleifend tellus.
+          </p>
+          <p>
+            Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+            Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
+            Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.
+            Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur
+            ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas
+            tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit
+            amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel,
+            luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante
+            tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.
+            Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt.
+            Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis
+            magna.
+          </p>
+        </div>
+      </section>
+      <!-- GALERIA DE FOTOS -->
+      <section id="galeriaFotos">
+        <!-- Títulos -->
+        <h2>Galeria</h2>
+        <p class="subtitulo">Central Perk Lisboa</p>
+        <!-- Galeria tipo Grid / Masonry -->
+        <div class="galeria">
+          <!-- Imagens - tamanhos para desktop e mobile -->
+          <img
+            src="imagens/grid-vista-frente-sofa-800.jpg"
+            srcset="
+              imagens/grid-vista-frente-sofa-600.jpg 600w,
+              imagens/grid-vista-frente-sofa-800.jpg 800w
+            "
+            sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 25vw"
+            width="800"
+            height="474"
+            alt="Fotografia do interior do Central Perk Lisboa com a réplica do sofá da série 'Friends'"
+            loading="lazy"
+          />
+          <img
+            src="imagens/grid-interior-com-porta-entrada-800.jpg"
+            srcset="
+              imagens/grid-interior-com-porta-entrada-600.jpg 600w,
+              imagens/grid-interior-com-porta-entrada-800.jpg 800w
+            "
+            sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 25vw"
+            width="800"
+            height="600"
+            alt="Fotografia do interior do Central Perk Lisboa com a porta de entrada."
+            loading="lazy"
+          />
+          <img
+            src="imagens/grid-bebidas-frias-800.jpg"
+            srcset="
+              imagens/grid-bebidas-frias-600.jpg 600w,
+              imagens/grid-bebidas-frias-800.jpg 800w
+            "
+            sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 25vw"
+            width="800"
+            height="716"
+            alt="Fotografia do tipo de bebidas que se podem consumir no Central Perk Lisboa"
+            loading="lazy"
+          />
+          <img
+            src="imagens/grid-interior-com-clientes-800.jpg"
+            srcset="
+              imagens/grid-interior-com-clientes-600.jpg 600w,
+              imagens/grid-interior-com-clientes-800.jpg 800w
+            "
+            sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 25vw"
+            width="800"
+            height="450"
+            alt="Fotografia do interior do Central Perk Lisboa com clientes"
+            loading="lazy"
+          />
+          <img
+            src="imagens/grid-interior-com-balcao-800.jpg"
+            srcset="
+              imagens/grid-interior-com-balcao-600.jpg 600w,
+              imagens/grid-interior-com-balcao-800.jpg 800w
+            "
+            sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 25vw"
+            width="800"
+            height="600"
+            alt="Fotografia do interior do Central Perk Lisboa com o balcão ao fundo."
+            loading="lazy"
+          />
+          <img
+            src="imagens/grid-croissant-800.jpg"
+            srcset="
+              imagens/grid-croissant-600.jpg 600w,
+              imagens/grid-croissant-800.jpg 800w
+            "
+            sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 25vw"
+            width="800"
+            height="533"
+            alt="Fotografia de um croissant, exemplificando a pastelaria vendida no Central Perk Lisboa"
+            loading="lazy"
+          />
+        </div>
+        <!-- Elemento gráfico / Cor -->
+        <div class="bottom-color"></div>
+      </section>
+      <!-- NO MENU -->
+      <section id="menu">
+        <!-- Título -->
+        <h2>No menu</h2>
+         <!-- Elemento gráfico / Cor -->
+        <div class="menuProdutosWrapper">
+          <!-- Imagens como links para a loja online / menu  - tamanhos para desktop e mobile -->
+          <div class="menuProdutos">
+            <a href="menu.html#bebidas-quentes" class="produto">
+              <figure class="produto">
+                <img
+                  src="imagens/menu-bebidas-quentes-800.jpg"
+                  srcset="
+                    imagens/menu-bebidas-quentes-600.jpg 600w,
+                    imagens/menu-bebidas-quentes-800.jpg 800w
+                  "
+                  sizes="(max-width: 768px) 80vw, 25vw"
+                  width="800"
+                  height="842"
+                  alt="Fotografia de uma bebida quente"
+                  loading="lazy"
+                />
+                <figcaption>Bebidas Quentes</figcaption>
+              </figure>
+            </a>
+            <a href="menu.html#bebidas-frias" class="produto">
+              <figure class="produto">
+                <img
+                  src="imagens/menu-bebidas-frias-800.jpg"
+                  srcset="
+                    imagens/menu-bebidas-frias-600.jpg 600w,
+                    imagens/menu-bebidas-frias-800.jpg 800w
+                  "
+                  sizes="(max-width: 768px) 80vw, 25vw"
+                  width="800"
+                  height="997"
+                  alt="Fotografia de uma bebida fria"
+                  loading="lazy"
+                />
+                <figcaption>Bebidas Frias</figcaption>
+              </figure>
+            </a>
+            <a href="menu.html#pastelaria" class="produto">
+              <figure class="produto">
+                <img
+                  src="imagens/menu-pastelaria-800.jpg"
+                  srcset="
+                    imagens/menu-pastelaria-600.jpg 600w,
+                    imagens/menu-pastelaria-800.jpg 800w
+                  "
+                  sizes="(max-width: 768px) 80vw, 25vw"
+                  width="800"
+                  height="1067"
+                  alt="Fotografia de croissants."
+                  loading="lazy"
+                />
+                <figcaption>Pastelaria</figcaption>
+              </figure>
+            </a>
+          </div>
+          <!-- Call to Action para  visitar a loja online / menu -->
+          <div class="menuCTA">
+            <a href="menu.html" class="botao">Ver menu completo</a>
+          </div>
+        </div>
+      </section>
+      <!-- CONTACTOS E RESERVAS -->
+      <section id="reservas">
+        <!-- Texto / Informação -->
+        <div class="infoReservas">
+          <h3>Partilha esta experiência com os teus amigos:</h3>
+          <!-- Informação de contactos -->
+          <div class="contactos">
+            <p class="subtitulo">Rua Imaginária, nº000 1100-000 Lisboa</p>
+            <p>Tel: <a href="tel:+351210000000">+351 210 000 000</a></p>
+            <p>
+              Email:
+              <a href="mailto:reservas@centralperklisboa.com"
+                >reservas@centralperklisboa.com</a
+              >
+            </p>
+          </div>
+          <!-- Call to Action para fazer a reserva -->
+          <button id="reservaBtn" class="botao">
+            Faz a tua reserva <br /><span>garante o teu spot favorito</span>
+          </button>
+        </div>
+        <!-- Imagem - tamanhos para desktop e mobile -->
+        <img
+          class="imgReservas"
+          src="imagens/reservas-img-800.jpg"
+          srcset="
+            imagens/reservas-img-600.jpg 600w,
+            imagens/reservas-img-800.jpg 800w
+          "
+          sizes="(max-width: 768px) 80vw, 25vw"
+          width="800"
+          height="800"
+          alt="Chávena de Café com o logótipo do Central Perk."
+          loading="lazy"
+        />
+      </section>
+    </main>
+    <!-- FOOTER -->
+    <footer>
+      <!-- Footer Top -->
+      <section class="footerTop">
+        <!-- Redes Sociais -->
+        <div class="socialsLinks">
+          <p>Segue-nos nas redes sociais:</p>
+          <ul>
+            <li>
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook do Café Central Perk Lisboa"
+              >
+                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram do Café Central Perk Lisboa"
+              >
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube do Café Central Perk Lisboa"
+              >
+                <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- Formulário para Newsletter -->
+        <form id="formNewsletter" onsubmit="enviarForm(event)">
+          <fieldset>
+            <legend>Subscreve a nossa Newsletter:</legend>
+            <div class="form-row">
+              <label for="emailNewsletter">Email: <span>*</span></label>
+              <input
+                type="email"
+                id="emailNewsletter"
+                name="emailNewsletter"
+                placeholder="Email"
+                required
+              />
+              <button type="submit" class="botao">Subscrever</button>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+      <!-- Footer Bottom -->
+      <section class="footerBottom">
+        <!-- Copyright -->
+        <p>Café Central Perk Lisboa &copy; <span id="current-year"></span></p>
+        <p>Todos os direitos reservados</p>
+      </section>
+    </footer>
+    <!-- MODAL DE RESERVAS -->
+    <div
+      id="modalReservas"
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitulo"
+    >
+      <div class="modal-content">
+        <!-- Botão para fechar o modal -->
+        <button id="closeReservas" class="fechar" aria-label="Fechar">
+          &times;
+        </button>
+        <h3 id="modalTitulo">Faz a tua Reserva</h3>
+        <!-- Formulário de Reservas -->
+        <form id="formReservas" onsubmit="enviarForm(event)">
+          <fieldset class="fieldSetNomes">
+            <div class="field">
+              <label for="nomeReserva">Nome: <span>*</span></label>
+              <input
+                type="text"
+                id="nomeReserva"
+                name="nomeReserva"
+                placeholder="Nome"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="apelidoReserva">Apelido: <span>*</span></label>
+              <input
+                type="text"
+                id="apelidoReserva"
+                name="apelidoReserva"
+                placeholder="Apelido"
+                required
+              />
+            </div>
+          </fieldset>
+          <label for="emailReserva">Email: <span>*</span></label>
+          <input
+            type="email"
+            id="emailReserva"
+            name="emailReserva"
+            placeholder="Email"
+            required
+          />
+          <label for="dataReserva">Data da Reserva: <span>*</span></label>
+          <input type="date" id="dataReserva" name="dataReserva" required />
+          <label for="horaReserva">Hora da Reserva: <span>*</span></label>
+          <input type="time" id="horaReserva" name="horaReserva" required />
+          <label for="numPessoas">Número de Pessoas: <span>*</span></label>
+          <input
+            type="number"
+            id="numPessoas"
+            name="numPessoas"
+            min="1"
+            max="20"
+            required
+          />
+          <button type="submit" class="botao">Reservar</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
