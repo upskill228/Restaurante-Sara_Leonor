@@ -3,6 +3,7 @@
 const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('.navPrincipal');
 
+// Abrir e fechar menu
 hamburger.addEventListener('click', () => {
   const isOpen = nav.classList.toggle('open');
   hamburger.setAttribute('aria-expanded', isOpen);
@@ -51,6 +52,6 @@ function enviarForm(event) {
 
 // FOOTER
 
-// Ano Corrente:
+// Ano Corrente
 let currentYear = new Date().getFullYear();
 document.getElementById("current-year").textContent = currentYear;
