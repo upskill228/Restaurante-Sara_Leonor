@@ -47,7 +47,7 @@ document.addEventListener("keydown", (e) => {
 
 function enviarForm(event) {
   event.preventDefault();
-  alert("Obrigado pelo contacto! Brevemente entraremos em contacto.");
+  alert("Obrigado pelo contacto! Em breve irá receber uma resposta.");
 }
 
 // FOOTER
