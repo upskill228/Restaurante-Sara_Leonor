@@ -17,6 +17,7 @@ li {
 h1 {
   font-weight: 600;
   text-transform: uppercase;
+  color: #1f4d29;
 }
 
 h2 {
@@ -27,7 +28,7 @@ h2 {
 
 h3 {
   font-weight: 600;
-  color: white;
+  color: #000000;
   text-transform: uppercase;
 }
 
@@ -88,12 +89,11 @@ a.menunav {
 
 .primSeccao {
     display: flex;
-    border: 2px solid grey;
+    border: 2px solid #1f4d29;
     justify-content: space-between;
     align-items: center;
     width: 100vmax;
 }
-
 
 .opcaoCompra {
     display: flex;
@@ -108,7 +108,7 @@ a.menunav {
     display: grid; 
     grid-template-columns: 200px 1fr; 
     gap: 12px; 
-    border: 2px solid grey;
+    border: 3px solid #1f4d29;
     padding: 12px;
     max-width: 500px;
     min-height: 250px; height: auto; 
@@ -121,6 +121,7 @@ a.menunav {
     grid-template-rows: auto auto 1fr; 
     gap: 5px;
     min-width: 0; /* permite o texto encolher e quebrar */
+    overflow: scroll;
   }
   
   .product-description {
