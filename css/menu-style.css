@@ -11,7 +11,12 @@ header{
     width: 100vw;  
 }
 
+h1 {
+    font-size: 16px;
+}
+
 .cabecalhoSup {
+    position: relative;
     display: grid;
     grid-template-columns: 50px 1fr 1fr 1fr 50px; 
     grid-template-rows: 1fr;
@@ -222,7 +227,7 @@ div.gridPrincipal {
 
 .hamburguer {
     position: absolute;
-    top: 56px;
+    top: 40px; 
     left: -400px;
     width: auto; 
     height: auto; 
