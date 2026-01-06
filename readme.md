@@ -160,10 +160,20 @@ Ao iniciar esta função, garantimos que o total é zero e não existe conteúdo
 Associamos a abertura/fecho do "painel carrinho de compras" ao associarmos o evento clique, através de atribuição/remoção de classe CSS que representa o display do mesmo ou não, respectivamente.
 
 
+## Menu Hamburguer
+
+Criámos um menu hambúguer que reage ao evento "click" e consecutivamente expõe e esconde, respectivamente, um painel lateral com possibilidades genéricas (Gerir conta; favoritos; convidar amigos; ajuda e terminar sessão).
+Nenhum desses elementos é interactivo, mas representa um elemento padrão comum a muitos sites de restauração. (Ponto 3 dos aspectos que podem ser futuramente trabalhados) 
+
+## Pop-up/Modal
+
+Críamos duas janelas pop-up na página secundária no ícon de informação, tanto para informações adicionais sobre custos extra e sobre demora na entrega da encomenda. 
+Para fechar a janela, associamos ao clique do icon cruz "X" no topo superior direito da janela pop-up.
+
+
 ## Aspectos que podem futuramente ser trabalhados (interactividade)
 
-1. A subtração de produtos ao basket
-2. Menu Hambúrguer (no cabeçalho, que poderia dispôr de opções como iniciar sessão e terminar sessão, por exemplo)
-3. Ícon informativo (ao clicar apresentar um painel informativo com mais detalhes sobre o assunto em questão)
-4. Reviews serem geradas e automatizadas a sua actualização na página (de cada produto e do café)
-5. Num contexto real, após a seleção dos produtos a serem comprados e a forma (delivery ou pick-up), permitir a compra online e gerar o evento 
+1. Reviews serem geradas e automatizadas a sua actualização na página (de cada produto e do café)
+2. Num contexto real, após a seleção dos produtos a serem comprados e a forma (delivery ou pick-up), permitir a compra online e gerar o evento 
+3. Painel do utilizador (menu hamburguer) oferecer interatividade nos respectivos elementos
+4. Para os pop-ups informativos, da página secundária, pode ser expandido a interação, por exemplo, ao adicionar evento click fora do elemento para fechar (na página em si) e/ou impedir o scroll da página até o elemento ser fechado. 

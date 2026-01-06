@@ -1,43 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Café Central Perk - Loja Online</title>
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
-    <!-- <link
+    <script src="/js/menu-scripts.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Allura:wght@300;400;600;800&family=Italiana:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link
       href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"
       rel="stylesheet"
-    /> -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700;800&family=Oswald:wght@400;500;600"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="css/menu-style.css" />
-    <script src="js/menu-scripts.js" defer></script>
+    <link rel="stylesheet" href="/css/menu-style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Café Central Perk</title>
   </head>
 
-  <body>
+  <body onload="carregarPagina()">
     <header>
       <div aria-label="cabecalho" class="cabecalhoSup">
-        <button><i class="fa-solid fa-bars"></i></button>
-        <p><i class="fa-solid fa-person"></i>Arquiles DiaS</p>
-        <a href="/" aria-label="Página inicial" class="logo">
-        <img
-          src="img/central-perk-logo.png"
-          width="150"
-          alt="Logótipo do Central Perk"
-        />
-      </a>
-        <div aria-label="motorDePesquisa">
+        <button id="hamburguer"><i class="fa-solid fa-bars"></i></button>
+        <p class="escondido"><i class="fa-solid fa-person"></i>Arquiles Diaz</p>
+        <h1>COFFEE BREAK</h1>
+        <div aria-label="motorDePesquisa" class="miniGrid escondido">
           <label for="pesquisa">🔍</label>
           <input id="pesquisa" type="text" placeholder="Pesquise aqui" />
         </div>
@@ -52,29 +41,100 @@
         class="imgcafe"
       />
     </header>
+    <div aria-label="menuHamburguer" class="hamburguer" id="menuBurguer">
+      <div class="painelBurguer colapsado">
+        <i class="fa-solid fa-person"></i>
+        <p>Arquiles Diaz</p>
+      </div>
+      <div class="painelBurguer">
+        <i class="fa-regular fa-user"></i>
+        <p>Gerir conta</p>
+      </div>
+      <div class="painelBurguer">
+        <i class="fa-solid fa-heart"></i>
+        <p>Favoritos</p>
+      </div>
+      <div class="painelBurguer">
+        <i class="fa-solid fa-user-plus"></i>
+        <p>Convidar amigos</p>
+      </div>
+       <div class="painelBurguer colapsado">
+        <label for="pesquisa">🔍</label>
+        <input id="pesquisa" type="text" placeholder="Pesquise aqui" />
+      </div>
+      <div class="painelBurguer">
+        <i class="fa-regular fa-circle-question"></i>
+        <p>Ajuda</p>
+      </div>
+      <div class="painelBurguer">
+        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+        <p>Terminar sessão</p>
+      </div>
+    </div>
     <main>
+      <section>
+        <div
+          aria-label="painelInformativoTaxas"
+          class="info"
+          id="textoTaxaEntrega"
+        >
+          <p>
+            Esta taxa é variável consoante a localização da qual é realizado o
+            pedido. É informado(a) sempre da taxa total antes de proceder para o
+            pagamento. <br />
+            <br />Taxa de serviço: A taxa varia ainda consoante tamanho da
+            encomenda e tamanho do saco de encomenda. <br />
+            <br />
+            Taxa de encomendas pequenas: Uma taxa adicional de 0.50€ será
+            acrescida aos custos para encomendas inferiores a 5€.
+          </p>
+          <i class="fa-solid fa-xmark icon-cart" id="closePainelInfo"></i>
+        </div>
+        <div
+          aria-label="painelInformativoTempo"
+          class="infoTempo"
+          id="textoTempoEntrega"
+        >
+          <i class="fa-solid fa-xmark icon-cart" id="closeInfoTempo"></i>
+          <img src="/img/prepComida.png" />
+          <p>
+            Constrói o teu carrinho para teres um tempo estimativo mais preciso,
+            baseado nos produtos que escolheste, as condições reais actuais e
+            opções de entrega no checkout. Antes de selecionares os artigos,
+            este número reflecte o tempo de entrega mais rápida.
+          </p>
+        </div>
+      </section>
       <section class="primSeccao">
         <div aria-label="moradaCafe">
-          <h1>Central Perk - Loja Online</h1>
+          <h2>COFFEE BREAK</h2>
           <p>
-            4.7 <i class="fa-regular fa-thumbs-up"></i> (251) €0.50 Delivery Fee
+            4.7 <i class="fa-regular fa-thumbs-up"></i> (251) €0.50 Taxa de
+            entrega
           </p>
-          <p>Rua Imaginária, nº000<br>
-          1100-000 Lisboa</p>
+          <p>Avenida Herculano 314, Setúbal</p>
+          <p>2521-641, Azeitão</p>
         </div>
         <div aria-label="modoCompra" class="opcaoCompra">
-          <label for="delivery">Delivery</label>
+          <label for="delivery">Entrega ao Domicílio</label>
           <input id="delivery" type="radio" name="purchase" value="delivery" />
-          <label for="pickup">Pick-up</label>
+          <label for="pickup">Recolha no estabelecimento</label>
           <input id="pickup" type="radio" name="purchase" value="pickup" />
         </div>
         <div aria-label="custoEntrega">
-          <p>€0.50 Delivery Fee</p>
-          <p>Other fees <i class="fa-solid fa-info icon-info"></i></p>
+          <p>€0.50 Taxa de Entrega</p>
+          <p>
+            Outras taxas<i id="infoTaxa" class="fa-solid fa-info icon-info"></i>
+          </p>
         </div>
         <div aria-label="tempoEntrega">
           <p>22 min</p>
-          <p>Earliest arrival <i class="fa-solid fa-info icon-info"></i></p>
+          <p>
+            Tempo de entrega médio<i
+              id="infoTempo"
+              class="fa-solid fa-info icon-info"
+            ></i>
+          </p>
         </div>
       </section>
       <section>
@@ -90,13 +150,16 @@
               <h2>Bebidas Quentes</h2>
               <ol aria-label="Bebidas Quentes" class="menu">
                 <li>
-                  <div class="card" data-id="expresso" data-name="Expresso" data-price="0.90">
+                  <div
+                    class="card"
+                    data-id="expresso"
+                    data-name="Expresso"
+                    data-price="0.90"
+                  >
                     <div class="image-wrapper">
                       <img
-                        src="img/expresso.png"
+                        src="/img/expresso.png"
                         alt="cafe expresso"
-                        width="100%"
-                        height="100%"
                         class="templatecard"
                       />
                       <i class="fa-solid fa-plus icon-addCart"></i>
@@ -115,13 +178,16 @@
                   </div>
                 </li>
                 <li>
-                  <div class="card" data-id="cappucino" data-name="Cappucino" data-price="2.80">
+                  <div
+                    class="card"
+                    data-id="cappucino"
+                    data-name="Cappucino"
+                    data-price="2.80"
+                  >
                     <div class="image-wrapper">
                       <img
-                        src="img/capuccino.png"
+                        src="/img/capuccino.png"
                         alt="cappucino"
-                        width="100%"
-                        height="100%"
                         class="templatecard"
                       />
                       <i class="fa-solid fa-plus icon-addCart"></i>
@@ -141,13 +207,16 @@
                   </div>
                 </li>
                 <li>
-                  <div class="card" data-id="chocolateQuente" data-name="Chocolate Quente" data-price="3.10">
+                  <div
+                    class="card"
+                    data-id="chocolateQuente"
+                    data-name="Chocolate Quente"
+                    data-price="3.10"
+                  >
                     <div class="image-wrapper">
                       <img
-                        src="img/chocoquente.jpg"
+                        src="/img/chocoquente.jpg"
                         alt="chocolate quente"
-                        width="100%"
-                        height="100%"
                         class="templatecard"
                       />
                       <i class="fa-solid fa-plus icon-addCart"></i>
@@ -166,13 +235,16 @@
                   </div>
                 </li>
                 <li>
-                  <div class="card" data-id="mocha" data-name="Mocha" data-price="2.45">
+                  <div
+                    class="card"
+                    data-id="mocha"
+                    data-name="Mocha"
+                    data-price="2.45"
+                  >
                     <div class="image-wrapper">
                       <img
-                        src="img/mocha.png"
+                        src="/img/mocha.png"
                         alt="mocha"
-                        width="100%"
-                        height="100%"
                         class="templatecard"
                       />
                       <i class="fa-solid fa-plus icon-addCart"></i>
@@ -191,13 +263,16 @@
                   </div>
                 </li>
                 <li>
-                  <div class="card" data-id="americano" data-name="Americano" data-price="2.50">
+                  <div
+                    class="card"
+                    data-id="americano"
+                    data-name="Americano"
+                    data-price="2.50"
+                  >
                     <div class="image-wrapper">
                       <img
-                        src="img/americano.png"
+                        src="/img/americano.png"
                         alt="americano"
-                        width="100%"
-                        height="100%"
                         class="templatecard"
                       />
                       <i class="fa-solid fa-plus icon-addCart"></i>
@@ -216,15 +291,14 @@
                   </div>
                 </li>
                 <li>
-                  <div class="card" data-id="cha" data-name="Chá" data-price="1.55">
+                  <div
+                    class="card"
+                    data-id="cha"
+                    data-name="Chá"
+                    data-price="1.55"
+                  >
                     <div class="image-wrapper">
-                      <img
-                        src="img/cha.png"
-                        alt="cha"
-                        width="100%"
-                        height="100%"
-                        class="templatecard"
-                      />
+                      <img src="/img/cha.png" alt="cha" class="templatecard" />
                       <i class="fa-solid fa-plus icon-addCart"></i>
                     </div>
                     <div class="infoProduto">
@@ -242,17 +316,20 @@
                 </li>
               </ol>
             </div>
-            <section id="listaFrias" class="menuCat">
+            <div id="listaFrias" class="menuCat">
               <h2>Bebidas Frias</h2>
               <ol aria-label="Bebidas Frias" class="menu">
                 <li>
-                  <div class="card" data-id="expressoFrio" data-name="Expresso frio" data-price="1.10">
+                  <div
+                    class="card"
+                    data-id="expressoFrio"
+                    data-name="Expresso frio"
+                    data-price="1.10"
+                  >
                     <div class="image-wrapper">
                       <img
-                        src="img/cafefrio.jpg"
+                        src="/img/cafefrio.jpg"
                         alt="cafe expresso frio"
-                        width="100%"
-                        height="100%"
                         class="templatecard"
                       />
                       <i class="fa-solid fa-plus icon-addCart"></i>
@@ -264,19 +341,23 @@
                         class="product-description"
                         title="Em dias de calor, trazemos esta opção de café frio servido com cubos de gelo."
                       >
-                        Em dias de calor, trazemos esta opção de café frio servido com cubos de gelo.
+                        Em dias de calor, trazemos esta opção de café frio
+                        servido com cubos de gelo.
                       </p>
                     </div>
                   </div>
                 </li>
                 <li>
-                  <div class="card" data-id="matchaFrio" data-name="Matcha Frio" data-price="3.00">
+                  <div
+                    class="card"
+                    data-id="matchaFrio"
+                    data-name="Matcha Frio"
+                    data-price="3.00"
+                  >
                     <div class="image-wrapper">
                       <img
-                        src="img/matchafrio.png"
+                        src="/img/matchafrio.png"
                         alt="matcha frio"
-                        width="100%"
-                        height="100%"
                         class="templatecard"
                       />
                       <i class="fa-solid fa-plus icon-addCart"></i>
@@ -288,19 +369,23 @@
                         class="product-description"
                         title="Uma alternativa saudável aos dias quentes, servido com leite vegetal à escolha."
                       >
-                        Uma alternativa saudável aos dias quentes, servido com leite vegetal à escolha.
+                        Uma alternativa saudável aos dias quentes, servido com
+                        leite vegetal à escolha.
                       </p>
                     </div>
                   </div>
                 </li>
                 <li>
-                  <div class="card" data-id="matchaMorango" data-name="Matcha de morango" data-price="3.20">
+                  <div
+                    class="card"
+                    data-id="matchaMorango"
+                    data-name="Matcha de morango"
+                    data-price="3.20"
+                  >
                     <div class="image-wrapper">
                       <img
-                        src="img/matchamorango.png"
+                        src="/img/matchamorango.png"
                         alt="matcha morango"
-                        width="100%"
-                        height="100%"
                         class="templatecard"
                       />
                       <i class="fa-solid fa-plus icon-addCart"></i>
@@ -313,26 +398,30 @@
                         title="Adicionado morango e creme de morango à receita de matcha tradicional, 
                         servido com cubos de gelo e leite vegetal à escolha. "
                       >
-                        Adicionado morango e creme de morango à receita de matcha tradicional, 
-                        servido com cubos de gelo e leite vegetal à escolha. 
+                        Adicionado morango e creme de morango à receita de
+                        matcha tradicional, servido com cubos de gelo e leite
+                        vegetal à escolha.
                       </p>
                     </div>
                   </div>
                 </li>
                 <li>
-                  <div class="card" data-id="americanoFrio" data-name="Café americano frio" data-price="2.30">
+                  <div
+                    class="card"
+                    data-id="americanoFrio"
+                    data-name="Café americano frio"
+                    data-price="2.30"
+                  >
                     <div class="image-wrapper">
                       <img
-                        src="img/americanofrio.png"
+                        src="/img/americanofrio.png"
                         alt="cafe americano com gelo"
-                        width="100%"
-                        height="100%"
                         class="templatecard"
                       />
                       <i class="fa-solid fa-plus icon-addCart"></i>
                     </div>
                     <div class="infoProduto">
-                      <h3> Café americano frio</h3>
+                      <h3>Café americano frio</h3>
                       <p>€2.30 <i class="fa-regular fa-heart"></i> 86% (117)</p>
                       <p
                         class="product-description"
@@ -344,13 +433,16 @@
                   </div>
                 </li>
                 <li>
-                  <div class="card" data-id="cappucinoFrio" data-name="Cappucino frio" data-price="2.50">
+                  <div
+                    class="card"
+                    data-id="cappucinoFrio"
+                    data-name="Cappucino frio"
+                    data-price="2.50"
+                  >
                     <div class="image-wrapper">
                       <img
-                        src="img/cappucinofrio.png"
+                        src="/img/cappucinofrio.png"
                         alt="cappucino frio"
-                        width="100%"
-                        height="100%"
                         class="templatecard"
                       />
                       <i class="fa-solid fa-plus icon-addCart"></i>
@@ -363,20 +455,24 @@
                         title="Idêntico à nossa receita tradicional do cappucino, acrescentado cubos de gelo
                         e syrup de chocolate ou caramelo em cima."
                       >
-                        Idêntico à nossa receita tradicional do cappucino, acrescentado cubos de gelo
-                        e syrup de chocolate ou caramelo em cima.
+                        Idêntico à nossa receita tradicional do cappucino,
+                        acrescentado cubos de gelo e syrup de chocolate ou
+                        caramelo em cima.
                       </p>
                     </div>
                   </div>
                 </li>
                 <li>
-                  <div class="card" data-id="galaoGelado" data-name="Galão com bola de gelado" data-price="2.95">
+                  <div
+                    class="card"
+                    data-id="galaoGelado"
+                    data-name="Galão com bola de gelado"
+                    data-price="2.95"
+                  >
                     <div class="image-wrapper">
                       <img
-                        src="img/galaoGelado.png"
+                        src="/img/galaoGelado.png"
                         alt="galao com bola de gelado"
-                        width="100%"
-                        height="100%"
                         class="templatecard"
                       />
                       <i class="fa-solid fa-plus icon-addCart"></i>
@@ -389,25 +485,29 @@
                         title=" Receita da casa, um galão servido frio, com leite à escolha, 
                         com bola de gelado e baunilha, syrup de caramelo, flocos de chocolate e creme."
                       >
-                        Receita da casa, um galão servido frio, com leite à escolha, 
-                        com bola de gelado e baunilha, syrup de caramelo, flocos de chocolate e creme.
+                        Receita da casa, um galão servido frio, com leite à
+                        escolha, com bola de gelado e baunilha, syrup de
+                        caramelo, flocos de chocolate e creme.
                       </p>
                     </div>
                   </div>
                 </li>
               </ol>
-            </section>
+            </div>
             <div id="listaPastelaria" class="menuCat">
               <h2>Pastelaria</h2>
               <ol aria-label="Pastelaria" class="menu">
                 <li>
-                  <div class="card" data-id="muffinChocolate" data-name="Muffin de chocolate" data-price="1.50">
+                  <div
+                    class="card"
+                    data-id="muffinChocolate"
+                    data-name="Muffin de chocolate"
+                    data-price="1.50"
+                  >
                     <div class="image-wrapper">
                       <img
-                        src="img/muffinchoco.jpg"
+                        src="/img/muffinchoco.jpg"
                         alt="muffin de chocolate"
-                        width="100%"
-                        height="100%"
                         class="templatecard"
                       />
                       <i class="fa-solid fa-plus icon-addCart"></i>
@@ -420,20 +520,23 @@
                         title="Muffins de chocolate, confecionados com uma receita caseira, chocolate preto 50% cacau e 
                         açúcar de cana."
                       >
-                        Muffins de chocolate, confecionados com uma receita caseira, chocolate preto 50% cacau e 
-                        açúcar de cana.
+                        Muffins de chocolate, confecionados com uma receita
+                        caseira, chocolate preto 50% cacau e açúcar de cana.
                       </p>
                     </div>
                   </div>
                 </li>
                 <li>
-                  <div class="card" data-id="muffinBlueberry" data-name="Muffin de blueberry" data-price="1.50">
+                  <div
+                    class="card"
+                    data-id="muffinBlueberry"
+                    data-name="Muffin de blueberry"
+                    data-price="1.50"
+                  >
                     <div class="image-wrapper">
                       <img
-                        src="img/muffinblueberry.jpg"
+                        src="/img/muffinblueberry.jpg"
                         alt="muffin de blueberry"
-                        width="100%"
-                        height="100%"
                         class="templatecard"
                       />
                       <i class="fa-solid fa-plus icon-addCart"></i>
@@ -446,17 +549,23 @@
                         title="Muffins de blueberry, confecionados com uma receita caseira, 
                         blueberries directos da nossa horta e usado açúcar de cana."
                       >
-                        Muffins de blueberry, confecionados com uma receita caseira, 
-                        blueberries directos da nossa horta e usado açúcar de cana.
+                        Muffins de blueberry, confecionados com uma receita
+                        caseira, blueberries directos da nossa horta e usado
+                        açúcar de cana.
                       </p>
                     </div>
                   </div>
                 </li>
                 <li>
-                  <div class="card" data-id="croissant" data-name="Croissant simples" data-price="1.35">
+                  <div
+                    class="card"
+                    data-id="croissant"
+                    data-name="Croissant simples"
+                    data-price="1.35"
+                  >
                     <div class="image-wrapper">
                       <img
-                        src="img/croissant.jpg"
+                        src="/img/croissant.jpg"
                         alt="croissant folhado simples"
                         class="templatecard"
                       />
@@ -470,17 +579,22 @@
                         title="Croissant simples, folhado, com exterior estaladiço e 
                       interior macio ideal para acompanhar um café ou chá."
                       >
-                      Croissant simples, folhado, com exterior estaladiço e 
-                      interior macio ideal para acompanhar um café ou chá.
+                        Croissant simples, folhado, com exterior estaladiço e
+                        interior macio ideal para acompanhar um café ou chá.
                       </p>
                     </div>
                   </div>
                 </li>
                 <li>
-                  <div class="card" data-id="croissantChocolate" data-name="Croissant folhado de Chocolate" data-price="1.85">
+                  <div
+                    class="card"
+                    data-id="croissantChocolate"
+                    data-name="Croissant folhado de Chocolate"
+                    data-price="1.85"
+                  >
                     <div class="image-wrapper">
                       <img
-                        src="img/croissantChoco.png"
+                        src="/img/croissantChoco.png"
                         alt="croissant de chocolate"
                         class="templatecard"
                       />
@@ -494,17 +608,23 @@
                         title="Croissant folhado de chocolate, com exterior estaladiço e 
                       interior com chocolate derretido ideal para pequeno-almoço ou lanche."
                       >
-                      Croissant folhado de chocolate, com exterior estaladiço e 
-                      interior com chocolate derretido ideal para pequeno-almoço ou lanche.
+                        Croissant folhado de chocolate, com exterior estaladiço
+                        e interior com chocolate derretido ideal para
+                        pequeno-almoço ou lanche.
                       </p>
                     </div>
                   </div>
                 </li>
                 <li>
-                  <div class="card" data-id="cinnamonRolls" data-name="Cinnamon rolls" data-price="2.20">
+                  <div
+                    class="card"
+                    data-id="cinnamonRolls"
+                    data-name="Cinnamon rolls"
+                    data-price="2.20"
+                  >
                     <div class="image-wrapper">
                       <img
-                        src="img/cinnamonrolls.png"
+                        src="/img/cinnamonrolls.png"
                         alt="cinnamon rolls"
                         class="templatecard"
                       />
@@ -518,17 +638,23 @@
                         title="Cinnamon rolls macios e aromáticos,  recheados com canela e açúcar,
                       e cobertos com um delicado glaze que realça o sabor quente e reconfortante."
                       >
-                      Cinnamon rolls macios e aromáticos,  recheados com canela e açúcar,
-                      e cobertos com um delicado glaze que realça o sabor quente e reconfortante.
+                        Cinnamon rolls macios e aromáticos, recheados com canela
+                        e açúcar, e cobertos com um delicado glaze que realça o
+                        sabor quente e reconfortante.
                       </p>
                     </div>
                   </div>
                 </li>
                 <li>
-                  <div class="card" data-id="folhadosVariados" data-name="Folhados variados" data-price="2.50">
+                  <div
+                    class="card"
+                    data-id="folhadosVariados"
+                    data-name="Folhados variados"
+                    data-price="2.50"
+                  >
                     <div class="image-wrapper">
                       <img
-                        src="img/folhadosVariados.png"
+                        src="/img/folhadosVariados.png"
                         alt="pastelaria folhada variados"
                         class="templatecard"
                       />
@@ -542,8 +668,10 @@
                         title="Esta receita de folhados, com exterior estaladiço e interior amanteigado, 
                       traz diferentes variações, com cobertura de chocolate negro, chocolate branco e creme de pistáchio."
                       >
-                      Esta receita de folhados, com exterior estaladiço e interior amanteigado, 
-                      traz diferentes variações, com cobertura de chocolate negro, chocolate branco e creme de pistáchio.
+                        Esta receita de folhados, com exterior estaladiço e
+                        interior amanteigado, traz diferentes variações, com
+                        cobertura de chocolate negro, chocolate branco e creme
+                        de pistáchio.
                       </p>
                     </div>
                   </div>
@@ -556,12 +684,11 @@
     </main>
     <aside id="painelCarrinho" class="cartpanel">
       <div class="cartheader">
-         <h2>O meu carrinho</h2>
-         <i class="fa-solid fa-xmark icon-cart" id="closeCart"></i>
+        <h2>O meu carrinho</h2>
+        <i class="fa-solid fa-xmark icon-cart" id="closeCart"></i>
       </div>
-      <div id="cartcontent">
-
-      </div>
+      <div id="cartcontent" class="conteudoCarro"></div>
+      <button id="limparCarrinho">Limpar carrinho</button>
     </aside>
   </body>
 </html>
