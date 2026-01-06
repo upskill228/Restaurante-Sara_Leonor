@@ -22,61 +22,62 @@
 
   <body onload="carregarPagina()">
     <header class="cabecalhoSup">
-        <button id="hamburguer" aria-label="Abrir menu" aria-expanded="false" aria-controls="menuBurguer">
-          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      <button
+        id="hamburguer"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="menuBurguer"
+      >
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+      <nav aria-label="painelDoMenu" class="hamburguer" id="menuBurguer">
+        <button class="painelBurguer colapsado botao">
+          <i class="fa-solid fa-person" aria-hidden="true"></i>
+          <span>Arquiles Diaz</span>
         </button>
-        <nav aria-label="painelDoMenu" class="hamburguer" id="menuBurguer">
-          <button class="painelBurguer colapsado botao">
-            <i class="fa-solid fa-person" aria-hidden="true"></i>
-            <span>Arquiles Diaz</span>
-          </button>
-          <button class="painelBurguer botao">
-            <i class="fa-regular fa-user" aria-hidden="true"></i>
-            <span>Gerir conta</span>
-          </button>
-          <button class="painelBurguer botao">
-            <i class="fa-solid fa-heart" aria-hidden="true"></i>
-            <span>Favoritos</span>
-          </button>
-          <button class="painelBurguer botao">
-            <i class="fa-solid fa-user-plus" aria-hidden="true"></i>
-            <span>Convidar amigos</span>
-          </button>
-          <button class="painelBurguer colapsado botao">
-            <label for="pesquisa-painel">🔍</label>
-            <input
-              id="pesquisa-painel"
-              type="text"
-              placeholder="Pesquise aqui"
-              aria-label="barra de pesquisa"
-            />
-          </button>
-          <button class="painelBurguer botao">
-            <i class="fa-regular fa-circle-question" aria-hidden="true"></i>
-            <span>Ajuda</span>
-          </button>
-          <button class="painelBurguer botao">
-            <i
-              class="fa-solid fa-arrow-right-to-bracket"
-              aria-hidden="true"
-            ></i>
-            <span>Terminar sessão</span>
-          </button>
-        </nav>
-        <p class="escondido"><i class="fa-solid fa-person"></i>Arquiles Diaz</p>
-        <h1>COFFEE BREAK</h1>
-        <div aria-label="motorDePesquisa" class="miniGrid escondido">
-          <label for="pesquisa-cabecalho">🔍</label>
+        <button class="painelBurguer botao">
+          <i class="fa-regular fa-user" aria-hidden="true"></i>
+          <span>Gerir conta</span>
+        </button>
+        <button class="painelBurguer botao">
+          <i class="fa-solid fa-heart" aria-hidden="true"></i>
+          <span>Favoritos</span>
+        </button>
+        <button class="painelBurguer botao">
+          <i class="fa-solid fa-user-plus" aria-hidden="true"></i>
+          <span>Convidar amigos</span>
+        </button>
+        <button class="painelBurguer colapsado botao">
+          <label for="pesquisa-painel">🔍</label>
           <input
-            id="pesquisa-cabecalho"
+            id="pesquisa-painel"
             type="text"
             placeholder="Pesquise aqui"
+            aria-label="barra de pesquisa"
           />
-        </div>
-        <button id="basket" aria-label="carrinho" class="botao">
-          <i class="fa-solid fa-basket-shopping icon-cart"></i>
         </button>
+        <button class="painelBurguer botao">
+          <i class="fa-regular fa-circle-question" aria-hidden="true"></i>
+          <span>Ajuda</span>
+        </button>
+        <button class="painelBurguer botao">
+          <i class="fa-solid fa-arrow-right-to-bracket" aria-hidden="true"></i>
+          <span>Terminar sessão</span>
+        </button>
+      </nav>
+      <p class="escondido"><i class="fa-solid fa-person"></i>Arquiles Diaz</p>
+      <h1>COFFEE BREAK</h1>
+      <div aria-label="motorDePesquisa" class="miniGrid escondido">
+        <label for="pesquisa-cabecalho">🔍</label>
+        <input
+          id="pesquisa-cabecalho"
+          type="text"
+          placeholder="Pesquise aqui"
+        />
       </div>
+      <button id="basket" aria-label="carrinho" class="botao">
+        <i class="fa-solid fa-basket-shopping icon-cart"></i>
+      </button>
       <img
         src="img/backgroundcafe.jpg"
         alt="grãos de café em bancada de madeira"
@@ -85,34 +86,94 @@
       />
     </header>
     <main>
-      <section>
+      <section class="primSeccao">
+        <address>
+          <h2>COFFEE BREAK</h2>
+          <p>
+            <span class="sr-only">Avaliação: </span> 4.7 <i class="fa-regular fa-thumbs-up" aria-hidden="true"></i> 
+            <span class="sr-only">Quantidade de reviews:</span> (251)
+            €0.50 Taxa de entrega
+          </p>
+          <p>Avenida Herculano 314, Setúbal</p>
+          <p>2521-641, Azeitão</p>
+        </address>
+        <fieldset class="opcaoCompra">
+          <legend>Modo de compra:</legend>
+          <label for="delivery">Entrega ao Domicílio</label>
+          <input id="delivery" type="radio" name="purchase" value="delivery" />
+          <label for="pickup">Recolha no estabelecimento</label>
+          <input id="pickup" type="radio" name="purchase" value="pickup" />
+        </fieldset>
+        <div aria-label="custoEntrega">
+          <p>€0.50 Taxa de Entrega</p>
+          <p id="textoTaxasEntrega">
+            Outras taxas
+            <button class="botao">
+              <i id="infoTaxa" class="fa-solid fa-info icon-info"></i>
+            </button>
+          </p>
+        </div>
         <div
-          aria-label="painelInformativoTaxas"
+          role="dialog"
+          aria-labelledby="textoTaxasEntrega"
+          aria-modal="true"
           class="info"
           id="textoTaxaEntrega"
         >
+          <button
+            aria-label="Fechar informação sobre Taxas de Entrega"
+            class="botao fecho"
+          >
+            <i
+              class="fa-solid fa-xmark icon-cart"
+              id="closePainelInfo"
+              aria-hidden="true"
+            ></i>
+          </button>
           <p>
             Esta taxa é variável consoante a localização da qual é realizado o
             pedido. É informado(a) sempre da taxa total antes de proceder para o
-            pagamento. </p>
-            <p>
-            Taxa de serviço: A taxa varia ainda consoante tamanho da
-            encomenda e tamanho do saco de encomenda.
-            </p> 
-            <p>
+            pagamento.
+          </p>
+          <p>
+            Taxa de serviço: A taxa varia ainda consoante tamanho da encomenda e
+            tamanho do saco de encomenda.
+          </p>
+          <p>
             Taxa de encomendas pequenas: Uma taxa adicional de 0.50€ será
             acrescida aos custos para encomendas inferiores a 5€.
-            </p>
-          
-          <i class="fa-solid fa-xmark icon-cart" id="closePainelInfo"></i>
+          </p>
+        </div>
+        <div aria-label="textoTempoEntrega">
+          <p>22 min</p>
+          <p id="textoEntrega">
+            Tempo de entrega médio<i
+              id="infoTempo"
+              class="fa-solid fa-info icon-info"
+            ></i>
+          </p>
         </div>
         <div
-          aria-label="painelInformativoTempo"
+          aria-labelledby="textoEntrega"
+          role="dialog"
+          aria-modal="true"
           class="infoTempo"
           id="textoTempoEntrega"
         >
-          <i class="fa-solid fa-xmark icon-cart" id="closeInfoTempo"></i>
-          <img src="/img/prepComida.png" />
+          <button
+            aria-label="Fechar informação sobre Taxas de tempo de entrega"
+            class="botao fecho"
+          >
+            <i
+              class="fa-solid fa-xmark icon-cart"
+              id="closeInfoTempo"
+              aria-hidden="true"
+            ></i>
+          </button>
+          <img
+            src="/img/prepComida.png"
+            alt="ingredientes em tábua de madeira"
+          />
           <p>
             Constrói o teu carrinho para teres um tempo estimativo mais preciso,
             baseado nos produtos que escolheste, as condições reais actuais e
@@ -121,52 +182,38 @@
           </p>
         </div>
       </section>
-      <section class="primSeccao">
-        <div aria-label="moradaCafe">
-          <h2>COFFEE BREAK</h2>
-          <p>
-            4.7 <i class="fa-regular fa-thumbs-up"></i> (251) €0.50 Taxa de
-            entrega
-          </p>
-          <p>Avenida Herculano 314, Setúbal</p>
-          <p>2521-641, Azeitão</p>
-        </div>
-        <div aria-label="modoCompra" class="opcaoCompra">
-          <label for="delivery">Entrega ao Domicílio</label>
-          <input id="delivery" type="radio" name="purchase" value="delivery" />
-          <label for="pickup">Recolha no estabelecimento</label>
-          <input id="pickup" type="radio" name="purchase" value="pickup" />
-        </div>
-        <div aria-label="custoEntrega">
-          <p>€0.50 Taxa de Entrega</p>
-          <p>
-            Outras taxas<i id="infoTaxa" class="fa-solid fa-info icon-info"></i>
-          </p>
-        </div>
-        <div aria-label="tempoEntrega">
-          <p>22 min</p>
-          <p>
-            Tempo de entrega médio<i
-              id="infoTempo"
-              class="fa-solid fa-info icon-info"
-            ></i>
-          </p>
-        </div>
-      </section>
       <section>
         <div class="gridPrincipal">
-          <nav>
-            <span>O nosso menu</span>
-            <div><a class="menunav" id="quentes" href>Bebidas quentes</a></div>
-            <div><a class="menunav" id="frias" href>Bebidas frias</a></div>
-            <div><a class="menunav" id="pastelaria" href>Pastelaria</a></div>
+          <nav aria-label="categorias do menu">
+            <h3>O nosso menu</h3>
+            <button
+              class="botao"
+              aria-controls="listaQuentes"
+              aria-selected="true"
+            >
+              <a class="menunav" id="quentes" href="#">Bebidas quentes</a>
+            </button>
+            <button
+              class="botao"
+              aria-controls="listaFrias"
+              aria-selected="false"
+            >
+              <a class="menunav" id="frias" href="#">Bebidas frias</a>
+            </button>
+            <button
+              class="botao"
+              aria-controls="listaPastelaria"
+              aria-selected="false"
+            >
+              <a class="menunav" id="pastelaria" href="#">Pastelaria</a>
+            </button>
           </nav>
           <div>
-            <div id="listaQuentes" class="menuCat active">
+            <div id="listaQuentes" class="menuCat active" aria-hidden="false">
               <h2>Bebidas Quentes</h2>
               <ol aria-label="Bebidas Quentes" class="menu">
                 <li>
-                  <div
+                  <article
                     class="card"
                     data-id="expresso"
                     data-name="Expresso"
@@ -175,26 +222,32 @@
                     <div class="image-wrapper">
                       <img
                         src="/img/expresso.png"
-                        alt="cafe expresso"
+                        alt="café expresso servido numa chávena"
                         class="templatecard"
                       />
-                      <i class="fa-solid fa-plus icon-addCart"></i>
+                      <button
+                        class="icon-addCart botao"
+                        aria-label="Adicionar produto ao carrinho"
+                      >
+                        <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                      </button>
                     </div>
                     <div class="infoProduto">
                       <h3>Expresso</h3>
-                      <p>€0.90 <i class="fa-regular fa-heart"></i> 99% (71)</p>
-                      <p
-                        class="product-description"
-                        title="Esta bebida feita com grão de café torrado proveninete do Peru. Pode ser servido em dose simples ou dupla."
-                      >
+                      <p>
+                        €0.90
+                        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                        <span class="sr-only">Avaliação:</span> 99% (71)
+                      </p>
+                      <p class="product-description">
                         Esta bebida feita com grão de café torrado proveninete
                         do Peru. Pode ser servido em dose simples ou dupla.
                       </p>
                     </div>
-                  </div>
+                  </article>
                 </li>
                 <li>
-                  <div
+                  <article
                     class="card"
                     data-id="cappucino"
                     data-name="Cappucino"
@@ -203,27 +256,33 @@
                     <div class="image-wrapper">
                       <img
                         src="/img/capuccino.png"
-                        alt="cappucino"
+                        alt="cappucino cremoso com topping de chocolate servido numa chávena"
                         class="templatecard"
                       />
-                      <i class="fa-solid fa-plus icon-addCart"></i>
+                      <button
+                        class="icon-addCart botao"
+                        aria-label="Adicionar produto ao carrinho"
+                      >
+                        <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                      </button>
                     </div>
                     <div class="infoProduto">
                       <h3>Cappucino</h3>
-                      <p>€2.80 <i class="fa-regular fa-heart"></i> 78% (63)</p>
-                      <p
-                        class="product-description"
-                        title="Feito com grão de café Português, leite meio gordo ou vegetal (à escolha). Cobertura de flocos de chocolate em cima."
-                      >
+                      <p>
+                        €2.80
+                        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                        <span class="sr-only">Avaliação:</span> 78% (63)
+                      </p>
+                      <p class="product-description">
                         Feito com grão de café Português, leite meio gordo ou
                         vegetal (à escolha). Cobertura de flocos de chocolate em
                         cima.
                       </p>
                     </div>
-                  </div>
+                  </article>
                 </li>
                 <li>
-                  <div
+                  <article
                     class="card"
                     data-id="chocolateQuente"
                     data-name="Chocolate Quente"
@@ -232,26 +291,35 @@
                     <div class="image-wrapper">
                       <img
                         src="/img/chocoquente.jpg"
-                        alt="chocolate quente"
+                        alt="chocolate quente cremoso com pepitas de chocolate servido numa chávena"
                         class="templatecard"
                       />
-                      <i class="fa-solid fa-plus icon-addCart"></i>
+                      <button
+                        class="icon-addCart botao"
+                        aria-label="Adicionar produto ao carrinho"
+                      >
+                        <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                      </button>
                     </div>
                     <div class="infoProduto">
                       <h3>Chocolate Quente</h3>
-                      <p>€3.10 <i class="fa-regular fa-heart"></i> 62% (62)</p>
+                      <p>
+                        €3.10
+                        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                        <span class="sr-only">Avaliação:</span> 62% (62)
+                      </p>
                       <p
                         class="product-description"
-                        title="Com uma receita caseira, esta bebida oferece um intenso sabor a chocolate, misturado com leite à escolha."
+                       
                       >
                         Com uma receita caseira, esta bebida oferece um intenso
                         sabor a chocolate, misturado com leite à escolha.
                       </p>
                     </div>
-                  </div>
+                  </article>
                 </li>
                 <li>
-                  <div
+                  <article
                     class="card"
                     data-id="mocha"
                     data-name="Mocha"
@@ -260,26 +328,35 @@
                     <div class="image-wrapper">
                       <img
                         src="/img/mocha.png"
-                        alt="mocha"
+                        alt="mocha servido numa caneca metálica"
                         class="templatecard"
                       />
-                      <i class="fa-solid fa-plus icon-addCart"></i>
+                      <button
+                        class="icon-addCart botao"
+                        aria-label="Adicionar produto ao carrinho"
+                      >
+                        <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                      </button>
                     </div>
                     <div class="infoProduto">
                       <h3>Mocha</h3>
-                      <p>€2.45 <i class="fa-regular fa-heart"></i> 82% (104)</p>
+                      <p>
+                        €2.45
+                        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                        <span class="sr-only">Avaliação:</span> 82% (104)
+                      </p>
                       <p
                         class="product-description"
-                        title="Leite com chocolate, com um shot de expresso à mistura, servido com leite à escolha."
+
                       >
                         Leite com chocolate, com um shot de expresso à mistura,
                         servido com leite à escolha.
                       </p>
                     </div>
-                  </div>
+                  </article>
                 </li>
                 <li>
-                  <div
+                  <article
                     class="card"
                     data-id="americano"
                     data-name="Americano"
@@ -288,47 +365,65 @@
                     <div class="image-wrapper">
                       <img
                         src="/img/americano.png"
-                        alt="americano"
+                        alt="americano servido numa caneca metálica"
                         class="templatecard"
                       />
-                      <i class="fa-solid fa-plus icon-addCart"></i>
+                      <button
+                        class="icon-addCart botao"
+                        aria-label="Adicionar produto ao carrinho"
+                      >
+                        <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                      </button>
                     </div>
                     <div class="infoProduto">
                       <h3>Americano</h3>
-                      <p>€2.50 <i class="fa-regular fa-heart"></i> 47% (53)</p>
+                      <p>
+                        €2.50
+                        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                        <span class="sr-only">Avaliação:</span> 47% (53)
+                      </p>
                       <p
                         class="product-description"
-                        title="Café Longo simples, misturado com água quente, pode ser servido com ou sem leite."
+                  
                       >
                         Café Longo simples, misturado com água quente, pode ser
                         servido com ou sem leite.
                       </p>
                     </div>
-                  </div>
+                  </article>
                 </li>
                 <li>
-                  <div
+                  <article
                     class="card"
                     data-id="cha"
                     data-name="Chá"
                     data-price="1.55"
                   >
                     <div class="image-wrapper">
-                      <img src="/img/cha.png" alt="cha" class="templatecard" />
-                      <i class="fa-solid fa-plus icon-addCart"></i>
+                      <img src="/img/cha.png" alt="chá quente em chávena de vidro" class="templatecard" />
+                      <button
+                        class="icon-addCart botao"
+                        aria-label="Adicionar produto ao carrinho"
+                      >
+                        <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                      </button>
                     </div>
                     <div class="infoProduto">
                       <h3>Chá</h3>
-                      <p>€1.55 <i class="fa-regular fa-heart"></i> 80% (74)</p>
+                      <p>
+                        €1.55
+                        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                        <span class="sr-only">Avaliação:</span> 80% (74)
+                      </p>
                       <p
                         class="product-description"
-                        title="Dispomos de uma uma variedade extensa de chás, veja o cárdapio para mais informação."
+                      
                       >
                         Dispomos de uma uma variedade extensa de chás, veja o
                         cárdapio para mais informação.
                       </p>
                     </div>
-                  </div>
+                  </article>
                 </li>
               </ol>
             </div>
@@ -336,7 +431,7 @@
               <h2>Bebidas Frias</h2>
               <ol aria-label="Bebidas Frias" class="menu">
                 <li>
-                  <div
+                  <article
                     class="card"
                     data-id="expressoFrio"
                     data-name="Expresso frio"
@@ -345,26 +440,35 @@
                     <div class="image-wrapper">
                       <img
                         src="/img/cafefrio.jpg"
-                        alt="cafe expresso frio"
+                        alt="Café expresso frio servido num copo de vidro longo com cubos de gelo"
                         class="templatecard"
                       />
-                      <i class="fa-solid fa-plus icon-addCart"></i>
+                      <button
+                        class="icon-addCart botao"
+                        aria-label="Adicionar produto ao carrinho"
+                      >
+                        <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                      </button>
                     </div>
                     <div class="infoProduto">
                       <h3>Expresso frio</h3>
-                      <p>€1.10 <i class="fa-regular fa-heart"></i> 72% (143)</p>
+                      <p>
+                        €1.10
+                        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                        <span class="sr-only">Avaliação:</span> 72% (143)
+                      </p>
                       <p
                         class="product-description"
-                        title="Em dias de calor, trazemos esta opção de café frio servido com cubos de gelo."
+                    
                       >
                         Em dias de calor, trazemos esta opção de café frio
                         servido com cubos de gelo.
                       </p>
                     </div>
-                  </div>
+                  </article>
                 </li>
                 <li>
-                  <div
+                  <article
                     class="card"
                     data-id="matchaFrio"
                     data-name="Matcha Frio"
@@ -373,26 +477,35 @@
                     <div class="image-wrapper">
                       <img
                         src="/img/matchafrio.png"
-                        alt="matcha frio"
+                        alt="matcha frio misturado com leite e cubos de gelo servido num copo de vidro"
                         class="templatecard"
                       />
-                      <i class="fa-solid fa-plus icon-addCart"></i>
+                      <button
+                        class="icon-addCart botao"
+                        aria-label="Adicionar produto ao carrinho"
+                      >
+                        <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                      </button>
                     </div>
                     <div class="infoProduto">
                       <h3>Matcha frio</h3>
-                      <p>€3.00 <i class="fa-regular fa-heart"></i> 45% (50)</p>
+                      <p>
+                        €3.00
+                        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                        <span class="sr-only">Avaliação:</span> 45% (50)
+                      </p>
                       <p
                         class="product-description"
-                        title="Uma alternativa saudável aos dias quentes, servido com leite vegetal à escolha."
+                 
                       >
                         Uma alternativa saudável aos dias quentes, servido com
                         leite vegetal à escolha.
                       </p>
                     </div>
-                  </div>
+                  </article>
                 </li>
                 <li>
-                  <div
+                  <article
                     class="card"
                     data-id="matchaMorango"
                     data-name="Matcha de morango"
@@ -401,28 +514,36 @@
                     <div class="image-wrapper">
                       <img
                         src="/img/matchamorango.png"
-                        alt="matcha morango"
+                        alt="matcha morango cremoso, misturado com leite, com um morango em cima, e topping de morango na base, servido em copo de vidro"
                         class="templatecard"
                       />
-                      <i class="fa-solid fa-plus icon-addCart"></i>
+                      <button
+                        class="icon-addCart botao"
+                        aria-label="Adicionar produto ao carrinho"
+                      >
+                        <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                      </button>
                     </div>
                     <div class="infoProduto">
                       <h3>Matcha de morango</h3>
-                      <p>€3.20 <i class="fa-regular fa-heart"></i> 57% (68)</p>
+                      <p>
+                        €3.20
+                        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                        <span class="sr-only">Avaliação:</span> 57% (68)
+                      </p>
                       <p
                         class="product-description"
-                        title="Adicionado morango e creme de morango à receita de matcha tradicional, 
-                        servido com cubos de gelo e leite vegetal à escolha. "
+                      
                       >
                         Adicionado morango e creme de morango à receita de
                         matcha tradicional, servido com cubos de gelo e leite
                         vegetal à escolha.
                       </p>
                     </div>
-                  </div>
+                  </article>
                 </li>
                 <li>
-                  <div
+                  <article
                     class="card"
                     data-id="americanoFrio"
                     data-name="Café americano frio"
@@ -431,25 +552,34 @@
                     <div class="image-wrapper">
                       <img
                         src="/img/americanofrio.png"
-                        alt="cafe americano com gelo"
+                        alt="café longo americano com cubos de gelo em copo de vidro e servido com palhinha"
                         class="templatecard"
                       />
-                      <i class="fa-solid fa-plus icon-addCart"></i>
+                      <button
+                        class="icon-addCart botao"
+                        aria-label="Adicionar produto ao carrinho"
+                      >
+                        <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                      </button>
                     </div>
                     <div class="infoProduto">
                       <h3>Café americano frio</h3>
-                      <p>€2.30 <i class="fa-regular fa-heart"></i> 86% (117)</p>
+                      <p>
+                        €2.30
+                        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                        <span class="sr-only">Avaliação:</span> 86% (117)
+                      </p>
                       <p
                         class="product-description"
-                        title=" Um café americano longo servido frio."
+                       
                       >
                         Um café americano longo servido frio.
                       </p>
                     </div>
-                  </div>
+                  </article>
                 </li>
                 <li>
-                  <div
+                  <article
                     class="card"
                     data-id="cappucinoFrio"
                     data-name="Cappucino frio"
@@ -458,28 +588,36 @@
                     <div class="image-wrapper">
                       <img
                         src="/img/cappucinofrio.png"
-                        alt="cappucino frio"
+                        alt="cappucino frio cremoso com syrup de caramelo servido em copo de vidro"
                         class="templatecard"
                       />
-                      <i class="fa-solid fa-plus icon-addCart"></i>
+                      <button
+                        class="icon-addCart botao"
+                        aria-label="Adicionar produto ao carrinho"
+                      >
+                        <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                      </button>
                     </div>
                     <div class="infoProduto">
                       <h3>Cappucino frio</h3>
-                      <p>€2.50 <i class="fa-regular fa-heart"></i> 91% (123)</p>
+                      <p>
+                        €2.50
+                        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                        <span class="sr-only">Avaliação:</span> 91% (123)
+                      </p>
                       <p
                         class="product-description"
-                        title="Idêntico à nossa receita tradicional do cappucino, acrescentado cubos de gelo
-                        e syrup de chocolate ou caramelo em cima."
+                       
                       >
                         Idêntico à nossa receita tradicional do cappucino,
                         acrescentado cubos de gelo e syrup de chocolate ou
                         caramelo em cima.
                       </p>
                     </div>
-                  </div>
+                  </article>
                 </li>
                 <li>
-                  <div
+                  <article
                     class="card"
                     data-id="galaoGelado"
                     data-name="Galão com bola de gelado"
@@ -488,25 +626,33 @@
                     <div class="image-wrapper">
                       <img
                         src="/img/galaoGelado.png"
-                        alt="galao com bola de gelado"
+                        alt="galão com bola de gelado de baunilha e syrup de caramelo servido em caneca de vidro"
                         class="templatecard"
                       />
-                      <i class="fa-solid fa-plus icon-addCart"></i>
+                      <button
+                        class="icon-addCart botao"
+                        aria-label="Adicionar produto ao carrinho"
+                      >
+                        <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                      </button>
                     </div>
                     <div class="infoProduto">
                       <h3>Galão com bola de gelado</h3>
-                      <p>€2.95 <i class="fa-regular fa-heart"></i> 91% (123)</p>
+                      <p>
+                        €2.95
+                        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                        <span class="sr-only">Avaliação:</span> 91% (123)
+                      </p>
                       <p
                         class="product-description"
-                        title=" Receita da casa, um galão servido frio, com leite à escolha, 
-                        com bola de gelado e baunilha, syrup de caramelo, flocos de chocolate e creme."
+                     
                       >
                         Receita da casa, um galão servido frio, com leite à
                         escolha, com bola de gelado e baunilha, syrup de
                         caramelo, flocos de chocolate e creme.
                       </p>
                     </div>
-                  </div>
+                  </article>
                 </li>
               </ol>
             </div>
@@ -514,7 +660,7 @@
               <h2>Pastelaria</h2>
               <ol aria-label="Pastelaria" class="menu">
                 <li>
-                  <div
+                  <article
                     class="card"
                     data-id="muffinChocolate"
                     data-name="Muffin de chocolate"
@@ -523,27 +669,35 @@
                     <div class="image-wrapper">
                       <img
                         src="/img/muffinchoco.jpg"
-                        alt="muffin de chocolate"
+                        alt="muffin de chocolate crocante envolto em papel vegetal"
                         class="templatecard"
                       />
-                      <i class="fa-solid fa-plus icon-addCart"></i>
+                      <button
+                        class="icon-addCart botao"
+                        aria-label="Adicionar produto ao carrinho"
+                      >
+                        <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                      </button>
                     </div>
                     <div class="infoProduto">
                       <h3>Muffin de chocolate</h3>
-                      <p>€1.50 <i class="fa-regular fa-heart"></i> 92% (210)</p>
+                      <p>
+                        €1.50
+                        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                        <span class="sr-only">Avaliação:</span> 92% (210)
+                      </p>
                       <p
                         class="product-description"
-                        title="Muffins de chocolate, confecionados com uma receita caseira, chocolate preto 50% cacau e 
-                        açúcar de cana."
+                      
                       >
                         Muffins de chocolate, confecionados com uma receita
                         caseira, chocolate preto 50% cacau e açúcar de cana.
                       </p>
                     </div>
-                  </div>
+                  </article>
                 </li>
                 <li>
-                  <div
+                  <article
                     class="card"
                     data-id="muffinBlueberry"
                     data-name="Muffin de blueberry"
@@ -552,28 +706,36 @@
                     <div class="image-wrapper">
                       <img
                         src="/img/muffinblueberry.jpg"
-                        alt="muffin de blueberry"
+                        alt="muffin de blueberry crocante com pedaços de blueberries"
                         class="templatecard"
                       />
-                      <i class="fa-solid fa-plus icon-addCart"></i>
+                      <button
+                        class="icon-addCart botao"
+                        aria-label="Adicionar produto ao carrinho"
+                      >
+                        <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                      </button>
                     </div>
                     <div class="infoProduto">
                       <h3>Muffin de blueberry</h3>
-                      <p>€1.50 <i class="fa-regular fa-heart"></i> 89% (171)</p>
+                      <p>
+                        €1.50
+                        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                        <span class="sr-only">Avaliação:</span>89% (171)
+                      </p>
                       <p
                         class="product-description"
-                        title="Muffins de blueberry, confecionados com uma receita caseira, 
-                        blueberries directos da nossa horta e usado açúcar de cana."
+                      
                       >
                         Muffins de blueberry, confecionados com uma receita
                         caseira, blueberries directos da nossa horta e usado
                         açúcar de cana.
                       </p>
                     </div>
-                  </div>
+                  </article>
                 </li>
                 <li>
-                  <div
+                  <article
                     class="card"
                     data-id="croissant"
                     data-name="Croissant simples"
@@ -582,27 +744,35 @@
                     <div class="image-wrapper">
                       <img
                         src="/img/croissant.jpg"
-                        alt="croissant folhado simples"
+                        alt="croissant folhado simples com exterior estaladiço"
                         class="templatecard"
                       />
-                      <i class="fa-solid fa-plus icon-addCart"></i>
+                      <button
+                        class="icon-addCart botao"
+                        aria-label="Adicionar produto ao carrinho"
+                      >
+                        <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                      </button>
                     </div>
                     <div class="infoProduto">
                       <h3>Croissant folhado simples</h3>
-                      <p>€1.35 <i class="fa-regular fa-heart"></i> 74% (82)</p>
+                      <p>
+                        €1.35
+                        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                        <span class="sr-only">Avaliação:</span> 74% (82)
+                      </p>
                       <p
                         class="product-description"
-                        title="Croissant simples, folhado, com exterior estaladiço e 
-                      interior macio ideal para acompanhar um café ou chá."
+                       
                       >
                         Croissant simples, folhado, com exterior estaladiço e
                         interior macio ideal para acompanhar um café ou chá.
                       </p>
                     </div>
-                  </div>
+                  </article>
                 </li>
                 <li>
-                  <div
+                  <article
                     class="card"
                     data-id="croissantChocolate"
                     data-name="Croissant folhado de Chocolate"
@@ -611,28 +781,36 @@
                     <div class="image-wrapper">
                       <img
                         src="/img/croissantChoco.png"
-                        alt="croissant de chocolate"
+                        alt="croissant de chocolate estaladiço coberto por pepitas de chocolate"
                         class="templatecard"
                       />
-                      <i class="fa-solid fa-plus icon-addCart"></i>
+                      <button
+                        class="icon-addCart botao"
+                        aria-label="Adicionar produto ao carrinho"
+                      >
+                        <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                      </button>
                     </div>
                     <div class="infoProduto">
                       <h3>Croissant folhado de Chocolate</h3>
-                      <p>€1.85 <i class="fa-regular fa-heart"></i> 78% (103)</p>
+                      <p>
+                        €1.85
+                        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                        <span class="sr-only">Avaliação:</span> 78% (103)
+                      </p>
                       <p
                         class="product-description"
-                        title="Croissant folhado de chocolate, com exterior estaladiço e 
-                      interior com chocolate derretido ideal para pequeno-almoço ou lanche."
+                      
                       >
                         Croissant folhado de chocolate, com exterior estaladiço
                         e interior com chocolate derretido ideal para
                         pequeno-almoço ou lanche.
                       </p>
                     </div>
-                  </div>
+                  </article>
                 </li>
                 <li>
-                  <div
+                  <article
                     class="card"
                     data-id="cinnamonRolls"
                     data-name="Cinnamon rolls"
@@ -641,28 +819,36 @@
                     <div class="image-wrapper">
                       <img
                         src="/img/cinnamonrolls.png"
-                        alt="cinnamon rolls"
+                        alt="cinnamon rolls com passas e creme de ovo"
                         class="templatecard"
                       />
-                      <i class="fa-solid fa-plus icon-addCart"></i>
+                      <button
+                        class="icon-addCart botao"
+                        aria-label="Adicionar produto ao carrinho"
+                      >
+                        <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                      </button>
                     </div>
                     <div class="infoProduto">
                       <h3>Cinnamon rolls</h3>
-                      <p>€2.20 <i class="fa-regular fa-heart"></i> 63% (91)</p>
+                      <p>
+                        €2.20
+                        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                        <span class="sr-only">Avaliação:</span> 63% (91)
+                      </p>
                       <p
                         class="product-description"
-                        title="Cinnamon rolls macios e aromáticos,  recheados com canela e açúcar,
-                      e cobertos com um delicado glaze que realça o sabor quente e reconfortante."
+                      
                       >
                         Cinnamon rolls macios e aromáticos, recheados com canela
                         e açúcar, e cobertos com um delicado glaze que realça o
                         sabor quente e reconfortante.
                       </p>
                     </div>
-                  </div>
+                  </article>
                 </li>
                 <li>
-                  <div
+                  <article
                     class="card"
                     data-id="folhadosVariados"
                     data-name="Folhados variados"
@@ -671,18 +857,26 @@
                     <div class="image-wrapper">
                       <img
                         src="/img/folhadosVariados.png"
-                        alt="pastelaria folhada variados"
+                        alt="rolos folhados com exterior estaladiço cobertos por creme de pistáchio ou chocolate negro, com pepitas de pistáchio ou chocolate na cobertura respestivamente"
                         class="templatecard"
                       />
-                      <i class="fa-solid fa-plus icon-addCart"></i>
+                      <button
+                        class="icon-addCart botao"
+                        aria-label="Adicionar produto ao carrinho"
+                      >
+                        <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                      </button>
                     </div>
                     <div class="infoProduto">
                       <h3>Folhados variados</h3>
-                      <p>€2.50 <i class="fa-regular fa-heart"></i> 94% (201)</p>
+                      <p>
+                        €2.50
+                        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                        <span class="sr-only">Avaliação:</span> 94% (201)
+                      </p>
                       <p
                         class="product-description"
-                        title="Esta receita de folhados, com exterior estaladiço e interior amanteigado, 
-                      traz diferentes variações, com cobertura de chocolate negro, chocolate branco e creme de pistáchio."
+                       
                       >
                         Esta receita de folhados, com exterior estaladiço e
                         interior amanteigado, traz diferentes variações, com
@@ -690,7 +884,7 @@
                         de pistáchio.
                       </p>
                     </div>
-                  </div>
+                  </article>
                 </li>
               </ol>
             </div>
@@ -698,12 +892,14 @@
         </div>
       </section>
     </main>
-    <aside id="painelCarrinho" class="cartpanel">
+    <aside id="painelCarrinho" class="cartpanel" role="dialog" aria-modal="true" aria-labelledby="oMeuCarrinho">
       <div class="cartheader">
-        <h2>O meu carrinho</h2>
-        <i class="fa-solid fa-xmark icon-cart" id="closeCart"></i>
+        <h2 id="oMeuCarrinho">O meu carrinho</h2>
+        <button class="botao">
+          <i class="fa-solid fa-xmark icon-cart" id="closeCart" aria-hidden="true"></i>
+        </button>
       </div>
-      <div id="cartcontent" class="conteudoCarro"></div>
+      <div id="cartcontent" class="conteudoCarro" aria-live="polite"></div>
       <button id="limparCarrinho">Limpar carrinho</button>
     </aside>
   </body>

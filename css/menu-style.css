@@ -70,6 +70,7 @@ a.menunav {
 
 
 .opcaoCompra {
+    border: none;
     display: flex;
     flex-direction: column;
 }
@@ -272,6 +273,7 @@ div.gridPrincipal {
 
 .info.open {
     display: flex; 
+    flex-direction: column;
 
 }
 
@@ -349,6 +351,12 @@ div.gridPrincipal {
 
 
 .botao {
+    display: flex;
     border: none;
     background-color: white;
+}
+
+.botao.fecho {
+    justify-self: flex-end;
+    background-color: whitesmoke;;
 }
