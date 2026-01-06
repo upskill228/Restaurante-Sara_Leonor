@@ -178,6 +178,7 @@ botaoHamburguer.addEventListener("click", exporMenu)
 
 function exporMenu () {
     menuHamburguer.classList.toggle("open")
+    botaoHamburguer.setAttribute("aria-expanded", true); 
 }
 
 //Painel de Informação para taxas de entrega

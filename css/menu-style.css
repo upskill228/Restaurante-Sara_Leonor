@@ -346,3 +346,9 @@ div.gridPrincipal {
     display: none;
     }
 }
+
+
+.botao {
+    border: none;
+    background-color: white;
+}
