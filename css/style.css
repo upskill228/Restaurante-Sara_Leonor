@@ -109,20 +109,43 @@ label span { /* estilo do '*' nos campos required dos formulários */
   box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.4);
 }
 
-.hamburger { 
+/* Menu hamburger */
+.menu-toggle {
   background: none;
   border: none;
-  color: #46714f;
-  font-size: 2.2rem;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  z-index: 100;
+  display: block;
+  margin-right: 1.5rem;
+  z-index: 1110;
   transition: transform 0.3s ease;
 }
 
-.hamburger:hover { /* animação no 'hover' sobre o menu hamburger */
+.menu-toggle span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #09160c;
+  margin: 6px 0;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+/* Transformação para o X */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.menu-toggle:hover { /* animação no 'hover' sobre o menu hamburger */
   transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
 
 /* Logo central */
@@ -158,10 +181,11 @@ label span { /* estilo do '*' nos campos required dos formulários */
 
 /* Menu escondido e animado */
 .navPrincipal {
+  display: flex;
   position: fixed;
-  top: 72px;
+  top: 0;
   left: 0;
-  height: calc(100vh - 72px);
+  height: 100vh;
   width: 250px;
   background-color: #46714f;
   flex-direction: column;
@@ -171,7 +195,7 @@ label span { /* estilo do '*' nos campos required dos formulários */
   transform: translateX(-100%);
   opacity: 0;
   transition: transform 0.4s ease, opacity 0.4s ease;
-  z-index: 900;
+  z-index: 1100;
 }
 
 .navPrincipal.open {
@@ -188,16 +212,29 @@ label span { /* estilo do '*' nos campos required dos formulários */
   gap: 1.5rem;
 }
 
-.navPrincipal a {
+.menu-link {
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 700;
+  letter-spacing: 1px;
   transition: color 0.2s ease;
 }
 
-.navPrincipal a:hover {
+.menu-link:focus-visible { /* Para navegação por teclado */
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
+}
+
+.menu-link:hover {
   color: #122e18;
+}
+
+.menu-link.active { /* estilo dos links ativos */
+  color: #09160c;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
 }
 
 /* --- BODY--- */
