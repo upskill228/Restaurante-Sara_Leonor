@@ -43,12 +43,33 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-// Feedback a simular envio do formulário
+// Feedback a simular envio do formulário de reserva
 
 function enviarForm(event) {
   event.preventDefault();
-  alert("Obrigado pelo contacto! Em breve irá receber uma resposta.");
+  const form = event.target;
+  const nome = form.nomeReserva.value;
+  const feedback = document.getElementById("feedback");
+
+  feedback.textContent = "Mensagem enviada com sucesso! Obrigada pelo contacto " + nome + " 😊";
+
+  form.reset();
 }
+
+// Feedback a simular subscrição para newsletter
+
+function confirmarSubscricaoNewsletter (event) {
+  event.preventDefault();
+  const form = event.target;
+  const nome = form.emailNewsletter.value;
+
+  const feedback = document.getElementById("feedbackNewsletter");
+
+  feedback.textContent = "Subscrição registada com sucesso para o e-mail " + nome + ". Obrigada pelo contacto 😊";
+
+  form.reset();
+}
+
 
 // FOOTER
 
