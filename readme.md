@@ -143,7 +143,7 @@ A apresentação da página, de uma forma generalizada, é a seguinte:
 - Conteúdo principal com duas secções. Primeiramente:
     - Informação descritiva do café nomeadamente morada
     - Cotação do café (4.7 likes - 251 reviews)
-    - Opção "radio-type" entre entrega ao domicílio ou recolha no estabelecimento 
+    - Opção "radio buttons" entre entrega ao domicílio ou recolha no estabelecimento 
     - Conteúdo informativo sobre taxas associadas à entrega ao domicílio 
     - Finalmente, conteúdo informativo sobre tempo médio de entrega 
 
@@ -151,7 +151,7 @@ Note-se que o site foi pensado na estrutura mobile-first, como tal, há elemento
 
 Seguidamente, a outra secção:
     - Menu navegação (bebidas quentes, bebidas frias e pastelaria)
-    - Apresentação da categoria selecionada (ou do default - bebidas quentes) com apresentação dos respetivos produtos da categoria em "template" cards
+    - Apresentação da categoria selecionada (ou do default - bebidas quentes) com apresentação dos respetivos produtos da categoria em "template" cards.
 
 ### Acesso ao menu
 
@@ -181,7 +181,7 @@ Em cada produto, é apresentado num template card que apresenta as seguintes inf
 
 ## Interatividade JS
 
-Associamos os subtópicos aqui dados no ficheiro "menu-scripts.js" para permitir melhor encontrar cada uma das funções desenvolvidas.
+Associamos o nome dos subtópicos aqui dados igual no ficheiro "menu-scripts.js" para permitir melhor encontrar cada uma das funções desenvolvidas.
 
 ### Filtro das categorias do menu
 
@@ -190,8 +190,8 @@ Para permitir filtrar categorias apresentadas foram necessárias duas coisas: cr
 Associado a cada categoria tivemos que criar duas variáveis. 
 
 Foi criada primeiramente uma variável para capturar o elemento do menu de navegação (foi usado um _button_) que exibe o nome da categoria (bebidas quentes, bebidas frias e pastelaria).
-Fizemo-lo por associação do pseudo-selector id atribuido.
-Ex: `const bebidasQuentes = document.getElementById("quentes")``
+Fizemo-lo por associação ao id atribuido.
+Ex: `const bebidasQuentes = document.getElementById("quentes")`
 
 Criamos também uma variável que contém o elemento contentor dos produtos que pertencem à categoria pretendida (utilizámos para o efeito uma _section_)
 Ex: `const listaBebidasQuentes = document.getElementById("listaQuentes")`
@@ -211,28 +211,28 @@ Esta função realiza 3 coisas:
 
 Primeiramente criámos um array vazio (basket) associado ao "carrinho de compras". 
 
-De seguida, utilizamos o pseudo-selector classe para capturar num array todos os "botões de adição" que se encontram associados a cada produto.
+De seguida, capturamos num array todos os "botões de adição" que se encontram associados a cada produto.
 Ex: `const botoes = document.querySelectorAll(".icon-addCart"); `
 
 Para cada um destes botões associamos uma função ao evento (click) para adicionar o produto ao carrinho (addToCart).
 
 Esta função começa por criar um objeto produto a partir dos atributos data marcados no elemento HTML que contém o produto (_article_ com _data-id_, _data-name_ e _data-price_), e de seguida utiliza uma função de suporte para procurar o produto no carrinho (função `procurarNoCarrinho(id)`, que devolve o produto existente no carrinho com o id fornecido, ou null se não existir). 
-Se existente, a quantidade do produto é então incrementada em 1, senão o produto é adicionado ao array basket (`basket.push(produto)``)
-Por fim, a chama outra função de suporte (`updateBasketDisplay()`), que é responsável por gerar o código HTML com o conteúdo atualizado do carrinho.
+Se existente, a quantidade do produto é então incrementada em 1, senão o produto é adicionado ao array basket (`basket.push(produto)`)
+Por fim, chama outra função de suporte (`updateBasketDisplay()`), que é responsável por gerar o código HTML com o conteúdo atualizado do carrinho.
 
-Nesta função, capturamos o elemnto "cartcontent", que é o contentor que vai conter todo o conteúdo do carrinho. É então percorrido o array basket. Para cada produto existente no array são criadas variáveis (nome, preço, quantidade, subtotal e total) com os dados do produto. É criada uma string com esses dados, e calculado o subtotal (preço do produto x quantidade). É criado um elemento html ("p"), onde essa string é colocada, e o elemento adicionado ao elemento html "pai" que é o contentor "cartcontent" no painel do carrinho de compras. São também adicionados elementos (botões) para aumentar e reduzir a quantidade do produto, e associadas as respetivas funções para tratamento do click (`aumentarProduto(numID)` e `reduzirProduto(numID)`)
+Nesta função, capturamos o elemento "cartcontent", que é o elemento que vai conter todo o conteúdo do carrinho. É então percorrido o array basket. Para cada produto existente no array são criadas variáveis (nome, preço, quantidade, subtotal e total) com os dados do produto. É criada uma string com esses dados, e calculado o subtotal (preço do produto x quantidade). É criado um elemento html ("p"), onde essa string é colocada, e o elemento adicionado ao elemento html "pai" que é o elemento "cartcontent" no painel do carrinho de compras. São também adicionados elementos (botões) para aumentar e reduzir a quantidade do produto, e associadas as respetivas funções para tratamento do click (`aumentarProduto(numID)` e `reduzirProduto(numID)`).
 
 Ao sair do ciclo for, é criado um separador "hr" e outro elemento "p" e adicionado ao elemento HTML pai em questão, que contêm a informação do preço total (que será visto no carrinho de compras). 
 
-Ao iniciar esta função, garantimos que o total é zero e não existe conteúdo neste elemento HTML (ou sejá não é exibido nada no carrinho, na interface). Ou seja, a função gera sempre de raiz o conteúdo atualizado do carrinho
+Ao iniciar esta função, garantimos que o total é zero e não existe conteúdo neste elemento HTML (ou sejá não é exibido nada no carrinho, na interface). 
 
-Associamos a abertura/fecho do "painel carrinho de compras" ao associarmos o evento clique, através de atribuição/remoção de classe CSS que representa o display do mesmo ou não, respectivamente.
+Associamos a abertura/fecho do "painel carrinho de compras" ao associarmos o evento click, através de atribuição/remoção de classe CSS que representa o display do mesmo ou não, respectivamente.
 
 ### Aumento/Redução de produtos no basket
 
 Para a concretização da redução de produtos no carrinho, tivemos que regressar à função "Update Display Basket" e criar um elemento html (o botão menos e botão mais respetivamente). A ambos, adicionar evento click que gera função que por sua vez leva à função de suporte criada (para não proceder à execução imediata da função). Esta função passa um parâmetro (o id do produto).
 
-Nas funções de suporte, reduzir produto ou aumentar produto, percorremos o array basket, e quando identificado o id do produto em questão diminui-se ou aumenta-se a quantidade do mesmo em um respetivamente e leva novamente à função "update basket display" para atualização na interface, com um break final para evitar percorrer todo o array se já foi executada a alteração, melhorando a performance.
+Nas funções de suporte, reduzir produto ou aumentar produto, percorremos o array basket, e quando identificado o id do produto em questão diminui-se ou aumenta-se a quantidade do mesmo respetivamente e leva novamente à função "update basket display" para atualização na interface, com um break final para evitar percorrer todo o array se já foi executada a alteração, melhorando a performance.
 
 
 ### Limpeza total do basket
@@ -259,13 +259,13 @@ Para fechar a janela, associamos ao clique do icon cruz "X" no topo superior dir
 1. Identificamos algumas falhas na formatação do site quanto testamos a responsividade do mesmo, nomeadamente, existe scroll horizontal presente na página secundária, que idealmente não estaria presente. 
 Contudo, fizemos a opção de priorizar a interatividade nesta página, como descrito acima, (filtro de categorias; adição, redução e limpeza do carrinho; janelas pop-up e menu hambúrguer) e reforçamos a parte estética/visual na página principal.
 
-2. Reviews serem geradas e automatizadas a sua actualização na página (de cada produto e do café)
+2. Reviews serem geradas e automatizadas a sua actualização na página (de cada produto e do café).
 
-3. Num contexto real, após a seleção dos produtos a serem comprados e a forma (delivery ou pick-up), permitir a compra online e gerar o evento 
+3. Num contexto real, após a seleção dos produtos a serem comprados e a forma (delivery ou pick-up), permitir a compra online e gerar o evento. 
 
-4. Painel do utilizador (menu hamburguer) oferecer interatividade nos respectivos elementos
+4. Painel do utilizador (menu hambúrguer) oferecer interatividade nos respectivos elementos.
 
-5. Para os pop-ups informativos, da página secundária, pode ser expandido a interação, por exemplo, ao adicionar evento click fora do elemento para fechar (na página em si) e/ou impedir o scroll da página até o elemento ser fechado. 
+5. Para os pop-ups informativos, da página secundária, pode ser expandida a interação, por exemplo, ao adicionar evento click fora do elemento para fechar (na página em si) e/ou impedir o scroll da página até o elemento ser fechado. 
 
 
 
