@@ -20,118 +20,118 @@ A enumeração dos mesmos decorre ao longo desta secção.
 
 ## Na Página principal
 
-    Escolha do tema e layout
+Escolha do tema e layout
 
-    Para elaborar a página do restaurante/café fictício, decidimos inspirarmo-nos na série "Friends" e criar um "Central Perk" em Lisboa.
-    Para tal, escolhemos imagens/fotografias que representassem o espaço da série e fomos buscar o logótipo que já existia na série.
+Para elaborar a página do restaurante/café fictício, decidimos inspirarmo-nos na série "Friends" e criar um "Central Perk" em Lisboa.
+Para tal, escolhemos imagens/fotografias que representassem o espaço da série e fomos buscar o logótipo que já existia na série.
 
-    Por o Central Perk ter um ambiente muito ecléctico e cheio de cor, optámos por criar um visual web mais minimalista. Desta forma quisemos conjugar as fotografias do espaço, com elementos gráficos/blocos de cor que unificassem e dessem ritmo às secções do website, mas mantendo o foco no essencial e tendo atenção à acessibilidade.
+Por o Central Perk ter um ambiente muito ecléctico e cheio de cor, optámos por criar um visual web mais minimalista. Desta forma quisemos conjugar as fotografias do espaço, com elementos gráficos/blocos de cor que unificassem e dessem ritmo às secções do website, mas mantendo o foco no essencial e tendo atenção à acessibilidade.
 
-    <img src="img/Layout_Friends.png" width="400" height="300">
+<img src="img/Layout_Friends.png" width="400" height="300">
 
-    Nos seguintes parágrafos, especificamos mais sobre a tomada de decisão relativa ao layout desta página mantendo a nossa perspetiva assim como a do utilizador.
+Nos seguintes parágrafos, especificamos mais sobre a tomada de decisão relativa ao layout desta página mantendo a nossa perspetiva assim como a do utilizador.
 
-    Header 
+### Header 
     
-    No header tentámos continuar com o aspecto minimalista, dando prioridade ao menu hamburger, mesmo para desktop.
-    Esta decisão permitiu-nos ter espaço visual para um call to action para a loja online (Página Coffee Break) e criou-se mais separação entre menu, logótipo e CTA.
+No header tentámos continuar com o aspecto minimalista, dando prioridade ao menu hamburger, mesmo para desktop.
+Esta decisão permitiu-nos ter espaço visual para um call to action para a loja online (Página Coffee Break) e criou-se mais separação entre menu, logótipo e CTA.
 
 ### Landing Page / intro
 
-    De forma a tentar captar a atenção do utilizador, optou-se pela fotografia da fachada parcialmente coberta por um elemento gráfico branco, em ângulo. Esta inserção permitiu também criar espaço para o texto (o único h1 da página) e uma pequena animação em css que convida a continuar a explorar o site.
+De forma a tentar captar a atenção do utilizador, optou-se pela fotografia da fachada parcialmente coberta por um elemento gráfico branco, em ângulo. Esta inserção permitiu também criar espaço para o texto (o único h1 da página) e uma pequena animação em css que convida a continuar a explorar o site.
 
 ### Sobre Nós
 
-    Achámos que seria importante reservar uma secção para dar a conhecer a história do Central Perk.
-    Para tal, articulou-se um bloco de cor vertical, fotografia do espaço interior do café e texto simulado que explicaria a origem do café e agora a sua nova morada em Lisboa.
+Achámos que seria importante reservar uma secção para dar a conhecer a história do Central Perk.
+Para tal, articulou-se um bloco de cor vertical, fotografia do espaço interior do café e texto simulado que explicaria a origem do café e agora a sua nova morada em Lisboa.
 
 ### Galeria de Fotos
 
-    Optámos por uma galeria tipo masonry pois permite uma melhor comunicação entre imagens com tamanhos diferentes.
-    Quando fazemos "hover" sobre as imagens, há um ligeiro zoom/aumento de tamanho da imagem e aumento na intensidade da sombra da mesma. Na nossa opinião, estes elementos contribuem para uma maior interactividade, tornando a página mais dinâmica.
+Optámos por uma galeria tipo masonry pois permite uma melhor comunicação entre imagens com tamanhos diferentes.
+Quando fazemos "hover" sobre as imagens, há um ligeiro zoom/aumento de tamanho da imagem e aumento na intensidade da sombra da mesma. Na nossa opinião, estes elementos contribuem para uma maior interactividade, tornando a página mais dinâmica.
 
 ### No Menu
 
-    Nesta secção apresentamos mais uma forma de integrar ambas as páginas desenvolvidas no projecto.
-    Cada imagem representa uma das categorias principais (bebidas quentes, bebidas frias e pastelaria) com links para a respectiva apresentação. Aqui remete para a nossa página secumdária (descrita abaixo), com o menu selecionado filtrado.
-    (Ver menu-scripts.js em "Carregar da página principal para a secundária com categorias filtradas", que se encontra no final da página)
+Nesta secção apresentamos mais uma forma de integrar ambas as páginas desenvolvidas no projecto.
+Cada imagem representa uma das categorias principais (bebidas quentes, bebidas frias e pastelaria) com links para a respectiva apresentação. Aqui remete para a nossa página secumdária (descrita abaixo), com o menu selecionado filtrado.
+(Ver menu-scripts.js em "Carregar da página principal para a secundária com categorias filtradas", que se encontra no final da página)
 
-    Ao fazer "hover" sobre as imagens, estas fazem um zoom mais discreto, que se limita ao tamanho do seu contentor.
-    Deste modo, pretendemos criar efeitos semelhantes (zoom) que unifiquem a página no seu todo mas que ao mesmo tempo permitam fazer pequenas distinções e criar dinamismo.
+Ao fazer "hover" sobre as imagens, estas fazem um zoom mais discreto, que se limita ao tamanho do seu contentor.
+Deste modo, pretendemos criar efeitos semelhantes (zoom) que unifiquem a página no seu todo mas que ao mesmo tempo permitam fazer pequenas distinções e criar dinamismo.
 
-    No final desta secção temos novo CTA que convida a conhecer o menu completo na página Coffee Break.
-    De notar que, tal como as imagens, os botões e CTAs também tem animações de zoom quando se faz "hover" sobre eles.
+No final desta secção temos novo CTA que convida a conhecer o menu completo na página Coffee Break.
+De notar que, tal como as imagens, os botões e CTAs também tem animações de zoom quando se faz "hover" sobre eles.
 
 ### Contactos e Reservas
 
-    Para mostrar os contactos, fez-se uso de links funcionais (href="mailto: e href="tel:) e criou-se um novo CTA para o formulário de reservas.
-    Este aparece num modal, com campos de preenchimento obrigatório (required).
-    Para a criação deste formulário, fizemos uso de diversos tipos de input, nomeadamente "text", "email", "date", "time" e "number". Sendo que para o "number" foram definidos limites de uma pessoa (mínimo) a 20 pessoas (máximo).
-    Foram criados diversos addEventListener para melhor interagir com o modal:
-    É possível fechar o modal com a tecla ESC, clicando fora do conteúdo ou utilizando o botão "X", criado para esse efeito.
+Para mostrar os contactos, fez-se uso de links funcionais (href="mailto: e href="tel:) e criou-se um novo CTA para o formulário de reservas.
+Este aparece num modal, com campos de preenchimento obrigatório (required).
+Para a criação deste formulário, fizemos uso de diversos tipos de input, nomeadamente "text", "email", "date", "time" e "number". Sendo que para o "number" foram definidos limites de uma pessoa (mínimo) a 20 pessoas (máximo).
+Foram criados diversos addEventListener para melhor interagir com o modal:
+É possível fechar o modal com a tecla ESC, clicando fora do conteúdo ou utilizando o botão "X", criado para esse efeito.
 
-    Quando se clica no botão para submeter a reserva, aparece um "alert" com uma mensagem que simula o envio com sucesso.
+Quando se clica no botão para submeter a reserva, aparece um "alert" com uma mensagem que simula o envio com sucesso.
 
 ### Footer
 
-    Para o footer, optou-se por dividi-lo em duas secções:
+Para o footer, optou-se por dividi-lo em duas secções:
 
-    No topo, criou-se links para as redes sociais (com target="_blank") e fez-se um pequeno formulário para subscrever Newsletter.
-    Depois de se preencher com o email (é um campo required), quando se clica no botão para subscrever, aparece um "alert" com uma mensagem que simula o envio com sucesso.
+No topo, criou-se links para as redes sociais (com target="_blank") e fez-se um pequeno formulário para subscrever Newsletter.
+Depois de se preencher com o email (é um campo required), quando se clica no botão para subscrever, aparece um "alert" com uma mensagem que simula o envio com sucesso.
 
-    No final da página temos o copyright e o ano actual, escrito de forma dinâmica com a função getFullYear().
+No final da página temos o copyright e o ano actual, escrito de forma dinâmica com a função getFullYear().
 
 
 ## Página secundária/menu
 
-    Nesta página, o nosso objectivo foi criar um template de como seria a interface para o utilizador num cenário real de restauração. Usamos como referência a app Uber Eats para algumas das coisas que gostariamos de disponibilizar e da interatividade que seria necessária construir.
+Nesta página, o nosso objectivo foi criar um template de como seria a interface para o utilizador num cenário real de restauração. Usamos como referência a app Uber Eats para algumas das coisas que gostariamos de disponibilizar e da interatividade que seria necessária construir.
 
-    Note-se que muitas coisas funcionam como uma template e que poderiam ser mais exploradas e desenvolvidas. 
-    Tentamos nomear as mesmas na sequência deste documento. 
+Note-se que muitas coisas funcionam como uma template e que poderiam ser mais exploradas e desenvolvidas. 
+Tentamos nomear as mesmas na sequência deste documento. 
 
 ### Apresentação da página secundária
  
-    A apresentação da página, de uma forma generalizada, é a seguinte: 
+A apresentação da página, de uma forma generalizada, é a seguinte: 
 
-        - Cabeçalho com menu "hambúrguer", nome do utilizador (pressupõe que foi feito Log In), nome do café, barra de pesquisa e e ícon do basket.
-        - Uma imagem decorativa alusiva à restauração selecionada ("café")
-        - Conteúdo principal com duas secções. Primeiramente:
-            - Informação descritiva do café nomeadamente morada
-            - Cotação do café (4.7 likes - 251 reviews)
-            - Opção "radio-type" entre entrega ao domicilio ou recolha no estabelecimento 
-            - Conteúdo informativo sobre taxas associadas à entrega ao domicilio 
-            - Finalmente, conteúdo informativo sobre médio do tempo de entrega 
+- Cabeçalho com menu "hambúrguer", nome do utilizador (pressupõe que foi feito Log In), nome do café, barra de pesquisa e e ícon do basket.
+- Uma imagem decorativa alusiva à restauração selecionada ("café")
+- Conteúdo principal com duas secções. Primeiramente:
+    - Informação descritiva do café nomeadamente morada
+    - Cotação do café (4.7 likes - 251 reviews)
+    - Opção "radio-type" entre entrega ao domicilio ou recolha no estabelecimento 
+    - Conteúdo informativo sobre taxas associadas à entrega ao domicilio 
+    - Finalmente, conteúdo informativo sobre médio do tempo de entrega 
 
-    - Seguidamente, a outra secção:
-        - Menu navegação (bebidas quentes, bebidas frias e pastelaria)
-        - Apresentação da categoria selecionada (ou do default - bebidas quentes) com apresentação dos respetivos produtos da categoria em "template" cards
+Seguidamente, a outra secção:
+    - Menu navegação (bebidas quentes, bebidas frias e pastelaria)
+    - Apresentação da categoria selecionada (ou do default - bebidas quentes) com apresentação dos respetivos produtos da categoria em "template" cards
 
 ### Acesso ao menu
 
-    Assim, nesta página, o principal foco é o acesso ao menu por parte do utilizador. 
+Assim, nesta página, o principal foco é o acesso ao menu por parte do utilizador. 
 
-    No caso, de termos feito a opção por um café, optamos por categorizar os produtos em três categorias (seis produtos por cada):
-        - bebibas quentes
-        - bebidas frias
-        - pastelaria
+No caso, de termos feito a opção por um café, optamos por categorizar os produtos em três categorias (seis produtos por cada):
+    - bebibas quentes
+    - bebidas frias
+    - pastelaria
 
-    Estas são as categorias principais, mas num contexto real, faria sentido ter mais categorias e mais produtos. 
-    O que foi desenvolvido foi neste contexto como template (como referenciado acima).
+Estas são as categorias principais, mas num contexto real, faria sentido ter mais categorias e mais produtos. 
+O que foi desenvolvido foi neste contexto como template (como referenciado acima).
 
-    Este acesso é apresentado num menu de navegação lateral (à esquerda na página), em categorias, e como solicitado, permite também ao utilizador filtrar os produtos que quer ver.
-    Ou seja, o default da nossa página apresenta a primeira categoria (neste caso bebidas quentes), com a característica de poder ser selecionado e apresentado cada categoria individualmente através do "click" nessa mesma categoria por parte do utilizador.
+Este acesso é apresentado num menu de navegação lateral (à esquerda na página), em categorias, e como solicitado, permite também ao utilizador filtrar os produtos que quer ver.
+Ou seja, o default da nossa página apresenta a primeira categoria (neste caso bebidas quentes), com a característica de poder ser selecionado e apresentado cada categoria individualmente através do "click" nessa mesma categoria por parte do utilizador.
 
-    Mais ainda navegar entre páginas, como descrito acima, ao permitir fazer a selecção de qualquer uma das três categorias na página princiapl e abrir directamente esta página com a categoria já filtrada.
+Mais ainda navegar entre páginas, como descrito acima, ao permitir fazer a selecção de qualquer uma das três categorias na página princiapl e abrir directamente esta página com a categoria já filtrada.
 
-    Mais ainda, cada produto, é apresentado num template card, que apresenta as seguintes informações:
-        - fotografia do produto
-        - Nome do produto
-        - preço (em euros). A apresentação nesta unidade deve-se à localização central do café escolhida (Portugal).
-        - Percentagem de likes (reviews) do produto associado ao número de clientes que fez a review ao mesmo
-        (Isto pressupõe um sistema interativo em que o utilizador poderia deixar uma review e haveria uma contabilização total das reviews deixadas e uma média calculada automaticamente e atualizada na página.
-        Este poderia ser um ponto a ser futuramente desenvolvido e articulado com cada produto.)
-        - Descrição do produto
-        - Ícon de "mais" (adicção do produto ao basket - ver mais à frente)
+Mais ainda, cada produto, é apresentado num template card, que apresenta as seguintes informações:
+    - fotografia do produto
+    - Nome do produto
+    - preço (em euros). A apresentação nesta unidade deve-se à localização central do café escolhida (Portugal).
+    - Percentagem de likes (reviews) do produto associado ao número de clientes que fez a review ao mesmo
+    (Isto pressupõe um sistema interativo em que o utilizador poderia deixar uma review e haveria uma contabilização total das reviews deixadas e uma média calculada automaticamente e atualizada na página.
+    Este poderia ser um ponto a ser futuramente desenvolvido e articulado com cada produto.)
+    - Descrição do produto
+    - Ícon de "mais" (adicção do produto ao basket - ver mais à frente)
 
 
 ## Interatividade JS
