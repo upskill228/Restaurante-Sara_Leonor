@@ -355,7 +355,7 @@
           </ul>
         </div>
         <!-- Formulário para Newsletter -->
-        <form id="formNewsletter" onsubmit="enviarForm(event)">
+        <form id="formNewsletter" onsubmit="confirmarSubscricaoNewsletter(event)">
           <fieldset>
             <legend>Subscreve a nossa Newsletter:</legend>
             <div class="form-row">
@@ -369,6 +369,7 @@
               />
               <button type="submit" class="botao">Subscrever</button>
             </div>
+            <p class="formularioReservaJS" id="feedbackNewsletter" aria-live="polite"></p>
           </fieldset>
         </form>
       </section>
@@ -439,6 +440,7 @@
             required
           />
           <button type="submit" class="botao">Reservar</button>
+          <p class="formularioReservaJS" id="feedback" aria-live="polite"></p>
         </form>
       </div>
     </div>

@@ -11,16 +11,16 @@ https://github.com/upskill228/Restaurante-Sara_Leonor.git
 
 ## Passos para executar a vossa página
 
-Para aceder: Usar Live Server na pasta do projeto. 
+Para aceder:
 
-Para executar a nossa página, iniciar live server em index.html.
-Aqui, é-se reencaminhado para a página principal.
+* Obter a pasta do projeto do repositório github (link acima)
+* Usar Live Server na pasta do projeto. A página inicial é servida a partir do ficheiro index.html.
 
 <img src="imagens/Layout_Friends.png" width="400" height="300">
 
 Esta página representa a página principal do site e é representativa da apresentação do restaurante.
 
-A navegação nesta página pode ocorrer por seguir a continuidade da página que apresenta as seguintes secções:
+A navegação nesta página pode ser feita seguindo a continuidade da página que apresenta as seguintes secções:
 - sobre nós
 - galeria
 - menu
@@ -33,7 +33,7 @@ Ou, aceder a estas secções (excepto subscrição da newsletter), pelo menu lat
 <img src="imagens/paginaPrincipal.png" width="400" height="300">
 
 
-Para aceder à página secundária (Menu e que oferece interatividade para proceder à compra online), existem três possibilidades:
+Para aceder à página secundária (Menu, que oferece interatividade para proceder à compra online), existem três possibilidades:
 
 - Clicar em "loja online" no canto superior direito da página principal
 - Aceder a "No menu" da página principal e selecionar qualquer uma das três categorias (bebidas quentes, bebidas frias e pastelaria)
@@ -41,25 +41,22 @@ Para aceder à página secundária (Menu e que oferece interatividade para proce
 
 Na loja online (página secundária), recomendamos experienciar a interatividade criada para simular uma loja online.
 
-Como tal, no fim da página do lado esquerdo, encontra-se o menu completo com as diferentes categorias.
+Como tal, no fim da página do lado esquerdo, encontra-se o menu completo com as diferentes categorias. Pode-se selecionar qualquer uma delas, que será filtrada e apresentados os templates dos diferentes produtos.
 
-Pode-se selecionar qualquer uma delas, que será filtrada e apresentada os templates dos diferentes produtos.
-Podem ser adicionados ao carrinho (icon do canto superior direito que é expandível ao click, e vice-versa).
-Pode-se ainda diminuir quantidade de qualquer produto no basket ou limpar carrinho. 
+Os produtos podem ser adicionados ao carrinho (icon do canto superior direito que é sensível ao click). Cliques sucessivos no botão de adicionar irão aumentar o número de unidades do produto no carrinho.
+É também possível aceder ao painel do carrinho de compras, onde o utilizador pode aumentar e diminuir o número de unidades de qualquer produto. Reduzir a quantidade um produto com apenas uma unidade resulta na remoção do produto do carrinho. O utilizador pode ainda limpar o carrinho de uma só vez, eliminando todos os produtos. 
 
 <img src="imagens/carrinhoSite.png" width="400" height="300">
 
-Existem janelas modais feitas. Recomendamos, abertura do menu hamburguer no canto superior esquerdo. Assim como, abertura do icon "i" (informação) para informações adicionais nos custos de entrega e tempo de entrega. 
+Existem janelas modais feitas. Recomendamos a abertura do menu hamburguer no canto superior esquerdo, assim como a abertura dos ícones "i" (informação) para informações adicionais nos custos de entrega e tempo de entrega. 
 
 Adicionamente, neste readme, explicamos seguidamente algumas das tomadas de decisão (para ir de encontro ao solicitado) e exploramos como desenvolvemos alguma da interatividade do site.
-Neste subtópico, foram atribuimos nomes aos títulos por exemplo (### Filtro das categorias do menu) que foram também atribuidos no documento JS (menu-scripts.js) para ser melhor acedidos. 
-A ordem contudo é diferente no ficheiro JS versus readme. 
+Neste subtópico, os nomes atribuídos aos títulos, por exemplo (### Filtro das categorias do menu), seguem a mesma nomenclatura utilizada no documento JS (menu-scripts.js), para acesso mais fácil. A ordem contudo é diferente no ficheiro JS versus readme. 
 
-Cada página tem um ficheiro CSS e JS correspondente, identificado pelo nome atribuido.
-Assim, página principal inclui: index.html, scripts.js e style.css.
-Página "loja online" inclui: menu.html, menu-scripts.js e menu-styles.css.
+Cada página tem um ficheiro CSS e JS correspondente, identificado pelo nome atribuído.
+Assim, página principal inclui: index.html, scripts.js e style.css; a página "loja online" inclui: menu.html, menu-scripts.js e menu-styles.css.
 
-O site foi estruturado a pensar "mobile-first".
+O site foi estruturado numa lógica "mobile-first".
 
 
 ## Principais decisões tomadas e justificação da adequação
@@ -67,8 +64,8 @@ O site foi estruturado a pensar "mobile-first".
 Neste ponto expomos de forma mais desenvolvida as principais escolhas que fizemos em ambas as páginas tanto a nível de layout como de interatividade para reproduzir a experiência de um utilizador num site de restauração actual. 
 Neste último, fizemos opção de trabalhar a interatividade de forma a reproduzir alguns dos pontos solicitados, assim como explorar novos (mencionado no subtópico interatividade JS).
 
-Assim uma das nossas prioridades no site foi devolver o solicitado em layout: "Grelhas de produtos apetitosos (cards), tipografia elegante, formulário de reservas."
-Assim, como em interatividade: "Filtrar menu (Entradas/Pratos/Sobremesas); Modal de reserva; Galeria de fotos."
+Assim, uma das nossas prioridades no site foi devolver o solicitado em layout: "Grelhas de produtos apetitosos (cards), tipografia elegante, formulário de reservas."
+Assim como em interatividade: "Filtrar menu (Entradas/Pratos/Sobremesas); Modal de reserva; Galeria de fotos."
 
 A enumeração dos mesmos decorre ao longo desta secção. 
 
@@ -79,7 +76,7 @@ Escolha do tema e layout
 Para elaborar a página do restaurante/café fictício, decidimos inspirarmo-nos na série "Friends" e criar um "Central Perk" em Lisboa.
 Para tal, escolhemos imagens/fotografias que representassem o espaço da série e fomos buscar o logótipo que já existia na série.
 
-Por o Central Perk ter um ambiente muito ecléctico e cheio de cor, optámos por criar um visual web mais minimalista. Desta forma quisemos conjugar as fotografias do espaço, com elementos gráficos/blocos de cor que unificassem e dessem ritmo às secções do website, mas mantendo o foco no essencial e tendo atenção à acessibilidade.
+Por o Central Perk ter um ambiente muito ecléctico e cheio de cor, optámos por criar um visual web mais minimalista. Desta forma, quisemos conjugar as fotografias do espaço com elementos gráficos/blocos de cor que unificassem e dessem ritmo às secções do website, mas mantendo o foco no essencial e tendo atenção à acessibilidade.
 
 
 Nos seguintes parágrafos, especificamos mais sobre a tomada de decisão relativa ao layout desta página mantendo a nossa perspetiva assim como a do utilizador.
@@ -106,7 +103,7 @@ Quando fazemos "hover" sobre as imagens, há um ligeiro zoom/aumento de tamanho 
 ### No Menu
 
 Nesta secção apresentamos mais uma forma de integrar ambas as páginas desenvolvidas no projecto.
-Cada imagem representa uma das categorias principais (bebidas quentes, bebidas frias e pastelaria) com links para a respectiva apresentação. Aqui remete para a nossa página secumdária (descrita abaixo), com o menu selecionado filtrado.
+Cada imagem representa uma das categorias principais (bebidas quentes, bebidas frias e pastelaria) com links para a respectiva apresentação. Aqui remete para a nossa página secundária (descrita abaixo), com o menu selecionado filtrado.
 (Ver menu-scripts.js em "Carregar da página principal para a secundária com categorias filtradas", que se encontra no final da página)
 
 Ao fazer "hover" sobre as imagens, estas fazem um zoom mais discreto, que se limita ao tamanho do seu contentor.
