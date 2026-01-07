@@ -20,7 +20,7 @@ https://github.com/upskill228/Restaurante-Sara_Leonor.git
 
 ## Na Página principal
 
-### Escolha do tema e layout
+    Escolha do tema e layout
 
     Para elaborar a página do restaurante/café fictício, decidimos inspirarmo-nos na série "Friends" e criar um "Central Perk" em Lisboa.
     Para tal, escolhemos imagens/fotografias que representassem o espaço da série e fomos buscar o logótipo que já existia na série.
@@ -31,7 +31,7 @@ https://github.com/upskill228/Restaurante-Sara_Leonor.git
 
     Nos seguintes parágrafos, especificamos mais sobre a tomada de decisão relativa ao layout desta página mantendo a nossa perspetiva assim como a do utilizador.
 
-### Header 
+    Header 
     
     No header tentámos continuar com o aspecto minimalista, dando prioridade ao menu hamburger, mesmo para desktop.
     Esta decisão permitiu-nos ter espaço visual para um call to action para a loja online (Página Coffee Break) e criou-se mais separação entre menu, logótipo e CTA.
@@ -162,7 +162,7 @@ https://github.com/upskill228/Restaurante-Sara_Leonor.git
         Que atribui "background-color" à categoria selecionada (optamos por light grey)
 
 
-### Adcionar produtos ao basket
+### Adicionar produtos ao basket
 
     Primeiramente criámos um array vazio (basket) associado ao "carrinho de compras". 
 
