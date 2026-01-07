@@ -273,15 +273,13 @@ Para fechar a janela, associamos ao clique do icon cruz "X" no topo superior dir
 1. Identificamos algumas falhas na formatação do site quanto testamos a responsividade do mesmo, nomeadamente, existe scroll horizontal presente na página secundária, que idealmente não estaria presente. 
 Contudo, fizemos a opção de priorizar a interatividade nesta página, como descrito acima, (filtro de categorias; adição, redução e limpeza do carrinho; janelas pop-up e menu hambúrguer) e reforçamos a parte estética/visual na página principal.
 
-2. Adicionamente, reconhecemos que na página principal em vez de ser criado um alert deve ser devolvida uma mensagem aquando da submissão de reserva e de formulário.
+2. Reviews serem geradas e automatizadas a sua actualização na página (de cada produto e do café)
 
-3. Reviews serem geradas e automatizadas a sua actualização na página (de cada produto e do café)
+3. Num contexto real, após a seleção dos produtos a serem comprados e a forma (delivery ou pick-up), permitir a compra online e gerar o evento 
 
-4. Num contexto real, após a seleção dos produtos a serem comprados e a forma (delivery ou pick-up), permitir a compra online e gerar o evento 
+4. Painel do utilizador (menu hamburguer) oferecer interatividade nos respectivos elementos
 
-5. Painel do utilizador (menu hamburguer) oferecer interatividade nos respectivos elementos
-
-6. Para os pop-ups informativos, da página secundária, pode ser expandido a interação, por exemplo, ao adicionar evento click fora do elemento para fechar (na página em si) e/ou impedir o scroll da página até o elemento ser fechado. 
+5. Para os pop-ups informativos, da página secundária, pode ser expandido a interação, por exemplo, ao adicionar evento click fora do elemento para fechar (na página em si) e/ou impedir o scroll da página até o elemento ser fechado. 
 
 
 
