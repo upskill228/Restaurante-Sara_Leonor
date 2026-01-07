@@ -69,7 +69,7 @@ Tentamos nomear as mesmas na sequência deste documento.
  
 A apresentação da página, de uma forma generalizada, é a seguinte: 
 
-![](/img/readme_pag1)
+![Teste](img/croissant.jpg)
 
 - Cabeçalho com menu "hambúrguer", nome do utilizador (pressupõe que foi feito Log In), nome do café, barra de pesquisa e e ícon do basket.
 - Uma imagem decorativa alusiva à restauração selecionada ("café")
