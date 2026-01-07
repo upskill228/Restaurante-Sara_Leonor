@@ -1,13 +1,68 @@
 // HEADER
 
-const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('.navPrincipal');
+const toggle = document.querySelector(".menu-toggle");
+const menuLinks = document.querySelectorAll(".menu-link");
+const sections = document.querySelectorAll("section[id]");
 
-// Abrir e fechar menu
-hamburger.addEventListener('click', () => {
-  const isOpen = nav.classList.toggle('open');
-  hamburger.setAttribute('aria-expanded', isOpen);
+// Menu mobile - Abrir e fechar
+toggle.addEventListener("click", () => {
+  const isOpen = nav.classList.toggle("open");
+  toggle.classList.toggle("active", isOpen);
+  toggle.setAttribute("aria-expanded", isOpen);
+
+  document.body.style.overflow = isOpen ? "hidden" : "";
+
+  if (isOpen) {
+    menuLinks[0].focus();
+  } else {
+    toggle.focus();
+  }
 });
+
+// Fechar menu mobile ao clicar num link
+menuLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("open");
+    toggle.classList.remove("active");
+    toggle.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
+  });
+});
+
+// Fechar com ESC
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape" && nav.classList.contains("open")) {
+    nav.classList.remove("open");
+    toggle.classList.remove("active");
+    toggle.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
+    toggle.focus();
+  }
+});
+
+// Nav menu-links.active - quando se faz scroll pelas secções, destaca o link da secção correspondente
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        menuLinks.forEach(link => {
+          link.classList.toggle(
+            "active",
+            link.getAttribute("href") === `#${id}`
+          );
+        });
+      }
+    });
+  },
+  {
+    rootMargin: "-80px 0px -40% 0px",
+    threshold: 0.2
+  }
+);
+
+sections.forEach(section => observer.observe(section));
 
 // MODAL DE RESERVAS
 const btnAbrir = document.getElementById("reservaBtn");
