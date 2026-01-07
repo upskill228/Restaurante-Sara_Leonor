@@ -59,8 +59,6 @@ Cada página tem um ficheiro CSS e JS correspondente, identificado pelo nome atr
 Assim, página principal inclui: index.html, scripts.js e style.css.
 Página "loja online" inclui: menu.html, menu-scripts.js e menu-styles.css.
 
-O site foi estruturado a pensar "mobile-first".
-
 
 ## Principais decisões tomadas e justificação da adequação
 
