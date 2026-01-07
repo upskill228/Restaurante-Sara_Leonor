@@ -27,9 +27,9 @@ function filtrarFrias(e) {
     listaBebidasFrias.classList.add("active")
     listaBebidasQuentes.classList.remove("active")
     listaPastelaria.classList.remove("active")
-    bebidasQuentes.parentElement.classList.remove("selectedMenuItem")
-    bebidasFrias.parentElement.classList.add("selectedMenuItem")
-    pastelaria.parentElement.classList.remove("selectedMenuItem")
+    bebidasQuentes.classList.remove("selectedMenuItem")
+    bebidasFrias.classList.add("selectedMenuItem")
+    pastelaria.classList.remove("selectedMenuItem")
 }
 
 pastelaria.addEventListener("click", filtrarPastelaria)
@@ -39,9 +39,9 @@ function filtrarPastelaria(e) {
     listaBebidasFrias.classList.remove("active")
     listaBebidasQuentes.classList.remove("active")
     listaPastelaria.classList.add("active")
-    bebidasQuentes.parentElement.classList.remove("selectedMenuItem")
-    bebidasFrias.parentElement.classList.remove("selectedMenuItem")
-    pastelaria.parentElement.classList.add("selectedMenuItem")
+    bebidasQuentes.classList.remove("selectedMenuItem")
+    bebidasFrias.classList.remove("selectedMenuItem")
+    pastelaria.classList.add("selectedMenuItem")
 }
 
 //Atualizar Carrinho 

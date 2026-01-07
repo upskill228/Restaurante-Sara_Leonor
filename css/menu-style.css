@@ -354,6 +354,7 @@ div.gridPrincipal {
     display: flex;
     border: none;
     background-color: white;
+    cursor: pointer;
 }
 
 .botao.fecho {

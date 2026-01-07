@@ -90,9 +90,10 @@
         <address>
           <h2>COFFEE BREAK</h2>
           <p>
-            <span class="sr-only">Avaliação: </span> 4.7 <i class="fa-regular fa-thumbs-up" aria-hidden="true"></i> 
-            <span class="sr-only">Quantidade de reviews:</span> (251)
-            €0.50 Taxa de entrega
+            <span class="sr-only">Avaliação: </span> 4.7
+            <i class="fa-regular fa-thumbs-up" aria-hidden="true"></i>
+            <span class="sr-only">Quantidade de reviews:</span> (251) €0.50 Taxa
+            de entrega
           </p>
           <p>Avenida Herculano 314, Setúbal</p>
           <p>2521-641, Azeitão</p>
@@ -108,7 +109,10 @@
           <p>€0.50 Taxa de Entrega</p>
           <p id="textoTaxasEntrega">
             Outras taxas
-            <button class="botao">
+            <button
+              class="botao"
+              aria-label="mais informação sobre taxas de entrega"
+            >
               <i id="infoTaxa" class="fa-solid fa-info icon-info"></i>
             </button>
           </p>
@@ -147,10 +151,13 @@
         <div aria-label="textoTempoEntrega">
           <p>22 min</p>
           <p id="textoEntrega">
-            Tempo de entrega médio<i
-              id="infoTempo"
-              class="fa-solid fa-info icon-info"
-            ></i>
+            Tempo de entrega médio
+            <button
+              class="botao"
+              aria-label="mais informação sobre tempo de entrega"
+            >
+              <i id="infoTempo" class="fa-solid fa-info icon-info"></i>
+            </button>
           </p>
         </div>
         <div
@@ -184,28 +191,34 @@
       </section>
       <section>
         <div class="gridPrincipal">
-          <nav aria-label="categorias do menu">
+          <nav aria-label="categorias do menu" role="tablist">
             <h3>O nosso menu</h3>
             <button
+              role="tab"
               class="botao"
+              id="quentes"
               aria-controls="listaQuentes"
               aria-selected="true"
             >
-              <a class="menunav" id="quentes" href="#">Bebidas quentes</a>
+              Bebidas quentes
             </button>
             <button
+              role="tab"
               class="botao"
+              id="frias"
               aria-controls="listaFrias"
               aria-selected="false"
             >
-              <a class="menunav" id="frias" href="#">Bebidas frias</a>
+              Bebidas frias
             </button>
             <button
+              role="tab"
               class="botao"
+              id="pastelaria"
               aria-controls="listaPastelaria"
               aria-selected="false"
             >
-              <a class="menunav" id="pastelaria" href="#">Pastelaria</a>
+              Pastelaria
             </button>
           </nav>
           <div>
@@ -308,10 +321,7 @@
                         <i class="fa-regular fa-heart" aria-hidden="true"></i>
                         <span class="sr-only">Avaliação:</span> 62% (62)
                       </p>
-                      <p
-                        class="product-description"
-                       
-                      >
+                      <p class="product-description">
                         Com uma receita caseira, esta bebida oferece um intenso
                         sabor a chocolate, misturado com leite à escolha.
                       </p>
@@ -345,10 +355,7 @@
                         <i class="fa-regular fa-heart" aria-hidden="true"></i>
                         <span class="sr-only">Avaliação:</span> 82% (104)
                       </p>
-                      <p
-                        class="product-description"
-
-                      >
+                      <p class="product-description">
                         Leite com chocolate, com um shot de expresso à mistura,
                         servido com leite à escolha.
                       </p>
@@ -382,10 +389,7 @@
                         <i class="fa-regular fa-heart" aria-hidden="true"></i>
                         <span class="sr-only">Avaliação:</span> 47% (53)
                       </p>
-                      <p
-                        class="product-description"
-                  
-                      >
+                      <p class="product-description">
                         Café Longo simples, misturado com água quente, pode ser
                         servido com ou sem leite.
                       </p>
@@ -400,7 +404,11 @@
                     data-price="1.55"
                   >
                     <div class="image-wrapper">
-                      <img src="/img/cha.png" alt="chá quente em chávena de vidro" class="templatecard" />
+                      <img
+                        src="/img/cha.png"
+                        alt="chá quente em chávena de vidro"
+                        class="templatecard"
+                      />
                       <button
                         class="icon-addCart botao"
                         aria-label="Adicionar produto ao carrinho"
@@ -415,10 +423,7 @@
                         <i class="fa-regular fa-heart" aria-hidden="true"></i>
                         <span class="sr-only">Avaliação:</span> 80% (74)
                       </p>
-                      <p
-                        class="product-description"
-                      
-                      >
+                      <p class="product-description">
                         Dispomos de uma uma variedade extensa de chás, veja o
                         cárdapio para mais informação.
                       </p>
@@ -457,10 +462,7 @@
                         <i class="fa-regular fa-heart" aria-hidden="true"></i>
                         <span class="sr-only">Avaliação:</span> 72% (143)
                       </p>
-                      <p
-                        class="product-description"
-                    
-                      >
+                      <p class="product-description">
                         Em dias de calor, trazemos esta opção de café frio
                         servido com cubos de gelo.
                       </p>
@@ -494,10 +496,7 @@
                         <i class="fa-regular fa-heart" aria-hidden="true"></i>
                         <span class="sr-only">Avaliação:</span> 45% (50)
                       </p>
-                      <p
-                        class="product-description"
-                 
-                      >
+                      <p class="product-description">
                         Uma alternativa saudável aos dias quentes, servido com
                         leite vegetal à escolha.
                       </p>
@@ -531,10 +530,7 @@
                         <i class="fa-regular fa-heart" aria-hidden="true"></i>
                         <span class="sr-only">Avaliação:</span> 57% (68)
                       </p>
-                      <p
-                        class="product-description"
-                      
-                      >
+                      <p class="product-description">
                         Adicionado morango e creme de morango à receita de
                         matcha tradicional, servido com cubos de gelo e leite
                         vegetal à escolha.
@@ -569,10 +565,7 @@
                         <i class="fa-regular fa-heart" aria-hidden="true"></i>
                         <span class="sr-only">Avaliação:</span> 86% (117)
                       </p>
-                      <p
-                        class="product-description"
-                       
-                      >
+                      <p class="product-description">
                         Um café americano longo servido frio.
                       </p>
                     </div>
@@ -605,10 +598,7 @@
                         <i class="fa-regular fa-heart" aria-hidden="true"></i>
                         <span class="sr-only">Avaliação:</span> 91% (123)
                       </p>
-                      <p
-                        class="product-description"
-                       
-                      >
+                      <p class="product-description">
                         Idêntico à nossa receita tradicional do cappucino,
                         acrescentado cubos de gelo e syrup de chocolate ou
                         caramelo em cima.
@@ -643,10 +633,7 @@
                         <i class="fa-regular fa-heart" aria-hidden="true"></i>
                         <span class="sr-only">Avaliação:</span> 91% (123)
                       </p>
-                      <p
-                        class="product-description"
-                     
-                      >
+                      <p class="product-description">
                         Receita da casa, um galão servido frio, com leite à
                         escolha, com bola de gelado e baunilha, syrup de
                         caramelo, flocos de chocolate e creme.
@@ -686,10 +673,7 @@
                         <i class="fa-regular fa-heart" aria-hidden="true"></i>
                         <span class="sr-only">Avaliação:</span> 92% (210)
                       </p>
-                      <p
-                        class="product-description"
-                      
-                      >
+                      <p class="product-description">
                         Muffins de chocolate, confecionados com uma receita
                         caseira, chocolate preto 50% cacau e açúcar de cana.
                       </p>
@@ -723,10 +707,7 @@
                         <i class="fa-regular fa-heart" aria-hidden="true"></i>
                         <span class="sr-only">Avaliação:</span>89% (171)
                       </p>
-                      <p
-                        class="product-description"
-                      
-                      >
+                      <p class="product-description">
                         Muffins de blueberry, confecionados com uma receita
                         caseira, blueberries directos da nossa horta e usado
                         açúcar de cana.
@@ -761,10 +742,7 @@
                         <i class="fa-regular fa-heart" aria-hidden="true"></i>
                         <span class="sr-only">Avaliação:</span> 74% (82)
                       </p>
-                      <p
-                        class="product-description"
-                       
-                      >
+                      <p class="product-description">
                         Croissant simples, folhado, com exterior estaladiço e
                         interior macio ideal para acompanhar um café ou chá.
                       </p>
@@ -798,10 +776,7 @@
                         <i class="fa-regular fa-heart" aria-hidden="true"></i>
                         <span class="sr-only">Avaliação:</span> 78% (103)
                       </p>
-                      <p
-                        class="product-description"
-                      
-                      >
+                      <p class="product-description">
                         Croissant folhado de chocolate, com exterior estaladiço
                         e interior com chocolate derretido ideal para
                         pequeno-almoço ou lanche.
@@ -836,10 +811,7 @@
                         <i class="fa-regular fa-heart" aria-hidden="true"></i>
                         <span class="sr-only">Avaliação:</span> 63% (91)
                       </p>
-                      <p
-                        class="product-description"
-                      
-                      >
+                      <p class="product-description">
                         Cinnamon rolls macios e aromáticos, recheados com canela
                         e açúcar, e cobertos com um delicado glaze que realça o
                         sabor quente e reconfortante.
@@ -874,10 +846,7 @@
                         <i class="fa-regular fa-heart" aria-hidden="true"></i>
                         <span class="sr-only">Avaliação:</span> 94% (201)
                       </p>
-                      <p
-                        class="product-description"
-                       
-                      >
+                      <p class="product-description">
                         Esta receita de folhados, com exterior estaladiço e
                         interior amanteigado, traz diferentes variações, com
                         cobertura de chocolate negro, chocolate branco e creme
@@ -892,11 +861,21 @@
         </div>
       </section>
     </main>
-    <aside id="painelCarrinho" class="cartpanel" role="dialog" aria-modal="true" aria-labelledby="oMeuCarrinho">
+    <aside
+      id="painelCarrinho"
+      class="cartpanel"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="oMeuCarrinho"
+    >
       <div class="cartheader">
         <h2 id="oMeuCarrinho">O meu carrinho</h2>
-        <button class="botao">
-          <i class="fa-solid fa-xmark icon-cart" id="closeCart" aria-hidden="true"></i>
+        <button class="botao" aria-label="fechar o carrinho de compras">
+          <i
+            class="fa-solid fa-xmark icon-cart"
+            id="closeCart"
+            aria-hidden="true"
+          ></i>
         </button>
       </div>
       <div id="cartcontent" class="conteudoCarro" aria-live="polite"></div>
