@@ -31,7 +31,7 @@ A navegação nesta página pode ocorrer por seguir a continuidade da página qu
 Ou, aceder a estas secções (excepto subscrição da newsletter), pelo menu lateral:
 
 
-<img src="img/acesso_paginaPrincipal.png" width="400" height="300">
+<img src="img/paginaPrincipal.png" width="400" height="300">
 
 
 Para aceder à página secundária (Menu e que oferece interatividade para proceder à compra online), existem três possibilidades:
