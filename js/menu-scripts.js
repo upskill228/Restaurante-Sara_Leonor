@@ -1,4 +1,5 @@
-//Filtrar menu
+//Filtrar menu 
+// ### Filtro das categorias do menu
 
 const bebidasQuentes = document.getElementById("quentes")
 const bebidasFrias = document.getElementById("frias")
@@ -44,7 +45,9 @@ function filtrarPastelaria(e) {
     pastelaria.classList.add("selectedMenuItem")
 }
 
-//Atualizar Carrinho 
+//Atualizar Carrinho  
+// A atualização do carrinho vem depois de: "Click botões - adicionar elementos ao carrinho: ### Adicionar produtos ao basket"
+
 
 let basket = []; 
 
@@ -86,6 +89,9 @@ function updateBasketDisplay () {
 }
 
 updateBasketDisplay(); 
+
+// redução de produto 
+// ### Remoção de produtos no basket
 
 function reduzirProduto(numID) {
     console.log("este é o basket", basket); 
@@ -129,7 +135,8 @@ function fecharPainel () {
     painelCarrinho.classList.remove("open")
 }
 
-//Click botões - adicionar elementos ao carrinho
+//Click botões - adicionar elementos ao carrinho 
+// ### Adcionar produtos ao basket
 
 const botoes = document.querySelectorAll(".icon-addCart"); 
 console.log(botoes)
@@ -169,6 +176,7 @@ function procurarNoCarrinho(id) {
 }
 
 //Menu Hamburguer
+// ### Menu Hamburguer
 
 
 const botaoHamburguer = document.getElementById("hamburguer")
@@ -182,6 +190,8 @@ function exporMenu () {
 }
 
 //Painel de Informação para taxas de entrega
+// ### Pop-up/Modal
+
 //Abrir
 
 const botaoInformativo = document.getElementById("infoTaxa")
@@ -195,7 +205,7 @@ function mostrarInformacaoCustos () {
 
 //Fechar
 
-//const fechar = document.getElementById("closeCart")
+
 
 const fecharPainelCruz = document.getElementById("closePainelInfo")
 
@@ -208,6 +218,8 @@ function fecharPopUpTaxa() {
 }
 
 //Painel de Informação para tempo de Entrega
+// ### Pop-up/Modal
+
 
 //Abrir
 
@@ -232,7 +244,8 @@ function fecharPopUpTempo() {
 }
 
 
-//Limpar carrinho
+//Limpar carrinho 
+// ### Limpeza total do basket
 
 const limparTudo = document.getElementById("limparCarrinho")
 
@@ -247,7 +260,8 @@ function limpezaTotal () {
 
 // 
 
-//Carregar da página principal para a secundária 
+//Carregar da página principal para a secundária com categorias filtradas
+
 
 
 function carregarPagina () {

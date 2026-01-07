@@ -1,67 +1,68 @@
-Submetam um ficheiro README.md contendo:
-Nome de quem realizou o projeto
-Tema escolhido
-Link do repositório GitHub
-Passos para executar a vossa página
-Principais decisões tomadas e justificação da adequação
 
 # Projecto realizado por: Leonor Pereira e Sara Pina
 
 ## Tema escolhido - Opção 3: O Menu Digital
 
-Escolhemos o Menu digitla, tendo realizado o site para um café. 
-
-"Site moderno para um restaurante, café ou food truck.
-
-Foco:
-Grelhas de produtos apetitosos (cards), tipografia elegante, formulário de reservas.
-
-Interatividade:
-Filtrar menu (Entradas/Pratos/Sobremesas); Modal de reserva; Galeria de fotos."
+Escolhemos o Menu digital, tendo realizado o site para um café. 
 
 ## Link repositório WEB 
 https://github.com/upskill228/Restaurante-Sara_Leonor.git
 
-# Principais decisões tomadas e justificação da adequação
+## Principais decisões tomadas e justificação da adequação
+
+    Neste ponto expomos de forma mais desenvolvida as principais escolhas que fizemos em ambas as páginas tanto a nível de layout como de interatividade para reproduzir a experiência de um utilizador num site de restauração actual. 
+    Neste último, fizemos opção de trabalhar a interatividade de forma a reproduzir alguns dos pontos solicitados, assim como explorar novos (mencionado no subtópico interatividade JS).
+
+    Assim uma das nossas prioridades no site foi devolver o solicitado em layout: "Grelhas de produtos apetitosos (cards), tipografia elegante, formulário de reservas."
+    Assim, como em interatividade: "Filtrar menu (Entradas/Pratos/Sobremesas); Modal de reserva; Galeria de fotos."
+
+    A enumeração dos mesmos decorre ao longo desta secção. 
 
 ## Na Página principal
 
-1. Escolha do tema e layout
+### Escolha do tema e layout
 
-    Para elaborar a página do restaurante / café fictício, decidimos inspirarmo-nos na série "Friends" e criar um "Central Perk" em Lisboa.
-    Para tal, escolhemos imagens / fotografias que representassem o espaço da série e fomos buscar o logótipo que já existia na série.
+    Para elaborar a página do restaurante/café fictício, decidimos inspirarmo-nos na série "Friends" e criar um "Central Perk" em Lisboa.
+    Para tal, escolhemos imagens/fotografias que representassem o espaço da série e fomos buscar o logótipo que já existia na série.
 
-    Por o Central Perk ter um ambiente muito ecléctico e cheio de cor, optámos por criar um visual web mais minimalista. Desta forma quisemos conjugar as fotografias do espaço, com elementos gráficos / blocos de cor que unificassem e dessem ritmo às secções do website, mas mantendo o foco no essencial e tendo atenção à acessibilidade.
+    Por o Central Perk ter um ambiente muito ecléctico e cheio de cor, optámos por criar um visual web mais minimalista. Desta forma quisemos conjugar as fotografias do espaço, com elementos gráficos/blocos de cor que unificassem e dessem ritmo às secções do website, mas mantendo o foco no essencial e tendo atenção à acessibilidade.
 
-1.1. Header 
+    <img src="img/Layout_Friends.png" width="400" height="300">
+
+    Nos seguintes parágrafos, especificamos mais sobre a tomada de decisão relativa ao layout desta página mantendo a nossa perspetiva assim como a do utilizador.
+
+### Header 
     
     No header tentámos continuar com o aspecto minimalista, dando prioridade ao menu hamburger, mesmo para desktop.
     Esta decisão permitiu-nos ter espaço visual para um call to action para a loja online (Página Coffee Break) e criou-se mais separação entre menu, logótipo e CTA.
 
-1.2. Landing Page / intro
+### Landing Page / intro
 
     De forma a tentar captar a atenção do utilizador, optou-se pela fotografia da fachada parcialmente coberta por um elemento gráfico branco, em ângulo. Esta inserção permitiu também criar espaço para o texto (o único h1 da página) e uma pequena animação em css que convida a continuar a explorar o site.
 
-1.3. Sobre Nós
+### Sobre Nós
 
     Achámos que seria importante reservar uma secção para dar a conhecer a história do Central Perk.
     Para tal, articulou-se um bloco de cor vertical, fotografia do espaço interior do café e texto simulado que explicaria a origem do café e agora a sua nova morada em Lisboa.
 
-1.4. Galeria de Fotos
+### Galeria de Fotos
 
     Optámos por uma galeria tipo masonry pois permite uma melhor comunicação entre imagens com tamanhos diferentes.
-    Quando fazemos "hover" sobre as imagens, há um ligeiro zoom / aumento de tamanho da imagem e aumento na intensidade da sombra da mesma. Na nossa opinião, estes elementos contribuem para uma maior interactividade, tornando a página mais dinâmica.
+    Quando fazemos "hover" sobre as imagens, há um ligeiro zoom/aumento de tamanho da imagem e aumento na intensidade da sombra da mesma. Na nossa opinião, estes elementos contribuem para uma maior interactividade, tornando a página mais dinâmica.
 
-1.5. No Menu
+### No Menu
 
     Nesta secção apresentamos mais uma forma de integrar ambas as páginas desenvolvidas no projecto.
-    Cada imagem representa uma das categorias principais (bebidas quentes, bebidas frias e pastelaria) com links para a respectiva apresentação.
+    Cada imagem representa uma das categorias principais (bebidas quentes, bebidas frias e pastelaria) com links para a respectiva apresentação. Aqui remete para a nossa página secumdária (descrita abaixo), com o menu selecionado filtrado.
+    (Ver menu-scripts.js em "Carregar da página principal para a secundária com categorias filtradas", que se encontra no final da página)
+
     Ao fazer "hover" sobre as imagens, estas fazem um zoom mais discreto, que se limita ao tamanho do seu contentor.
     Deste modo, pretendemos criar efeitos semelhantes (zoom) que unifiquem a página no seu todo mas que ao mesmo tempo permitam fazer pequenas distinções e criar dinamismo.
+
     No final desta secção temos novo CTA que convida a conhecer o menu completo na página Coffee Break.
     De notar que, tal como as imagens, os botões e CTAs também tem animações de zoom quando se faz "hover" sobre eles.
 
-1.6. Contactos e Reservas
+### Contactos e Reservas
 
     Para mostrar os contactos, fez-se uso de links funcionais (href="mailto: e href="tel:) e criou-se um novo CTA para o formulário de reservas.
     Este aparece num modal, com campos de preenchimento obrigatório (required).
@@ -71,129 +72,170 @@ https://github.com/upskill228/Restaurante-Sara_Leonor.git
 
     Quando se clica no botão para submeter a reserva, aparece um "alert" com uma mensagem que simula o envio com sucesso.
 
-1.7. Footer
+### Footer
 
     Para o footer, optou-se por dividi-lo em duas secções:
-    No topo, criou-se links para as redes sociais (com target="_blank") e fez-se um pequeno formulário para subscrever a Newsletter.
+
+    No topo, criou-se links para as redes sociais (com target="_blank") e fez-se um pequeno formulário para subscrever Newsletter.
     Depois de se preencher com o email (é um campo required), quando se clica no botão para subscrever, aparece um "alert" com uma mensagem que simula o envio com sucesso.
+
     No final da página temos o copyright e o ano actual, escrito de forma dinâmica com a função getFullYear().
 
-## Página hiperligação/menu
+
+## Página secundária/menu
 
     Nesta página, o nosso objectivo foi criar um template de como seria a interface para o utilizador num cenário real de restauração. Usamos como referência a app Uber Eats para algumas das coisas que gostariamos de disponibilizar e da interatividade que seria necessária construir.
 
     Note-se que muitas coisas funcionam como uma template e que poderiam ser mais exploradas e desenvolvidas. 
     Tentamos nomear as mesmas na sequência deste documento. 
 
-2. Apresentação da página secundária
+### Apresentação da página secundária
  
     A apresentação da página, de uma forma generalizada, é a seguinte: 
 
-    <img src="img/croissant.jpg" width="200" height="195" alt="elementos da pagina coffee break">
-
-    - Cabeçalho com menu "hambúrguer", nome do utilizador (pressupõe que foi feito Log In), nome do café, barra de pesquisa e e ícon do basket.
-    - Uma imagem decorativa alusiva à restauração selecionada ("café")
-    - Conteúdo principal com duas secções. Primeiramente:
-        - Informação descritiva do café nomeadamente morada
-        - Cotação do café (4.7 likes - 251 reviews)
-        - Opção "radio-type" entre entrega ao domicilio ou recolha no estabelecimento 
-        - Conteúdo informativo sobre taxas associadas à entrega ao domicilio 
-        - Finalmente, conteúdo informativo sobre médio do tempo de entrega 
-
-    <img src="img/readme_pag2" width="200" height="195" alt="elementos da pagina coffee break">
+        - Cabeçalho com menu "hambúrguer", nome do utilizador (pressupõe que foi feito Log In), nome do café, barra de pesquisa e e ícon do basket.
+        - Uma imagem decorativa alusiva à restauração selecionada ("café")
+        - Conteúdo principal com duas secções. Primeiramente:
+            - Informação descritiva do café nomeadamente morada
+            - Cotação do café (4.7 likes - 251 reviews)
+            - Opção "radio-type" entre entrega ao domicilio ou recolha no estabelecimento 
+            - Conteúdo informativo sobre taxas associadas à entrega ao domicilio 
+            - Finalmente, conteúdo informativo sobre médio do tempo de entrega 
 
     - Seguidamente, a outra secção:
         - Menu navegação (bebidas quentes, bebidas frias e pastelaria)
         - Apresentação da categoria selecionada (ou do default - bebidas quentes) com apresentação dos respetivos produtos da categoria em "template" cards
 
-## Acesso ao menu
+### Acesso ao menu
 
-Assim, nesta página, o principal foco é o acesso ao menu por parte do utilizador. 
-No caso, de termos feito a opção por um café, optamos por categorizar os produtos em três categorias (seis produtos por cada):
- - bebibas quentes
- - bebidas frias
- - pastelaria
+    Assim, nesta página, o principal foco é o acesso ao menu por parte do utilizador. 
 
-Estas são as categorias principais, mas num contexto real, faria sentido ter mais categorias e mais produtos. 
-O que foi desenvolvido foi neste contexto como template (como referenciado acima).
+    No caso, de termos feito a opção por um café, optamos por categorizar os produtos em três categorias (seis produtos por cada):
+        - bebibas quentes
+        - bebidas frias
+        - pastelaria
 
-Este acesso é apresentado num menu de navegação lateral (à esquerda na página), em categorias, e como solicitado, permite também ao utilizador filtrar os produtos que quer ver.
-Ou seja, o default da nossa página apresenta a primeira categoria (neste caso bebidas quentes), com a característica de poder ser selecionado e apresentado cada categoria individualmente através do "click" nessa mesma categoria por parte do utilizador.
+    Estas são as categorias principais, mas num contexto real, faria sentido ter mais categorias e mais produtos. 
+    O que foi desenvolvido foi neste contexto como template (como referenciado acima).
 
-Mais ainda, cada produto, é apresentado num template card, que apresenta as seguintes informações:
- - fotografia do produto
- - Nome do produto
- - preço (em euros). A apresentação nesta unidade deve-se à localização central do café escolhida (Portugal).
- - Percentagem de likes (reviews) do produto associado ao número de clientes que fez a review ao mesmo
- (Isto pressupõe um sistema interativo em que o utilizador poderia deixar uma review e haveria uma contabilização total das reviews deixadas e uma média calculada automaticamente e atualizada na página.
- Este poderia ser um ponto a ser futuramente desenvolvido e articulado com cada produto.)
- - Descrição do produto
- - Ícon de "mais" (adicção do produto ao basket - ver mais à frente)
+    Este acesso é apresentado num menu de navegação lateral (à esquerda na página), em categorias, e como solicitado, permite também ao utilizador filtrar os produtos que quer ver.
+    Ou seja, o default da nossa página apresenta a primeira categoria (neste caso bebidas quentes), com a característica de poder ser selecionado e apresentado cada categoria individualmente através do "click" nessa mesma categoria por parte do utilizador.
 
+    Mais ainda navegar entre páginas, como descrito acima, ao permitir fazer a selecção de qualquer uma das três categorias na página princiapl e abrir directamente esta página com a categoria já filtrada.
 
-## Filtro das categorias/Interatividade JS
-
-Para permitir filtrar categorias apresentadas foram necessárias duas coisas: criação de variáveis e associação de evento (click) a variável.
-
-Associado a cada categoria tivemos que criar duas variáveis. 
-
-A do menu de navegação que exibe o nome da categoria (bebidas quentes, bebidas frias e pastelaria).
-Fizemo-lo por associação do pseudo-selector id atribuido.
-Ex: const bebidasQuentes = document.getElementById("quentes")
-
-Criamos também a variável que contêm a lista a ser apresentada (todos os produtos de determinada categoria).
-Ex: const listaBebidasQuentes = document.getElementById("listaQuentes")
-
-Associamos o evento click à primeira vriável, menu de selecção, ao qual atribuimos uma função.
-
-Esta função, realiza 3 coisas:
- - e.preventDefault() 
- Impede o comportamento padrão do browser (reload da página)
- - atribuição de uma classe (add) à categoria seleccionada e eliminação da mesma às restantes (remove)
- Esta classe em CSS permite a visibilidade dos produtos (ex: display: grid)
- - atribuição e remoção de outra classe às categorias (selecionada versus restantes)
- Que atribui "background-color" à categoria selecionada (optamos por light grey)
+    Mais ainda, cada produto, é apresentado num template card, que apresenta as seguintes informações:
+        - fotografia do produto
+        - Nome do produto
+        - preço (em euros). A apresentação nesta unidade deve-se à localização central do café escolhida (Portugal).
+        - Percentagem de likes (reviews) do produto associado ao número de clientes que fez a review ao mesmo
+        (Isto pressupõe um sistema interativo em que o utilizador poderia deixar uma review e haveria uma contabilização total das reviews deixadas e uma média calculada automaticamente e atualizada na página.
+        Este poderia ser um ponto a ser futuramente desenvolvido e articulado com cada produto.)
+        - Descrição do produto
+        - Ícon de "mais" (adicção do produto ao basket - ver mais à frente)
 
 
+## Interatividade JS
 
-## Adcionar ao basket/Interatividade JS
+    Associamos os sutópicos aqui dados no ficheiro "menu-scripts.js" para permitir melhor encontrar cada uma das funções desenvolvidas.
 
-Primeiramente criámos um array vazio (basket) associado ao "carrinho de compras". 
-De seguida, criamos outro array, que associamos todos os "botões de adição" que se encontram associados a cada produto.
-Desta vez, fizemo-lo pelo pseudo-selector classe. 
+### Filtro das categorias do menu
 
-Ex: const botoes = document.querySelectorAll(".icon-addCart"); 
+    Para permitir filtrar categorias apresentadas foram necessárias duas coisas: criação de variáveis e associação de evento (click) a variável.
 
-Para cada um destes botões associamos um evento (click) que gerou uma função.
-Esta função em si tem várias finalidades (criação de variável e objeto) e recorre a funções de suporte (para aumentar quantidade do produto no basket; adicionar novos produtos; atualizar informação na interface)
+    Associado a cada categoria tivemos que criar duas variáveis. 
 
-A primeira variável a ser criada é, o elemento HTML que atribuimos dataset atributos (id, nome, preço e quantidade).
-A segunda é um objecto (produto) com essas mesmas propriedades. 
-Seguidamente, chamámos outra função de suporte que nos devolvia o produto em si (se existente no array basket - quando criado vazio).
-Se existente, aumentava a quantidade em 1, senão adicionava o produto ao array basket ("basket.push(produto)")
-Finalmente, chama outra função de suporte ("updateBasketDisplay). 
-Nesta função, é percorrido o array basket. Se existirem produtos no array são criadas variáveis (nome, preço, quantidade, subtotal e total).
-É ainda criado elemento html ("p") e adicionado ao elemento html "pai" que é o painel do carrinho de compras.
-Ao sair do ciclo for, é criado outro elemento HTML "p" e adicionado ao elemento HTML pai em questão, que contêm a informação do preço total (que será visto no carrinho de compras). 
-Ao iniciar esta função, garantimos que o total é zero e não existe conteúdo neste elemento HTML (ou sejá não é exibido nada no carrinho, na interface).
+    A do menu de navegação que exibe o nome da categoria (bebidas quentes, bebidas frias e pastelaria).
+    Fizemo-lo por associação do pseudo-selector id atribuido.
+    Ex: const bebidasQuentes = document.getElementById("quentes")
 
-Associamos a abertura/fecho do "painel carrinho de compras" ao associarmos o evento clique, através de atribuição/remoção de classe CSS que representa o display do mesmo ou não, respectivamente.
+    Criamos também a variável que contêm a lista a ser apresentada (todos os produtos de determinada categoria).
+    Ex: const listaBebidasQuentes = document.getElementById("listaQuentes")
 
+    Associamos o evento click à primeira variável, menu de selecção, ao qual atribuimos uma função.
 
-## Menu Hamburguer
-
-Criámos um menu hambúguer que reage ao evento "click" e consecutivamente expõe e esconde, respectivamente, um painel lateral com possibilidades genéricas (Gerir conta; favoritos; convidar amigos; ajuda e terminar sessão).
-Nenhum desses elementos é interactivo, mas representa um elemento padrão comum a muitos sites de restauração. (Ponto 3 dos aspectos que podem ser futuramente trabalhados) 
-
-## Pop-up/Modal
-
-Críamos duas janelas pop-up na página secundária no ícon de informação, tanto para informações adicionais sobre custos extra e sobre demora na entrega da encomenda. 
-Para fechar a janela, associamos ao clique do icon cruz "X" no topo superior direito da janela pop-up.
+    Esta função, realiza 3 coisas:
+        - e.preventDefault() 
+        Impede o comportamento padrão do browser (reload da página)
+        - atribuição de uma classe (add) à categoria seleccionada e eliminação da mesma às restantes (remove)
+        Esta classe em CSS permite a visibilidade dos produtos (ex: display: grid)
+        - atribuição e remoção de outra classe às categorias (selecionada versus restantes)
+        Que atribui "background-color" à categoria selecionada (optamos por light grey)
 
 
-## Aspectos que podem futuramente ser trabalhados (interactividade)
+### Adcionar produtos ao basket
 
-1. Reviews serem geradas e automatizadas a sua actualização na página (de cada produto e do café)
-2. Num contexto real, após a seleção dos produtos a serem comprados e a forma (delivery ou pick-up), permitir a compra online e gerar o evento 
-3. Painel do utilizador (menu hamburguer) oferecer interatividade nos respectivos elementos
-4. Para os pop-ups informativos, da página secundária, pode ser expandido a interação, por exemplo, ao adicionar evento click fora do elemento para fechar (na página em si) e/ou impedir o scroll da página até o elemento ser fechado. 
+    Primeiramente criámos um array vazio (basket) associado ao "carrinho de compras". 
+
+    De seguida, criamos outro array, que associamos todos os "botões de adição" que se encontram associados a cada produto.
+    Desta vez, fizemo-lo pelo pseudo-selector classe. 
+
+    Ex: const botoes = document.querySelectorAll(".icon-addCart"); 
+
+    Para cada um destes botões associamos um evento (click) que gerou uma função.
+    Esta função em si tem várias finalidades (criação de variável e objeto) e recorre a funções de suporte (para aumentar quantidade do produto no basket; adicionar novos produtos; atualizar informação na interface)
+
+    A primeira variável a ser criada é, o elemento HTML que atribuimos dataset atributos (id, nome, preço e quantidade).
+    A segunda é um objecto (produto) com essas mesmas propriedades. 
+    Seguidamente, chamámos outra função de suporte que nos devolvia o produto em si (se existente no array basket - quando criado vazio).
+    Se existente, aumentava a quantidade em 1, senão adicionava o produto ao array basket ("basket.push(produto)")
+
+    Por fim, chama outra função de suporte ("updateBasketDisplay). 
+
+    Nesta função, é percorrido o array basket. Se existirem produtos no array são criadas variáveis (nome, preço, quantidade, subtotal e total).
+
+    É ainda criado elemento html ("p") e adicionado ao elemento html "pai" que é o painel do carrinho de compras.
+    Ao sair do ciclo for, é criado outro elemento HTML "p" e adicionado ao elemento HTML pai em questão, que contêm a informação do preço total (que será visto no carrinho de compras). 
+
+    Ao iniciar esta função, garantimos que o total é zero e não existe conteúdo neste elemento HTML (ou sejá não é exibido nada no carrinho, na interface).
+
+    Associamos a abertura/fecho do "painel carrinho de compras" ao associarmos o evento clique, através de atribuição/remoção de classe CSS que representa o display do mesmo ou não, respectivamente.
+
+### Remoção de produtos no basket
+
+    Para a concretização da redução de produtos no carrinho, tivemos que regressar à função "Update Display Basket" e criar um elemento html (o botão menos e botão mais respetivamente). A ambos, adicionar evento click que gera função que por sua vez leva à função de suporte criada (para não proceder à execução imediata da função). Esta função passa um parâmetro (o id do produto).
+
+    Nas funções de suporte, reduzir produto ou aumentar produto, percorremos o array basket, e quando identificado o id do produto em questãoo diminui-se ou aumenta-se a quantidade do mesmo em um respetivamente e leva novamente à função "uptade basket display" para atualização na interface, com um break final para não levar a um loop infinito.
+
+
+### Limpeza total do basket
+
+    Posteriormente, adicionamos um botão "Limpar tudo" que permite a limpeza do carrinho. 
+
+    A nível de JS isto significou obter o elemento "botão" e associar um evento click ao mesmo. Ao o fazer, reatribuimos o valor do array basket (basket = []) e fizemos a chamada novamente a função já criada previamente "Update Display basket".
+
+
+
+### Menu Hamburguer
+
+    Criámos um menu hambúguer que reage ao evento "click" e consecutivamente expõe e esconde, respectivamente, um painel lateral com possibilidades genéricas (Gerir conta; favoritos; convidar amigos; ajuda e terminar sessão).
+    Nenhum desses elementos é interactivo, mas representa um elemento padrão comum a muitos sites de restauração. (Ponto 3 dos aspectos que podem ser futuramente trabalhados) 
+
+### Pop-up/Modal
+
+    Críamos duas janelas pop-up na página secundária no ícon de informação, tanto para informações adicionais sobre custos extra e sobre demora na entrega da encomenda. 
+    Para fechar a janela, associamos ao clique do icon cruz "X" no topo superior direito da janela pop-up.
+
+
+## Aspectos que podem futuramente ser trabalhados 
+
+    1. Identificamos algumas falhas na formatação do site quanto testamos a responsividade do mesmo, nomeadamente, existe scroll horizontal presente na página secundária, que idealmente não estaria presente. 
+    Contudo, fizemos a opção de priorizar a interatividade nesta página, como descrito acima, (filtro de categorias; adição, redução e limpeza do carrinho; janelas pop-up e menu hambúrguer) e reforçamos a parte estética/visual na página principal.
+
+    1. Reviews serem geradas e automatizadas a sua actualização na página (de cada produto e do café)
+
+    2. Num contexto real, após a seleção dos produtos a serem comprados e a forma (delivery ou pick-up), permitir a compra online e gerar o evento 
+
+    3. Painel do utilizador (menu hamburguer) oferecer interatividade nos respectivos elementos
+
+    4. Para os pop-ups informativos, da página secundária, pode ser expandido a interação, por exemplo, ao adicionar evento click fora do elemento para fechar (na página em si) e/ou impedir o scroll da página até o elemento ser fechado. 
+
+
+
+    Extras:
+
+Submetam um ficheiro README.md contendo:
+
+Passos para executar a vossa página
+Principais decisões tomadas e justificação da adequação
+
+
