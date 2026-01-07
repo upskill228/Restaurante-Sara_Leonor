@@ -109,7 +109,7 @@ label span { /* estilo do '*' nos campos required dos formulários */
   box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.4);
 }
 
-/* Hamburger Menu */
+/* Menu Hamburger */
 .menu-toggle {
   background: none;
   border: none;
@@ -522,9 +522,6 @@ main {
 }
 
 #reservaBtn { /* Botão / CTA de Reservas */
-  background-color: #ffffff;
-  color: #122e18;
-  border: none;
   border-radius: 40px;
   cursor: pointer;
   margin-top: 3rem;
