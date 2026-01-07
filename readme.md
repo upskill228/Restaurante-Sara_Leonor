@@ -16,7 +16,7 @@ Para aceder: Usar Live Server na pasta do projeto.
 Para executar a nossa página, iniciar live server em index.html.
 Aqui, é-se reencaminhado para a página principal.
 
-<img src="img/Layout_Friends.png" width="400" height="300">
+<img src="imagens/Layout_Friends.png" width="400" height="300">
 
 Esta página representa a página principal do site e é representativa da apresentação do restaurante.
 
@@ -30,7 +30,7 @@ A navegação nesta página pode ocorrer por seguir a continuidade da página qu
 Ou, aceder a estas secções (excepto subscrição da newsletter), pelo menu lateral:
 
 
-<img src="img/paginaPrincipal.png" width="400" height="300">
+<img src="imagens/paginaPrincipal.png" width="400" height="300">
 
 
 Para aceder à página secundária (Menu e que oferece interatividade para proceder à compra online), existem três possibilidades:
@@ -47,7 +47,7 @@ Pode-se selecionar qualquer uma delas, que será filtrada e apresentada os templ
 Podem ser adicionados ao carrinho (icon do canto superior direito que é expandível ao click, e vice-versa).
 Pode-se ainda diminuir quantidade de qualquer produto no basket ou limpar carrinho. 
 
-<img src="img/carrinhoSite.png" width="400" height="300">
+<img src="imagens/carrinhoSite.png" width="400" height="300">
 
 Existem janelas modais feitas. Recomendamos, abertura do menu hamburguer no canto superior esquerdo. Assim como, abertura do icon "i" (informação) para informações adicionais nos custos de entrega e tempo de entrega. 
 
