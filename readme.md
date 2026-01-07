@@ -120,14 +120,14 @@ Para a criação deste formulário, fizemos uso de diversos tipos de input, nome
 Foram criados diversos addEventListener para melhor interagir com o modal:
 É possível fechar o modal com a tecla ESC, clicando fora do conteúdo ou utilizando o botão "X", criado para esse efeito.
 
-Quando se clica no botão para submeter a reserva, aparece um "alert" com uma mensagem que simula o envio com sucesso.
+Quando se clica no botão para submeter a reserva, aparece uma mensagem que simula o envio com sucesso.
 
 ### Footer
 
 Para o footer, optou-se por dividi-lo em duas secções:
 
 No topo, criou-se links para as redes sociais (com target="_blank") e fez-se um pequeno formulário para subscrever Newsletter.
-Depois de se preencher com o email (é um campo required), quando se clica no botão para subscrever, aparece um "alert" com uma mensagem que simula o envio com sucesso.
+Depois de se preencher com o email (é um campo required), quando se clica no botão para subscrever, aparece uma mensagem que simula o envio com sucesso.
 
 No final da página temos o copyright e o ano actual, escrito de forma dinâmica com a função getFullYear().
 
