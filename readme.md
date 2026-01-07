@@ -112,9 +112,6 @@ Cada imagem representa uma das categorias principais (bebidas quentes, bebidas f
 Ao fazer "hover" sobre as imagens, estas fazem um zoom mais discreto, que se limita ao tamanho do seu contentor.
 Deste modo, pretendemos criar efeitos semelhantes (zoom) que unifiquem a página no seu todo mas que ao mesmo tempo permitam fazer pequenas distinções e criar dinamismo.
 
-No final desta secção temos novo CTA que convida a conhecer o menu completo na página Coffee Break.
-De notar que, tal como as imagens, os botões e CTAs também tem animações de zoom quando se faz "hover" sobre eles.
-
 ### Contactos e Reservas
 
 Para mostrar os contactos, fez-se uso de links funcionais (href="mailto: e href="tel:) e criou-se um novo CTA para o formulário de reservas.
