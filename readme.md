@@ -1,6 +1,15 @@
+Submetam um ficheiro README.md contendo:
+Nome de quem realizou o projeto
+Tema escolhido
+Link do repositório GitHub
+Passos para executar a vossa página
+Principais decisões tomadas e justificação da adequação
+
 # Projecto realizado por: Leonor Pereira e Sara Pina
 
 ## Tema escolhido - Opção 3: O Menu Digital
+
+Escolhemos o Menu digitla, tendo realizado o site para um café. 
 
 "Site moderno para um restaurante, café ou food truck.
 
@@ -13,78 +22,89 @@ Filtrar menu (Entradas/Pratos/Sobremesas); Modal de reserva; Galeria de fotos."
 ## Link repositório WEB 
 https://github.com/upskill228/Restaurante-Sara_Leonor.git
 
+# Principais decisões tomadas e justificação da adequação
 
-# Página principal
-Para elaborar a página do restaurante / café fictício, decidimos inspirarmo-nos na série "Friends" e criar um "Central Perk" em Lisboa.
-Para tal, escolhemos imagens / fotografias que representassem o espaço da série e fomos buscar o logótipo que já existia na série.
+## Na Página principal
 
-Por o Central Perk ter um ambiente muito ecléctico e cheio de cor, optámos por criar um visual web mais minimalista. Desta forma quisemos conjugar as fotografias do espaço, com elementos gráficos / blocos de cor que unificassem e dessem ritmo às secções do website, mas mantendo o foco no essencial e tendo atenção à acessibilidade.
+1. Escolha do tema e layout
 
-## Header
-No header tentámos continuar com o aspecto minimalista, dando prioridade ao menu hamburger, mesmo para desktop.
-Esta decisão permitiu-nos ter espaço visual para um call to action para a loja online (Página Coffee Break) e criou-se mais separação entre menu, logótipo e CTA.
+    Para elaborar a página do restaurante / café fictício, decidimos inspirarmo-nos na série "Friends" e criar um "Central Perk" em Lisboa.
+    Para tal, escolhemos imagens / fotografias que representassem o espaço da série e fomos buscar o logótipo que já existia na série.
 
-## Landing Page / intro
-De forma a tentar captar a atenção do utilizador, optou-se pela fotografia da fachada parcialmente coberta por um elemento gráfico branco, em ângulo. Esta inserção permitiu também criar espaço para o texto (o único h1 da página) e uma pequena animação em css que convida a continuar a explorar o site.
+    Por o Central Perk ter um ambiente muito ecléctico e cheio de cor, optámos por criar um visual web mais minimalista. Desta forma quisemos conjugar as fotografias do espaço, com elementos gráficos / blocos de cor que unificassem e dessem ritmo às secções do website, mas mantendo o foco no essencial e tendo atenção à acessibilidade.
 
-## Sobre Nós
-Achámos que seria importante reservar uma secção para dar a conhecer a história do Central Perk.
-Para tal, articulou-se um bloco de cor vertical, fotografia do espaço interior do café e texto simulado que explicaria a origem do café e agora a sua nova morada em Lisboa.
+1.1. Header 
+    
+    No header tentámos continuar com o aspecto minimalista, dando prioridade ao menu hamburger, mesmo para desktop.
+    Esta decisão permitiu-nos ter espaço visual para um call to action para a loja online (Página Coffee Break) e criou-se mais separação entre menu, logótipo e CTA.
 
-## Galeria de Fotos
-Optámos por uma galeria tipo masonry pois permite uma melhor comunicação entre imagens com tamanhos diferentes.
-Quando fazemos "hover" sobre as imagens, há um ligeiro zoom / aumento de tamanho da imagem e aumento na intensidade da sombra da mesma. Na nossa opinião, estes elementos contribuem para uma maior interactividade, tornando a página mais dinâmica.
+1.2. Landing Page / intro
 
-## No Menu
-Nesta secção apresentamos mais uma forma de integrar ambas as páginas desenvolvidas no projecto.
-Cada imagem representa uma das categorias principais (bebidas quentes, bebidas frias e pastelaria) com links para a respectiva apresentação.
-Ao fazer "hover" sobre as imagens, estas fazem um zoom mais discreto, que se limita ao tamanho do seu contentor.
-Deste modo, pretendemos criar efeitos semelhantes (zoom) que unifiquem a página no seu todo mas que ao mesmo tempo permitam fazer pequenas distinções e criar dinamismo.
-No final desta secção temos novo CTA que convida a conhecer o menu completo na página Coffee Break.
-De notar que, tal como as imagens, os botões e CTAs também tem animações de zoom quando se faz "hover" sobre eles.
+    De forma a tentar captar a atenção do utilizador, optou-se pela fotografia da fachada parcialmente coberta por um elemento gráfico branco, em ângulo. Esta inserção permitiu também criar espaço para o texto (o único h1 da página) e uma pequena animação em css que convida a continuar a explorar o site.
 
-## Contactos e Reservas
-Para mostrar os contactos, fez-se uso de links funcionais (href="mailto: e href="tel:) e criou-se um novo CTA para o formulário de reservas.
-Este aparece num modal, com campos de preenchimento obrigatório (required).
-Para a criação deste formulário, fizemos uso de diversos tipos de input, nomeadamente "text", "email", "date", "time" e "number". Sendo que para o "number" foram definidos limites de uma pessoa (mínimo) a 20 pessoas (máximo).
-Foram criados diversos addEventListener para melhor interagir com o modal:
-É possível fechar o modal com a tecla ESC, clicando fora do conteúdo ou utilizando o botão "X", criado para esse efeito.
+1.3. Sobre Nós
 
-Quando se clica no botão para submeter a reserva, aparece um "alert" com uma mensagem que simula o envio com sucesso.
+    Achámos que seria importante reservar uma secção para dar a conhecer a história do Central Perk.
+    Para tal, articulou-se um bloco de cor vertical, fotografia do espaço interior do café e texto simulado que explicaria a origem do café e agora a sua nova morada em Lisboa.
 
-## Footer
-Para o footer, optou-se por dividi-lo em duas secções:
-No topo, criou-se links para as redes sociais (com target="_blank") e fez-se um pequeno formulário para subscrever a Newsletter.
-Depois de se preencher com o email (é um campo required), quando se clica no botão para subscrever, aparece um "alert" com uma mensagem que simula o envio com sucesso.
-No final da página temos o copyright e o ano actual, escrito de forma dinâmica com a função getFullYear().
+1.4. Galeria de Fotos
 
-# Página "Coffee Break"
+    Optámos por uma galeria tipo masonry pois permite uma melhor comunicação entre imagens com tamanhos diferentes.
+    Quando fazemos "hover" sobre as imagens, há um ligeiro zoom / aumento de tamanho da imagem e aumento na intensidade da sombra da mesma. Na nossa opinião, estes elementos contribuem para uma maior interactividade, tornando a página mais dinâmica.
 
-Nesta página, o nosso objectivo foi criar um template de como seria a interface para o utilizador num cenário real de restauração. Usamos como referência a app Uber Eats para algumas das coisas que gostariamos de disponibilizar e da interatividade que seria necessária construir.
+1.5. No Menu
 
-Note-se que muitas coisas funcionam como uma template e que poderiam ser mais exploradas e desenvolvidas. 
-Tentamos nomear as mesmas na sequência deste documento. 
+    Nesta secção apresentamos mais uma forma de integrar ambas as páginas desenvolvidas no projecto.
+    Cada imagem representa uma das categorias principais (bebidas quentes, bebidas frias e pastelaria) com links para a respectiva apresentação.
+    Ao fazer "hover" sobre as imagens, estas fazem um zoom mais discreto, que se limita ao tamanho do seu contentor.
+    Deste modo, pretendemos criar efeitos semelhantes (zoom) que unifiquem a página no seu todo mas que ao mesmo tempo permitam fazer pequenas distinções e criar dinamismo.
+    No final desta secção temos novo CTA que convida a conhecer o menu completo na página Coffee Break.
+    De notar que, tal como as imagens, os botões e CTAs também tem animações de zoom quando se faz "hover" sobre eles.
 
-## Apresentação da página
+1.6. Contactos e Reservas
+
+    Para mostrar os contactos, fez-se uso de links funcionais (href="mailto: e href="tel:) e criou-se um novo CTA para o formulário de reservas.
+    Este aparece num modal, com campos de preenchimento obrigatório (required).
+    Para a criação deste formulário, fizemos uso de diversos tipos de input, nomeadamente "text", "email", "date", "time" e "number". Sendo que para o "number" foram definidos limites de uma pessoa (mínimo) a 20 pessoas (máximo).
+    Foram criados diversos addEventListener para melhor interagir com o modal:
+    É possível fechar o modal com a tecla ESC, clicando fora do conteúdo ou utilizando o botão "X", criado para esse efeito.
+
+    Quando se clica no botão para submeter a reserva, aparece um "alert" com uma mensagem que simula o envio com sucesso.
+
+1.7. Footer
+
+    Para o footer, optou-se por dividi-lo em duas secções:
+    No topo, criou-se links para as redes sociais (com target="_blank") e fez-se um pequeno formulário para subscrever a Newsletter.
+    Depois de se preencher com o email (é um campo required), quando se clica no botão para subscrever, aparece um "alert" com uma mensagem que simula o envio com sucesso.
+    No final da página temos o copyright e o ano actual, escrito de forma dinâmica com a função getFullYear().
+
+## Página hiperligação/menu
+
+    Nesta página, o nosso objectivo foi criar um template de como seria a interface para o utilizador num cenário real de restauração. Usamos como referência a app Uber Eats para algumas das coisas que gostariamos de disponibilizar e da interatividade que seria necessária construir.
+
+    Note-se que muitas coisas funcionam como uma template e que poderiam ser mais exploradas e desenvolvidas. 
+    Tentamos nomear as mesmas na sequência deste documento. 
+
+2. Apresentação da página secundária
  
-A apresentação da página, de uma forma generalizada, é a seguinte: 
+    A apresentação da página, de uma forma generalizada, é a seguinte: 
 
-<img src="img/croissant.jpg" width="200" height="195" alt="elementos da pagina coffee break">
+    <img src="img/croissant.jpg" width="200" height="195" alt="elementos da pagina coffee break">
 
-- Cabeçalho com menu "hambúrguer", nome do utilizador (pressupõe que foi feito Log In), nome do café, barra de pesquisa e e ícon do basket.
-- Uma imagem decorativa alusiva à restauração selecionada ("café")
-- Conteúdo principal com duas secções. Primeiramente:
-    - Informação descritiva do café nomeadamente morada
-    - Cotação do café (4.7 likes - 251 reviews)
-    - Opção "radio-type" entre entrega ao domicilio ou recolha no estabelecimento 
-    - Conteúdo informativo sobre taxas associadas à entrega ao domicilio 
-    - Finalmente, conteúdo informativo sobre médio do tempo de entrega 
+    - Cabeçalho com menu "hambúrguer", nome do utilizador (pressupõe que foi feito Log In), nome do café, barra de pesquisa e e ícon do basket.
+    - Uma imagem decorativa alusiva à restauração selecionada ("café")
+    - Conteúdo principal com duas secções. Primeiramente:
+        - Informação descritiva do café nomeadamente morada
+        - Cotação do café (4.7 likes - 251 reviews)
+        - Opção "radio-type" entre entrega ao domicilio ou recolha no estabelecimento 
+        - Conteúdo informativo sobre taxas associadas à entrega ao domicilio 
+        - Finalmente, conteúdo informativo sobre médio do tempo de entrega 
 
-<img src="img/readme_pag2" width="200" height="195" alt="elementos da pagina coffee break">
+    <img src="img/readme_pag2" width="200" height="195" alt="elementos da pagina coffee break">
 
-- Seguidamente, a outra secção:
-    - Menu navegação (bebidas quentes, bebidas frias e pastelaria)
-    - Apresentação da categoria selecionada (ou do default - bebidas quentes) com apresentação dos respetivos produtos da categoria em "template" cards
+    - Seguidamente, a outra secção:
+        - Menu navegação (bebidas quentes, bebidas frias e pastelaria)
+        - Apresentação da categoria selecionada (ou do default - bebidas quentes) com apresentação dos respetivos produtos da categoria em "template" cards
 
 ## Acesso ao menu
 
