@@ -8,6 +8,55 @@ Escolhemos o Menu digital, tendo realizado o site para um café.
 ## Link repositório WEB 
 https://github.com/upskill228/Restaurante-Sara_Leonor.git
 
+
+
+## Passos para executar a vossa página
+
+Para aceder: Usar Live Server na pasta do projeto. 
+
+Para executar a nossa página, iniciar live server em index.html.
+Aqui, é-se reencaminhado para a página principal.
+
+<img src="img/Layout_Friends.png" width="400" height="300">
+
+Esta página representa a página principal do site e é representativa da apresentação do restaurante.
+
+A navegação nesta página pode ocorrer por seguir a continuidade da página que apresenta as seguintes secções:
+- sobre nós
+- galeria
+- menu
+- fazer reserva
+- subscrever à newsletter
+
+Ou, aceder a estas secções (excepto subscrição da newsletter), pelo menu lateral:
+
+
+<img src="img/acesso_paginaPrincipal.png" width="400" height="300">
+
+
+Para aceder à página secundária (Menu e que oferece interatividade para proceder à compra online), existem três possibilidades:
+
+- Clicar em "loja online" no canto superior direito da página principal
+- Aceder a "No menu" da página principal e selecionar qualquer uma das três categorias (bebidas quentes, bebidas frias e pastelaria)
+- Directamente por live server de menu.html
+
+Na loja online (página secundária), recomendamos experienciar a interatividade criada para simular uma loja online.
+
+Como tal, no fim da página do lado esquerdo, encontra-se o menu completo com as diferentes categorias.
+
+Pode-se selecionar qualquer uma delas, que será filtrada e apresentada os templates dos diferentes produtos.
+Podem ser adicionados ao carrinho (icon do canto superior direito que é expandível ao click, e vice-versa).
+Pode-se ainda diminuir quantidade de qualquer produto no basket ou limpar carrinho. 
+
+<img src="img/carrinho_modal.png" width="400" height="300">
+
+Existem janelas modais feitas. Recomendamos, abertura do menu hamburguer no canto superior esquerdo. Assim como, abertura do icon "i" (informação) para informações adicionais nos custos de entrega e tempo de entrega. 
+
+Adicionamente, neste readme, explicamos seguidamente algumas das tomadas de decisão (para ir de encontro ao solicitado) e exploramos como desenvolvemos alguma da interatividade do site.
+Neste subtópico, foram atribuimos nomes aos títulos por exemplo (### Filtro das categorias do menu) que foram também atribuidos no documento JS (menu-scripts.js) para ser melhor acedidos. 
+A ordem contudo é diferente no ficheiro JS versus readme. 
+
+
 ## Principais decisões tomadas e justificação da adequação
 
 Neste ponto expomos de forma mais desenvolvida as principais escolhas que fizemos em ambas as páginas tanto a nível de layout como de interatividade para reproduzir a experiência de um utilizador num site de restauração actual. 
@@ -27,7 +76,6 @@ Para tal, escolhemos imagens/fotografias que representassem o espaço da série 
 
 Por o Central Perk ter um ambiente muito ecléctico e cheio de cor, optámos por criar um visual web mais minimalista. Desta forma quisemos conjugar as fotografias do espaço, com elementos gráficos/blocos de cor que unificassem e dessem ritmo às secções do website, mas mantendo o foco no essencial e tendo atenção à acessibilidade.
 
-<img src="img/Layout_Friends.png" width="400" height="300">
 
 Nos seguintes parágrafos, especificamos mais sobre a tomada de decisão relativa ao layout desta página mantendo a nossa perspetiva assim como a do utilizador.
 
@@ -231,11 +279,4 @@ Contudo, fizemos a opção de priorizar a interatividade nesta página, como des
 
 
 
-    Extras:
-
-Submetam um ficheiro README.md contendo:
-
-Passos para executar a vossa página
-Principais decisões tomadas e justificação da adequação
-
-
+  
