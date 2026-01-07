@@ -10,13 +10,13 @@ https://github.com/upskill228/Restaurante-Sara_Leonor.git
 
 ## Principais decisões tomadas e justificação da adequação
 
-    Neste ponto expomos de forma mais desenvolvida as principais escolhas que fizemos em ambas as páginas tanto a nível de layout como de interatividade para reproduzir a experiência de um utilizador num site de restauração actual. 
-    Neste último, fizemos opção de trabalhar a interatividade de forma a reproduzir alguns dos pontos solicitados, assim como explorar novos (mencionado no subtópico interatividade JS).
+Neste ponto expomos de forma mais desenvolvida as principais escolhas que fizemos em ambas as páginas tanto a nível de layout como de interatividade para reproduzir a experiência de um utilizador num site de restauração actual. 
+Neste último, fizemos opção de trabalhar a interatividade de forma a reproduzir alguns dos pontos solicitados, assim como explorar novos (mencionado no subtópico interatividade JS).
 
-    Assim uma das nossas prioridades no site foi devolver o solicitado em layout: "Grelhas de produtos apetitosos (cards), tipografia elegante, formulário de reservas."
-    Assim, como em interatividade: "Filtrar menu (Entradas/Pratos/Sobremesas); Modal de reserva; Galeria de fotos."
+Assim uma das nossas prioridades no site foi devolver o solicitado em layout: "Grelhas de produtos apetitosos (cards), tipografia elegante, formulário de reservas."
+Assim, como em interatividade: "Filtrar menu (Entradas/Pratos/Sobremesas); Modal de reserva; Galeria de fotos."
 
-    A enumeração dos mesmos decorre ao longo desta secção. 
+A enumeração dos mesmos decorre ao longo desta secção. 
 
 ## Na Página principal
 
