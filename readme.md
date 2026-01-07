@@ -24,10 +24,10 @@ A navegação nesta página pode ser feita seguindo a continuidade da página qu
 - sobre nós
 - galeria
 - menu
-- fazer reserva
-- subscrever à newsletter
+- contactos & reservas
+- footer
 
-Ou, aceder a estas secções (excepto subscrição da newsletter), pelo menu lateral:
+Ou, aceder a estas secções (excepto footer), pelo menu lateral:
 
 
 <img src="imagens/paginaPrincipal.png" width="400" height="300">
@@ -53,10 +53,9 @@ Existem janelas modais feitas. Recomendamos a abertura do menu hamburguer no can
 Adicionamente, neste readme, explicamos seguidamente algumas das tomadas de decisão (para ir de encontro ao solicitado) e exploramos como desenvolvemos alguma da interatividade do site.
 Neste subtópico, os nomes atribuídos aos títulos, por exemplo (### Filtro das categorias do menu), seguem a mesma nomenclatura utilizada no documento JS (menu-scripts.js), para acesso mais fácil. A ordem contudo é diferente no ficheiro JS versus readme. 
 
-Cada página tem um ficheiro CSS e JS correspondente, identificado pelo nome atribuído.
-Assim, página principal inclui: index.html, scripts.js e style.css; a página "loja online" inclui: menu.html, menu-scripts.js e menu-styles.css.
-
-O site foi estruturado numa lógica "mobile-first".
+Cada página tem um ficheiro CSS e JS correspondente, identificado pelo nome atribuido.
+Assim, a página principal inclui: index.html, scripts.js e style.css.
+Página "loja online" inclui: menu.html, menu-scripts.js e menu-styles.css.
 
 
 ## Principais decisões tomadas e justificação da adequação
@@ -84,7 +83,7 @@ Nos seguintes parágrafos, especificamos mais sobre a tomada de decisão relativ
 ### Header 
     
 No header tentámos continuar com o aspecto minimalista, dando prioridade ao menu hamburger, mesmo para desktop.
-Esta decisão permitiu-nos ter espaço visual para um call to action para a loja online (Página Coffee Break) e criou-se mais separação entre menu, logótipo e CTA.
+Esta decisão permitiu-nos ter espaço visual para um call to action para a loja online (menu.html) e criou-se mais separação entre menu, logótipo e CTA.
 
 ### Landing Page / intro
 
@@ -109,9 +108,6 @@ Cada imagem representa uma das categorias principais (bebidas quentes, bebidas f
 Ao fazer "hover" sobre as imagens, estas fazem um zoom mais discreto, que se limita ao tamanho do seu contentor.
 Deste modo, pretendemos criar efeitos semelhantes (zoom) que unifiquem a página no seu todo mas que ao mesmo tempo permitam fazer pequenas distinções e criar dinamismo.
 
-No final desta secção temos novo CTA que convida a conhecer o menu completo na página Coffee Break.
-De notar que, tal como as imagens, os botões e CTAs também têm animações de zoom quando se faz "hover" sobre eles.
-
 ### Contactos e Reservas
 
 Para mostrar os contactos, fez-se uso de links funcionais (href="mailto: e href="tel:) e criou-se um novo CTA para o formulário de reservas.
@@ -120,14 +116,14 @@ Para a criação deste formulário, fizemos uso de diversos tipos de input, nome
 Foram criados diversos addEventListener para melhor interagir com o modal:
 É possível fechar o modal com a tecla ESC, clicando fora do conteúdo ou utilizando o botão "X", criado para esse efeito.
 
-Quando se clica no botão para submeter a reserva, aparece um "alert" com uma mensagem que simula o envio com sucesso.
+Quando se clica no botão para submeter a reserva, aparece uma mensagem que simula o envio com sucesso.
 
 ### Footer
 
 Para o footer, optou-se por dividi-lo em duas secções:
 
 No topo, criou-se links para as redes sociais (com target="_blank") e fez-se um pequeno formulário para subscrever Newsletter.
-Depois de se preencher com o email (é um campo required), quando se clica no botão para subscrever, aparece um "alert" com uma mensagem que simula o envio com sucesso.
+Depois de se preencher com o email (é um campo required), quando se clica no botão para subscrever, aparece uma mensagem que simula o envio com sucesso.
 
 No final da página temos o copyright e o ano actual, escrito de forma dinâmica com a função getFullYear().
 
@@ -263,15 +259,13 @@ Para fechar a janela, associamos ao clique do icon cruz "X" no topo superior dir
 1. Identificamos algumas falhas na formatação do site quanto testamos a responsividade do mesmo, nomeadamente, existe scroll horizontal presente na página secundária, que idealmente não estaria presente. 
 Contudo, fizemos a opção de priorizar a interatividade nesta página, como descrito acima, (filtro de categorias; adição, redução e limpeza do carrinho; janelas pop-up e menu hambúrguer) e reforçamos a parte estética/visual na página principal.
 
-2. Adicionamente, reconhecemos que na página principal em vez de ser criado um _alert_, deve ser devolvida uma mensagem aquando da submissão de reserva e de formulário.
+2. Reviews serem geradas e automatizadas a sua actualização na página (de cada produto e do café)
 
-3. Reviews serem geradas e automatizadas a sua actualização na página (de cada produto e do café)
+3. Num contexto real, após a seleção dos produtos a serem comprados e a forma (delivery ou pick-up), permitir a compra online e gerar o evento 
 
-4. Num contexto real, após a seleção dos produtos a serem comprados e a forma (delivery ou pick-up), permitir a compra online e gerar o evento 
+4. Painel do utilizador (menu hamburguer) oferecer interatividade nos respectivos elementos
 
-5. Painel do utilizador (menu hamburguer) oferecer interatividade nos respectivos elementos
-
-6. Para os pop-ups informativos, da página secundária, pode ser expandido a interação, por exemplo, ao adicionar evento click fora do elemento para fechar (na página em si) e/ou impedir o scroll da página até o elemento ser fechado. 
+5. Para os pop-ups informativos, da página secundária, pode ser expandido a interação, por exemplo, ao adicionar evento click fora do elemento para fechar (na página em si) e/ou impedir o scroll da página até o elemento ser fechado. 
 
 
 

@@ -1,0 +1,564 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:  "Oswald", sans-serif;
+    color: black;
+    min-height: 100vh;
+}
+
+li {
+  list-style-type: none;
+}
+
+h1 {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+h2 {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+h3 {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+}
+
+header{
+    width: 100vw;  
+}
+
+.cabecalhoSup {
+    position: relative;
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr 1fr 50px; 
+    grid-template-rows: 1fr;
+    align-items: center;
+    gap: 20px; 
+    width: 100vmax; 
+    /* border: 2px solid black */
+}
+
+.minigrid {
+    display: flex; 
+    gap: 10px; 
+}
+
+/* Logo central */
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+
+.imgcafe {
+    object-fit: cover;
+    border-radius: 2px;
+    height: 300px;
+    width: 100vmax;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+a.menunav {
+    text-decoration: none;
+    color: black;
+}
+
+/* aside {
+    display: grid;
+    gap: 50px; 
+    grid-template-columns: 100px 1fr;
+    height: 300px;
+    /* grid-template-rows: 1fr; */
+    /* border: 2px solid black; */
+
+
+.primSeccao {
+    display: flex;
+    border: 3px solid #1f4d29;
+    border-radius: 0 0 15px 15px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    width: 100%;
+    max-width: 100%;
+    gap: 2rem;
+    box-sizing: border-box;
+}
+
+address {
+    font-style: normal;
+}
+
+.opcaoCompra {
+    border: none;
+    display: flex;
+    flex-direction: column;
+}
+
+#pickup, #delivery {
+    cursor: pointer;
+}
+
+ .card {
+    display: grid; 
+    grid-template-columns: 200px 1fr; 
+    gap: 12px; 
+    border: 4px solid #1f4d29;
+    padding: 12px;
+    max-width: 500px;
+    min-height: 250px;
+    height: auto; 
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+ }
+
+
+ .infoProduto{
+    display: grid;
+    grid-template-rows: auto auto 1fr; 
+    gap: 5px;
+    min-width: 0; /* permite o texto encolher e quebrar */
+  }
+  
+  .product-description {
+    font-family: "Roboto Slab", serif;
+    font-size: 0.9rem;
+    margin: 0;
+    overflow: scroll;
+    max-height: 3.6em;   /* ≈ 2 linhas (2 × line-height) */
+    line-height: 1.8;
+    transition: max-height 0.2s ease;
+  }
+  
+  /* Desktop: mais espaço */
+  @media (min-width: 678px) {
+    .product-description {
+      max-height: 5.4em; /* ≈ 3 linhas */
+    }
+
+  }
+
+
+.templatecard {
+    object-fit: cover;
+    border-radius: 15px;
+    width: 100%; 
+    height: 250px;  
+} 
+
+.image-wrapper {
+    position: relative;
+}
+
+.icon-addCart {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    color: black;
+    background-color: white;
+    padding: 6px;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0,0,0, 0.2);
+    cursor: pointer;
+}
+
+.icon-cart {
+    padding: 6px;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0,0,0, 0.2);
+    cursor: pointer;
+    color: black;
+}
+
+.icon-info {
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0,0,0, 0.2);
+    cursor: pointer;
+    color: black;
+    font-size: 10px; 
+}
+
+.cartpanel {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 300px;
+    height: 100vh;
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0,0,0, 0.2);
+    padding: 10px;
+    transition: right 0.3s ease;
+}
+
+.cartpanel.open {
+    right: 0; 
+}
+
+.cartheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ol.menu {
+    list-style: none;
+    display: none;
+    gap: 5px; 
+    margin: 0;
+    padding: 0;
+}
+
+div.gridPrincipal {
+    display: grid;
+    padding: 10px;
+    grid-template-columns: 120px 1fr;
+    width: 100vmax;
+    gap:20px;
+    align-items: start;
+    box-sizing: border-box;
+}
+
+.gridPrincipal h2{
+    margin-top: 20px;
+  }
+
+.gridPrincipal nav{
+    margin-top: 20px;
+}
+
+.gridPrincipal nav>div, .gridPrincipal nav>span {
+    width: 100%;
+}
+
+.gridPrincipal nav>div:hover{
+    background-color: lightgrey;
+}
+
+.selectedMenuItem {
+    background-color: lightgrey;
+}
+
+.menuCat.active ol {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.menuCat h2 {
+    display: none;
+}
+
+.menuCat.active h2 {
+    display: block;
+}
+
+.hamburguer {
+    position: absolute;
+    top: 40px; 
+    left: -400px;
+    width: auto; 
+    height: auto; 
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0,0,0, 0.2);
+    padding: 10px;
+    transition: left 0.3s ease;
+}
+
+.hamburguer.open {
+    left: 0; 
+}
+
+.painelBurguer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px; 
+}
+
+.info {
+    display: none; 
+    text-align: justify;
+    position: fixed; 
+    gap: 10px; 
+    /* inset: 70px 70px 300px 70px; ; top, right, bottom, left */
+    inset: 70px 70px 300px 70px; 
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: rgba(0, 0, 0, 0.1); fundo escuro */
+    background-color: whitesmoke;
+    z-index: 9999;
+    height: auto; 
+    width: fit-content; max-width: auto;
+    border: 2px solid grey;
+    padding: 10px;
+    /* max-width: 250px;
+    min-height: 200px; height: auto;  */
+    border-radius: 5px;
+
+}
+
+.info.open {
+    display: flex; 
+    flex-direction: column;
+
+}
+
+.info i {
+    align-self: flex-start;  
+    margin-left: auto;
+    bottom: 15px;
+    right: 15px;
+    color: black;
+    background-color: white;
+    padding: 6px;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0,0,0, 0.2);
+    cursor: pointer;
+}
+
+.infoTempo {
+     display: none; 
+    text-align: justify;
+    position: fixed; 
+    gap: 10px; 
+    /* inset: 70px 70px 300px 70px; ; top, right, bottom, left */
+    inset: 70px 70px 300px 70px; 
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: rgba(0, 0, 0, 0.1); fundo escuro */
+    background-color: whitesmoke;
+    z-index: 9999;
+    height: auto; 
+    width: fit-content; max-width: auto;
+    border: 2px solid grey;
+    padding: 10px;
+    /* max-width: 250px;
+    min-height: 200px; height: auto;  */
+    border-radius: 5px;
+}
+
+.infoTempo.open {
+    display: flex; 
+    flex-direction: column;
+
+}
+
+.infoTempo img {
+    object-fit: cover; 
+    width: 100%; 
+    height: 200px; 
+    position: relative;
+}
+
+.infoTempo i {
+    margin-left: auto;
+}
+
+
+
+.escondido {
+    visibility: hidden;
+}
+
+.colapsado {
+    display: flex;
+}
+
+@media (min-width: 700px) {
+    .escondido {
+    visibility: visible;
+} 
+    .colapsado {
+    display: none;
+    }
+}
+
+.botao {
+    display: flex;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.botao.fecho {
+    font-family: "Roboto Slab", serif;
+    justify-self: flex-end;
+    background-color: whitesmoke;;
+}
+
+/* --- FOOTER --- */
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #1f4d29;
+  color: #ffffff;
+}
+
+/* Footer Top */
+.footerTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem clamp(1.5rem, 5vw, 4rem); /* clamp para o 'padding' responsivo */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Redes Sociais */
+.socialsLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.socialsLinks ul {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.socialsLinks a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 44px;
+  height: 44px;
+  color: #ffffff;
+  font-size: 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.socialsLinks a:hover { /* animação no 'hover' sobre os icons das redes sociais */
+  transform: scale(1.3);
+  transition: all 0.2s ease;
+}
+
+/* Formulário para Newsletter */
+#formNewsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 3rem clamp(1.5rem, 5vw, 4rem); /* clamp para o 'padding' responsivo */
+}
+#formNewsletter fieldset {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 40px;
+  padding: 0.2rem 2rem;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.form-row label {
+  font-family: "Roboto Slab", serif;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.form-row input {
+  display: flex;
+  flex: 1;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  border: 1px solid #888;
+  font-family: "Roboto Slab", serif;
+}
+
+#formNewsletter input::placeholder {
+  color: #7d7d7d;
+}
+
+#formNewsletter input:focus {
+  outline: none;
+  border: solid 4px #46714f;
+}
+
+#formNewsletter .footer-botao {
+  background-color: #46714f;
+  margin: 2rem 0;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 50px;
+  padding: 0.63rem 1.25rem;
+  font-weight: bold;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease;
+}
+
+.footer-botao:hover { /* animação no 'hover' sobre os botões */
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+/* Footer Bottom */
+.footerBottom {
+  background-color: #46714f;
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  padding: 0.8rem 1rem;
+}
+
+.footerBottom p {
+  font-family: "Roboto Slab", serif;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  /* Footer Top*/
+  .footerTop {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Formulário para Newsletter */
+  .form-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-row label {
+    align-self: flex-start;
+  }
+
+  #formNewsletter .botao {
+    margin-top: 0.5rem;
+  }
+
+  /* Footer Bottom */
+  .footerBottom {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+}
