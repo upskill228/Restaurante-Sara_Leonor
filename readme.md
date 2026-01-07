@@ -69,7 +69,7 @@ Tentamos nomear as mesmas na sequência deste documento.
  
 A apresentação da página, de uma forma generalizada, é a seguinte: 
 
-![Teste](img/croissant.jpg)
+<img src="img/croissant.jpg" width="200" height="195" alt="elementos da pagina coffee break">
 
 - Cabeçalho com menu "hambúrguer", nome do utilizador (pressupõe que foi feito Log In), nome do café, barra de pesquisa e e ícon do basket.
 - Uma imagem decorativa alusiva à restauração selecionada ("café")
@@ -80,7 +80,7 @@ A apresentação da página, de uma forma generalizada, é a seguinte:
     - Conteúdo informativo sobre taxas associadas à entrega ao domicilio 
     - Finalmente, conteúdo informativo sobre médio do tempo de entrega 
 
-![](/img/readme_pag2)
+<img src="img/readme_pag2" width="200" height="195" alt="elementos da pagina coffee break">
 
 - Seguidamente, a outra secção:
     - Menu navegação (bebidas quentes, bebidas frias e pastelaria)
