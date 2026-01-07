@@ -9,7 +9,6 @@ Escolhemos o Menu digital, tendo realizado o site para um café.
 https://github.com/upskill228/Restaurante-Sara_Leonor.git
 
 
-
 ## Passos para executar a vossa página
 
 Para aceder: Usar Live Server na pasta do projeto. 
@@ -55,6 +54,12 @@ Existem janelas modais feitas. Recomendamos, abertura do menu hamburguer no cant
 Adicionamente, neste readme, explicamos seguidamente algumas das tomadas de decisão (para ir de encontro ao solicitado) e exploramos como desenvolvemos alguma da interatividade do site.
 Neste subtópico, foram atribuimos nomes aos títulos por exemplo (### Filtro das categorias do menu) que foram também atribuidos no documento JS (menu-scripts.js) para ser melhor acedidos. 
 A ordem contudo é diferente no ficheiro JS versus readme. 
+
+Cada página tem um ficheiro CSS e JS correspondente, identificado pelo nome atribuido.
+Assim, página principal inclui: index.html, scripts.js e style.css.
+Página "loja online" inclui: menu.html, menu-scripts.js e menu-styles.css.
+
+O site foi estruturado a pensar "mobile-first".
 
 
 ## Principais decisões tomadas e justificação da adequação
@@ -137,7 +142,7 @@ Nesta página, o nosso objectivo foi criar um template de como seria a interface
 Note-se que muitas coisas funcionam como uma template e que poderiam ser mais exploradas e desenvolvidas. 
 Tentamos nomear as mesmas na sequência deste documento. 
 
-### Apresentação da página secundária
+### Apresentação da página secundária (loja online)
  
 A apresentação da página, de uma forma generalizada, é a seguinte: 
 
@@ -149,6 +154,8 @@ A apresentação da página, de uma forma generalizada, é a seguinte:
     - Opção "radio-type" entre entrega ao domicilio ou recolha no estabelecimento 
     - Conteúdo informativo sobre taxas associadas à entrega ao domicilio 
     - Finalmente, conteúdo informativo sobre médio do tempo de entrega 
+
+Note-se que foi pensado na estrutura mobile-first, como tal, há elementos no cabeçalho (nome do utilizador e barra de pesquisa) que só aparecem para ecrãs superiores a 700px. Até então encontram-se no painel lateral que pode ser acessido pelo menu hambúrguer. Aqui, não são visíveis quando aparecem respetivamente no cabeçalho. 
 
 Seguidamente, a outra secção:
     - Menu navegação (bebidas quentes, bebidas frias e pastelaria)
@@ -269,13 +276,15 @@ Para fechar a janela, associamos ao clique do icon cruz "X" no topo superior dir
 1. Identificamos algumas falhas na formatação do site quanto testamos a responsividade do mesmo, nomeadamente, existe scroll horizontal presente na página secundária, que idealmente não estaria presente. 
 Contudo, fizemos a opção de priorizar a interatividade nesta página, como descrito acima, (filtro de categorias; adição, redução e limpeza do carrinho; janelas pop-up e menu hambúrguer) e reforçamos a parte estética/visual na página principal.
 
-1. Reviews serem geradas e automatizadas a sua actualização na página (de cada produto e do café)
+2. Adicionamente, reconhecemos que na página principal em vez de ser criado um alert deve ser devolvida uma mensagem aquando da submissão de reserva e de formulário.
 
-2. Num contexto real, após a seleção dos produtos a serem comprados e a forma (delivery ou pick-up), permitir a compra online e gerar o evento 
+3. Reviews serem geradas e automatizadas a sua actualização na página (de cada produto e do café)
 
-3. Painel do utilizador (menu hamburguer) oferecer interatividade nos respectivos elementos
+4. Num contexto real, após a seleção dos produtos a serem comprados e a forma (delivery ou pick-up), permitir a compra online e gerar o evento 
 
-4. Para os pop-ups informativos, da página secundária, pode ser expandido a interação, por exemplo, ao adicionar evento click fora do elemento para fechar (na página em si) e/ou impedir o scroll da página até o elemento ser fechado. 
+5. Painel do utilizador (menu hamburguer) oferecer interatividade nos respectivos elementos
+
+6. Para os pop-ups informativos, da página secundária, pode ser expandido a interação, por exemplo, ao adicionar evento click fora do elemento para fechar (na página em si) e/ou impedir o scroll da página até o elemento ser fechado. 
 
 
 
