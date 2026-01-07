@@ -45,6 +45,8 @@ function filtrarPastelaria(e) {
     pastelaria.classList.add("selectedMenuItem")
 }
 
+
+
 //Atualizar Carrinho  
 // A atualização do carrinho vem depois de: "Click botões - adicionar elementos ao carrinho: ### Adicionar produtos ao basket"
 
@@ -139,13 +141,13 @@ function fecharPainel () {
 // ### Adcionar produtos ao basket
 
 const botoes = document.querySelectorAll(".icon-addCart"); 
-console.log(botoes)
+// console.log(botoes)
 
 botoes.forEach (botao => {
     botao.addEventListener("click", () => addToCart(botao))
 }); 
 
-console.log(botoes)
+// console.log(botoes)
 
 
 function addToCart (botao) {
@@ -296,3 +298,7 @@ function confirmarSubscricaoNewsletter (event) {
 
   form.reset();
 }
+
+
+
+
