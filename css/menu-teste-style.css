@@ -4,7 +4,7 @@ body {
     padding: 0;
     font-family:  "Oswald", sans-serif;
     color: black;
-    min-height: 100vh;
+    height: 100vmax;
 }
 
 li {
@@ -52,20 +52,10 @@ header{
     gap: 10px; 
 }
 
-/* Logo central */
-.logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  z-index: 100;
-}
-
 .imgcafe {
     object-fit: cover;
     border-radius: 2px;
-    height: 300px;
+    height: 300px; 
     width: 100vmax;
 }
 
@@ -90,17 +80,15 @@ a.menunav {
     /* border: 2px solid black; */
 
 
+
 .primSeccao {
     display: flex;
-    border: 3px solid #1f4d29;
+    border: 2px solid #1f4d29;
     border-radius: 0 0 15px 15px;
     justify-content: space-between;
     align-items: center;
+    width: 100vmax;
     padding: 0 2rem;
-    width: 100%;
-    max-width: 100%;
-    gap: 2rem;
-    box-sizing: border-box;
 }
 
 address {
@@ -231,10 +219,8 @@ div.gridPrincipal {
     display: grid;
     padding: 10px;
     grid-template-columns: 120px 1fr;
-    width: 100vmax;
     gap:20px;
     align-items: start;
-    box-sizing: border-box;
 }
 
 .gridPrincipal h2{
@@ -257,6 +243,8 @@ div.gridPrincipal {
     background-color: lightgrey;
 }
 
+
+
 .menuCat.active ol {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -269,6 +257,7 @@ div.gridPrincipal {
 .menuCat.active h2 {
     display: block;
 }
+
 
 .hamburguer {
     position: absolute;
@@ -321,6 +310,7 @@ div.gridPrincipal {
 
 }
 
+
 .info i {
     align-self: flex-start;  
     margin-left: auto;
@@ -333,6 +323,7 @@ div.gridPrincipal {
     box-shadow: 0 2px 6px rgba(0,0,0, 0.2);
     cursor: pointer;
 }
+
 
 .infoTempo {
      display: none; 
@@ -391,6 +382,7 @@ div.gridPrincipal {
     }
 }
 
+
 .botao {
     display: flex;
     border: none;
@@ -399,7 +391,6 @@ div.gridPrincipal {
 }
 
 .botao.fecho {
-    font-family: "Roboto Slab", serif;
     justify-self: flex-end;
     background-color: whitesmoke;;
 }
