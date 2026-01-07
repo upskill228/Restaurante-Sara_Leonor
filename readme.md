@@ -136,98 +136,98 @@ Mais ainda, cada produto, é apresentado num template card, que apresenta as seg
 
 ## Interatividade JS
 
-    Associamos os sutópicos aqui dados no ficheiro "menu-scripts.js" para permitir melhor encontrar cada uma das funções desenvolvidas.
+Associamos os sutópicos aqui dados no ficheiro "menu-scripts.js" para permitir melhor encontrar cada uma das funções desenvolvidas.
 
 ### Filtro das categorias do menu
 
-    Para permitir filtrar categorias apresentadas foram necessárias duas coisas: criação de variáveis e associação de evento (click) a variável.
+Para permitir filtrar categorias apresentadas foram necessárias duas coisas: criação de variáveis e associação de evento (click) a variável.
 
-    Associado a cada categoria tivemos que criar duas variáveis. 
+Associado a cada categoria tivemos que criar duas variáveis. 
 
-    A do menu de navegação que exibe o nome da categoria (bebidas quentes, bebidas frias e pastelaria).
-    Fizemo-lo por associação do pseudo-selector id atribuido.
-    Ex: const bebidasQuentes = document.getElementById("quentes")
+A do menu de navegação que exibe o nome da categoria (bebidas quentes, bebidas frias e pastelaria).
+Fizemo-lo por associação do pseudo-selector id atribuido.
+Ex: const bebidasQuentes = document.getElementById("quentes")
 
-    Criamos também a variável que contêm a lista a ser apresentada (todos os produtos de determinada categoria).
-    Ex: const listaBebidasQuentes = document.getElementById("listaQuentes")
+Criamos também a variável que contêm a lista a ser apresentada (todos os produtos de determinada categoria).
+Ex: const listaBebidasQuentes = document.getElementById("listaQuentes")
 
-    Associamos o evento click à primeira variável, menu de selecção, ao qual atribuimos uma função.
+Associamos o evento click à primeira variável, menu de selecção, ao qual atribuimos uma função.
 
-    Esta função, realiza 3 coisas:
-        - e.preventDefault() 
-        Impede o comportamento padrão do browser (reload da página)
-        - atribuição de uma classe (add) à categoria seleccionada e eliminação da mesma às restantes (remove)
-        Esta classe em CSS permite a visibilidade dos produtos (ex: display: grid)
-        - atribuição e remoção de outra classe às categorias (selecionada versus restantes)
-        Que atribui "background-color" à categoria selecionada (optamos por light grey)
+Esta função, realiza 3 coisas:
+    - e.preventDefault() 
+    Impede o comportamento padrão do browser (reload da página)
+    - atribuição de uma classe (add) à categoria seleccionada e eliminação da mesma às restantes (remove)
+    Esta classe em CSS permite a visibilidade dos produtos (ex: display: grid)
+    - atribuição e remoção de outra classe às categorias (selecionada versus restantes)
+    Que atribui "background-color" à categoria selecionada (optamos por light grey)
 
 
 ### Adicionar produtos ao basket
 
-    Primeiramente criámos um array vazio (basket) associado ao "carrinho de compras". 
+Primeiramente criámos um array vazio (basket) associado ao "carrinho de compras". 
 
-    De seguida, criamos outro array, que associamos todos os "botões de adição" que se encontram associados a cada produto.
-    Desta vez, fizemo-lo pelo pseudo-selector classe. 
+De seguida, criamos outro array, que associamos todos os "botões de adição" que se encontram associados a cada produto.
+Desta vez, fizemo-lo pelo pseudo-selector classe. 
 
-    Ex: const botoes = document.querySelectorAll(".icon-addCart"); 
+Ex: const botoes = document.querySelectorAll(".icon-addCart"); 
 
-    Para cada um destes botões associamos um evento (click) que gerou uma função.
-    Esta função em si tem várias finalidades (criação de variável e objeto) e recorre a funções de suporte (para aumentar quantidade do produto no basket; adicionar novos produtos; atualizar informação na interface)
+Para cada um destes botões associamos um evento (click) que gerou uma função.
+Esta função em si tem várias finalidades (criação de variável e objeto) e recorre a funções de suporte (para aumentar quantidade do produto no basket; adicionar novos produtos; atualizar informação na interface)
 
-    A primeira variável a ser criada é, o elemento HTML que atribuimos dataset atributos (id, nome, preço e quantidade).
-    A segunda é um objecto (produto) com essas mesmas propriedades. 
-    Seguidamente, chamámos outra função de suporte que nos devolvia o produto em si (se existente no array basket - quando criado vazio).
-    Se existente, aumentava a quantidade em 1, senão adicionava o produto ao array basket ("basket.push(produto)")
+A primeira variável a ser criada é, o elemento HTML que atribuimos dataset atributos (id, nome, preço e quantidade).
+A segunda é um objecto (produto) com essas mesmas propriedades. 
+Seguidamente, chamámos outra função de suporte que nos devolvia o produto em si (se existente no array basket - quando criado vazio).
+Se existente, aumentava a quantidade em 1, senão adicionava o produto ao array basket ("basket.push(produto)")
 
-    Por fim, chama outra função de suporte ("updateBasketDisplay). 
+Por fim, chama outra função de suporte ("updateBasketDisplay). 
 
-    Nesta função, é percorrido o array basket. Se existirem produtos no array são criadas variáveis (nome, preço, quantidade, subtotal e total).
+Nesta função, é percorrido o array basket. Se existirem produtos no array são criadas variáveis (nome, preço, quantidade, subtotal e total).
 
-    É ainda criado elemento html ("p") e adicionado ao elemento html "pai" que é o painel do carrinho de compras.
-    Ao sair do ciclo for, é criado outro elemento HTML "p" e adicionado ao elemento HTML pai em questão, que contêm a informação do preço total (que será visto no carrinho de compras). 
+É ainda criado elemento html ("p") e adicionado ao elemento html "pai" que é o painel do carrinho de compras.
+Ao sair do ciclo for, é criado outro elemento HTML "p" e adicionado ao elemento HTML pai em questão, que contêm a informação do preço total (que será visto no carrinho de compras). 
 
-    Ao iniciar esta função, garantimos que o total é zero e não existe conteúdo neste elemento HTML (ou sejá não é exibido nada no carrinho, na interface).
+Ao iniciar esta função, garantimos que o total é zero e não existe conteúdo neste elemento HTML (ou sejá não é exibido nada no carrinho, na interface).
 
-    Associamos a abertura/fecho do "painel carrinho de compras" ao associarmos o evento clique, através de atribuição/remoção de classe CSS que representa o display do mesmo ou não, respectivamente.
+Associamos a abertura/fecho do "painel carrinho de compras" ao associarmos o evento clique, através de atribuição/remoção de classe CSS que representa o display do mesmo ou não, respectivamente.
 
 ### Remoção de produtos no basket
 
-    Para a concretização da redução de produtos no carrinho, tivemos que regressar à função "Update Display Basket" e criar um elemento html (o botão menos e botão mais respetivamente). A ambos, adicionar evento click que gera função que por sua vez leva à função de suporte criada (para não proceder à execução imediata da função). Esta função passa um parâmetro (o id do produto).
+Para a concretização da redução de produtos no carrinho, tivemos que regressar à função "Update Display Basket" e criar um elemento html (o botão menos e botão mais respetivamente). A ambos, adicionar evento click que gera função que por sua vez leva à função de suporte criada (para não proceder à execução imediata da função). Esta função passa um parâmetro (o id do produto).
 
-    Nas funções de suporte, reduzir produto ou aumentar produto, percorremos o array basket, e quando identificado o id do produto em questãoo diminui-se ou aumenta-se a quantidade do mesmo em um respetivamente e leva novamente à função "uptade basket display" para atualização na interface, com um break final para não levar a um loop infinito.
+Nas funções de suporte, reduzir produto ou aumentar produto, percorremos o array basket, e quando identificado o id do produto em questãoo diminui-se ou aumenta-se a quantidade do mesmo em um respetivamente e leva novamente à função "uptade basket display" para atualização na interface, com um break final para não levar a um loop infinito.
 
 
 ### Limpeza total do basket
 
-    Posteriormente, adicionamos um botão "Limpar tudo" que permite a limpeza do carrinho. 
+Posteriormente, adicionamos um botão "Limpar tudo" que permite a limpeza do carrinho. 
 
-    A nível de JS isto significou obter o elemento "botão" e associar um evento click ao mesmo. Ao o fazer, reatribuimos o valor do array basket (basket = []) e fizemos a chamada novamente a função já criada previamente "Update Display basket".
+A nível de JS isto significou obter o elemento "botão" e associar um evento click ao mesmo. Ao o fazer, reatribuimos o valor do array basket (basket = []) e fizemos a chamada novamente a função já criada previamente "Update Display basket".
 
 
 
 ### Menu Hamburguer
 
-    Criámos um menu hambúguer que reage ao evento "click" e consecutivamente expõe e esconde, respectivamente, um painel lateral com possibilidades genéricas (Gerir conta; favoritos; convidar amigos; ajuda e terminar sessão).
-    Nenhum desses elementos é interactivo, mas representa um elemento padrão comum a muitos sites de restauração. (Ponto 3 dos aspectos que podem ser futuramente trabalhados) 
+Criámos um menu hambúguer que reage ao evento "click" e consecutivamente expõe e esconde, respectivamente, um painel lateral com possibilidades genéricas (Gerir conta; favoritos; convidar amigos; ajuda e terminar sessão).
+Nenhum desses elementos é interactivo, mas representa um elemento padrão comum a muitos sites de restauração. (Ponto 3 dos aspectos que podem ser futuramente trabalhados) 
 
 ### Pop-up/Modal
 
-    Críamos duas janelas pop-up na página secundária no ícon de informação, tanto para informações adicionais sobre custos extra e sobre demora na entrega da encomenda. 
-    Para fechar a janela, associamos ao clique do icon cruz "X" no topo superior direito da janela pop-up.
+Críamos duas janelas pop-up na página secundária no ícon de informação, tanto para informações adicionais sobre custos extra e sobre demora na entrega da encomenda. 
+Para fechar a janela, associamos ao clique do icon cruz "X" no topo superior direito da janela pop-up.
 
 
 ## Aspectos que podem futuramente ser trabalhados 
 
-    1. Identificamos algumas falhas na formatação do site quanto testamos a responsividade do mesmo, nomeadamente, existe scroll horizontal presente na página secundária, que idealmente não estaria presente. 
-    Contudo, fizemos a opção de priorizar a interatividade nesta página, como descrito acima, (filtro de categorias; adição, redução e limpeza do carrinho; janelas pop-up e menu hambúrguer) e reforçamos a parte estética/visual na página principal.
+1. Identificamos algumas falhas na formatação do site quanto testamos a responsividade do mesmo, nomeadamente, existe scroll horizontal presente na página secundária, que idealmente não estaria presente. 
+Contudo, fizemos a opção de priorizar a interatividade nesta página, como descrito acima, (filtro de categorias; adição, redução e limpeza do carrinho; janelas pop-up e menu hambúrguer) e reforçamos a parte estética/visual na página principal.
 
-    1. Reviews serem geradas e automatizadas a sua actualização na página (de cada produto e do café)
+1. Reviews serem geradas e automatizadas a sua actualização na página (de cada produto e do café)
 
-    2. Num contexto real, após a seleção dos produtos a serem comprados e a forma (delivery ou pick-up), permitir a compra online e gerar o evento 
+2. Num contexto real, após a seleção dos produtos a serem comprados e a forma (delivery ou pick-up), permitir a compra online e gerar o evento 
 
-    3. Painel do utilizador (menu hamburguer) oferecer interatividade nos respectivos elementos
+3. Painel do utilizador (menu hamburguer) oferecer interatividade nos respectivos elementos
 
-    4. Para os pop-ups informativos, da página secundária, pode ser expandido a interação, por exemplo, ao adicionar evento click fora do elemento para fechar (na página em si) e/ou impedir o scroll da página até o elemento ser fechado. 
+4. Para os pop-ups informativos, da página secundária, pode ser expandido a interação, por exemplo, ao adicionar evento click fora do elemento para fechar (na página em si) e/ou impedir o scroll da página até o elemento ser fechado. 
 
 
 
