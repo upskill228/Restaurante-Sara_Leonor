@@ -25,7 +25,6 @@ h1 {
     align-items: center;
     gap: 20px; 
     width: 100vmax; 
-    /* border: 2px solid black */
 }
 
 .minigrid {
@@ -51,15 +50,6 @@ a.menunav {
     text-decoration: none;
     color: black;
 }
-
-/* aside {
-    display: grid;
-    gap: 50px; 
-    grid-template-columns: 100px 1fr;
-    height: 300px;
-    /* grid-template-rows: 1fr; */
-    /* border: 2px solid black; */
-
 
 
 .primSeccao {
@@ -258,19 +248,15 @@ div.gridPrincipal {
     text-align: justify;
     position: fixed; 
     gap: 10px; 
-    /* inset: 70px 70px 300px 70px; ; top, right, bottom, left */
     inset: 70px 70px 300px 70px; 
     margin-left: auto;
     margin-right: auto;
-    /* background-color: rgba(0, 0, 0, 0.1); fundo escuro */
     background-color: whitesmoke;
     z-index: 9999;
     height: auto; 
     width: fit-content; max-width: auto;
     border: 2px solid grey;
     padding: 10px;
-    /* max-width: 250px;
-    min-height: 200px; height: auto;  */
     border-radius: 5px;
 
 }
@@ -301,19 +287,15 @@ div.gridPrincipal {
     text-align: justify;
     position: fixed; 
     gap: 10px; 
-    /* inset: 70px 70px 300px 70px; ; top, right, bottom, left */
     inset: 70px 70px 300px 70px; 
     margin-left: auto;
     margin-right: auto;
-    /* background-color: rgba(0, 0, 0, 0.1); fundo escuro */
     background-color: whitesmoke;
     z-index: 9999;
     height: auto; 
     width: fit-content; max-width: auto;
     border: 2px solid grey;
     padding: 10px;
-    /* max-width: 250px;
-    min-height: 200px; height: auto;  */
     border-radius: 5px;
 }
 
