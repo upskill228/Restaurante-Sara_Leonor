@@ -87,7 +87,7 @@ Nos seguintes parágrafos, especificamos mais sobre a tomada de decisão relativ
 ### Header 
     
 No header tentámos continuar com o aspecto minimalista, dando prioridade ao menu hamburger, mesmo para desktop.
-Esta decisão permitiu-nos ter espaço visual para um call to action para a loja online (Página Coffee Break) e criou-se mais separação entre menu, logótipo e CTA.
+Esta decisão permitiu-nos ter espaço visual para um call to action para a loja online (menu.html) e criou-se mais separação entre menu, logótipo e CTA.
 
 ### Landing Page / intro
 
