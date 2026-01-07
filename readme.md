@@ -48,7 +48,7 @@ Pode-se selecionar qualquer uma delas, que será filtrada e apresentada os templ
 Podem ser adicionados ao carrinho (icon do canto superior direito que é expandível ao click, e vice-versa).
 Pode-se ainda diminuir quantidade de qualquer produto no basket ou limpar carrinho. 
 
-<img src="img/carrinho_modal.png" width="400" height="300">
+<img src="img/carrinhoSite.png" width="400" height="300">
 
 Existem janelas modais feitas. Recomendamos, abertura do menu hamburguer no canto superior esquerdo. Assim como, abertura do icon "i" (informação) para informações adicionais nos custos de entrega e tempo de entrega. 
 
