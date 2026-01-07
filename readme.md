@@ -24,10 +24,10 @@ A navegação nesta página pode ocorrer por seguir a continuidade da página qu
 - sobre nós
 - galeria
 - menu
-- fazer reserva
-- subscrever à newsletter
+- contactos & reservas
+- footer
 
-Ou, aceder a estas secções (excepto subscrição da newsletter), pelo menu lateral:
+Ou, aceder a estas secções (excepto footer), pelo menu lateral:
 
 
 <img src="imagens/paginaPrincipal.png" width="400" height="300">
