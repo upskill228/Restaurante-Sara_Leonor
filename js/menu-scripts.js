@@ -91,7 +91,7 @@ function updateBasketDisplay () {
 updateBasketDisplay(); 
 
 // redução de produto 
-// ### Remoção de produtos no basket
+// ### Aumento/Redução de produtos no basket
 
 function reduzirProduto(numID) {
     console.log("este é o basket", basket); 
