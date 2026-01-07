@@ -11,13 +11,14 @@
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700;800&family=Oswald:wght@400;500;600"
     />
     <link rel="stylesheet" href="/css/menu-style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Café Central Perk</title>
+    <title>Café Central Perk Online</title>
+    <link rel="icon" type="image/x-icon" href="imagens/favicon.ico" />
   </head>
 
   <body onload="carregarPagina()">
@@ -32,8 +33,8 @@
       </button>
       <nav aria-label="painelDoMenu" class="hamburguer" id="menuBurguer">
         <button class="painelBurguer colapsado botao">
-          <i class="fa-solid fa-person" aria-hidden="true"></i>
-          <span>Arquiles Diaz</span>
+          <i class="fa-solid fa-person colapsado" aria-hidden="true"></i>
+          <span class="colapsado">Arquiles Diaz</span>
         </button>
         <button class="painelBurguer botao">
           <i class="fa-regular fa-user" aria-hidden="true"></i>
@@ -48,12 +49,13 @@
           <span>Convidar amigos</span>
         </button>
         <button class="painelBurguer colapsado botao">
-          <label for="pesquisa-painel">🔍</label>
+          <label class="colapsado" for="pesquisa-painel">🔍</label>
           <input
             id="pesquisa-painel"
             type="text"
             placeholder="Pesquise aqui"
             aria-label="barra de pesquisa"
+            class="colapsado"
           />
         </button>
         <button class="painelBurguer botao">
@@ -66,7 +68,11 @@
         </button>
       </nav>
       <p class="escondido"><i class="fa-solid fa-person"></i>Arquiles Diaz</p>
-      <h1>COFFEE BREAK</h1>
+      <img
+        src="imagens/central-perk-logo.png"
+        width="150"
+        alt="Logótipo do Central Perk"
+      />
       <div aria-label="motorDePesquisa" class="miniGrid escondido">
         <label for="pesquisa-cabecalho">🔍</label>
         <input
@@ -222,7 +228,11 @@
             </button>
           </nav>
           <div>
-            <section id="listaQuentes" class="menuCat active" aria-hidden="false">
+            <section
+              id="listaQuentes"
+              class="menuCat active"
+              aria-hidden="false"
+            >
               <h2>Bebidas Quentes</h2>
               <ol aria-label="Bebidas Quentes" class="menu">
                 <li>
@@ -881,5 +891,69 @@
       <div id="cartcontent" class="conteudoCarro" aria-live="polite"></div>
       <button id="limparCarrinho">Limpar carrinho</button>
     </aside>
+     <footer>
+      <!-- Footer Top -->
+      <section class="footerTop">
+        <!-- Redes Sociais -->
+        <div class="socialsLinks">
+          <p>Segue-nos nas redes sociais:</p>
+          <ul>
+            <li>
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook do Café Central Perk Lisboa"
+              >
+                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram do Café Central Perk Lisboa"
+              >
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube do Café Central Perk Lisboa"
+              >
+                <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- Formulário para Newsletter -->
+        <form id="formNewsletter" onsubmit="enviarForm(event)">
+          <fieldset>
+            <legend>Subscreve a nossa Newsletter:</legend>
+            <div class="form-row">
+              <label for="emailNewsletter">Email: <span>*</span></label>
+              <input
+                type="email"
+                id="emailNewsletter"
+                name="emailNewsletter"
+                placeholder="Email"
+                required
+              />
+              <button type="submit" class="footer-botao">Subscrever</button>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+      <!-- Footer Bottom -->
+      <section class="footerBottom">
+        <!-- Copyright -->
+        <p>Café Central Perk Lisboa &copy; <span id="current-year"></span></p>
+        <p>Todos os direitos reservados</p>
+      </section>
+    </footer>
   </body>
 </html>
