@@ -281,3 +281,18 @@ function carregarPagina () {
         } 
             
 }
+
+
+// Feedback a simular subscrição para newsletter
+
+function confirmarSubscricaoNewsletter (event) {
+  event.preventDefault();
+  const form = event.target;
+  const nome = form.emailNewsletter.value;
+
+  const feedback = document.getElementById("feedbackNewsletter");
+
+  feedback.textContent = "Subscrição registada com sucesso para o e-mail " + nome + ". Obrigada pelo contacto 😊";
+
+  form.reset();
+}

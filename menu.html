@@ -931,7 +931,7 @@
           </ul>
         </div>
         <!-- Formulário para Newsletter -->
-        <form id="formNewsletter" onsubmit="enviarForm(event)">
+        <form id="formNewsletter" onsubmit="confirmarSubscricaoNewsletter(event)">
           <fieldset>
             <legend>Subscreve a nossa Newsletter:</legend>
             <div class="form-row">
@@ -945,6 +945,7 @@
               />
               <button type="submit" class="footer-botao">Subscrever</button>
             </div>
+            <p class="formularioReservaJS" id="feedbackNewsletter" aria-live="polite"></p>
           </fieldset>
         </form>
       </section>
